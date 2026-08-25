@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#D9F3FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TITLE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💊 Set Medicine Reminder"
+            android:textColor="#102A43"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a reminder for your medicine"
+            android:textColor="#64748B"
+            android:textSize="17sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="25dp"/>
+
+
+        <!-- MEDICINE NAME CARD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💊 Medicine Name"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/medicineName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:hint="Enter medicine name"
+                android:textColor="#102A43"
+                android:textColorHint="#64748B"
+                android:textSize="17sp"
+                android:singleLine="true"
+                android:background="@drawable/input_box"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+
+        <!-- TIME CARD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏰ Reminder Time"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:timePickerMode="spinner"/>
+
+        </LinearLayout>
+
+
+        <!-- SAVE BUTTON -->
+
+        <Button
+            android:id="@+id/saveReminderBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:text="Save Reminder"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4FC3F7"/>
+
+
+        <!-- HISTORY BUTTON -->
+
+        <Button
+            android:id="@+id/historyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:text="📋 View Reminder History"
+            android:textColor="#102A43"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#F5FCFF"/>
+
+    </LinearLayout>
+
+</ScrollView>

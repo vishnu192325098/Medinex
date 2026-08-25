@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Primary -->
+    <color name="primary">#4F8EF7</color>
+    <color name="primary_dark">#2F6FE4</color>
+    <color name="secondary">#6BCBFF</color>
+
+    <!-- Background -->
+    <color name="background">#EEF6FF</color>
+
+    <!-- Glass -->
+    <color name="glass_white">#CCFFFFFF</color>
+    <color name="glass_light">#99FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1B2A41</color>
+    <color name="text_secondary">#6B7A90</color>
+
+    <!-- Status -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="danger">#F44336</color>
+
+</resources>

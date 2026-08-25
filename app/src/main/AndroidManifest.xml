@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Notifications - Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Exact medicine reminders -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Medinex">
+
+        <!-- Splash Screen -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+
+        <!-- Dashboard -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+
+        <!-- Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+
+        <!-- Register -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+
+        <!-- Profile -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+
+        <!-- Settings -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+
+        <!-- Health Hub -->
+        <activity
+            android:name=".HealthHubActivity"
+            android:exported="false" />
+
+
+        <!-- About -->
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+
+
+        <!-- BMI -->
+        <activity
+            android:name=".BMIActivity"
+            android:exported="false" />
+
+
+        <!-- Health Tips -->
+        <activity
+            android:name=".HealthTipsActivity"
+            android:exported="false" />
+
+
+        <!-- Water Tracker -->
+        <activity
+            android:name=".WaterTrackerActivity"
+            android:exported="false" />
+
+
+        <!-- Apple Health Advisor -->
+        <activity
+            android:name=".AppleActivity"
+            android:exported="false" />
+
+
+        <!-- Diet Planner -->
+        <activity
+            android:name=".DietPlannerActivity"
+            android:exported="false" />
+
+
+        <!-- AI Health Assistant -->
+        <activity
+            android:name=".AIHealthAssistantActivity"
+            android:exported="false" />
+
+
+        <!-- Medicine Interaction -->
+        <activity
+            android:name=".MedicineInteractionActivity"
+            android:exported="false" />
+
+
+        <!-- Duplicate Medicine -->
+        <activity
+            android:name=".DuplicateMedicineActivity"
+            android:exported="false" />
+
+
+        <!-- Stock Prediction -->
+        <activity
+            android:name=".StockPredictionActivity"
+            android:exported="false" />
+
+
+        <!-- Upload Prescription -->
+        <activity
+            android:name=".UploadActivity"
+            android:exported="false" />
+
+
+        <!-- Emergency -->
+        <activity
+            android:name=".EmergencyActivity"
+            android:exported="false" />
+
+
+        <!-- Reminder Main Screen -->
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false" />
+
+
+        <!-- Reminder Setup -->
+        <activity
+            android:name=".ReminderSetupActivity"
+            android:exported="false" />
+
+
+        <!-- Reminder History -->
+        <activity
+            android:name=".ReminderHistoryActivity"
+            android:exported="false" />
+
+
+        <!-- Notification Receiver -->
+        <receiver
+            android:name=".NotificationReceiver"
+            android:exported="false" />
+
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

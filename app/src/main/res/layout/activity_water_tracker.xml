@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9F3FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💧 Water Tracker"
+            android:textColor="#102A43"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <!-- Subtitle -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track your daily water intake"
+            android:textColor="#64748B"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Water Count Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/health_hub_card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💧 Today's Water Intake"
+                android:textColor="#102A43"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/waterCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Glasses Drunk: 0"
+                android:textColor="#102A43"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+        <!-- Add Water Button -->
+
+        <Button
+            android:id="@+id/addWaterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="➕ Add Glass"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_gradient"
+            android:backgroundTint="@null"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Goal Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/health_hub_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎯 Daily Hydration Goal"
+                android:textColor="#102A43"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Goal: 8 Glasses"
+                android:textColor="#64748B"
+                android:textSize="17sp"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

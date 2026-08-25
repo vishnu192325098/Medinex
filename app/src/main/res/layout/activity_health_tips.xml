@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9F3FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💡 Daily Health Tips"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="#102A43"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple habits for a healthier lifestyle"
+            android:textColor="#64748B"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- Tips Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/health_hub_card"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <!-- Water -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💧  Stay Hydrated"
+                android:textColor="#102A43"
+                android:textSize="19sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drink enough water throughout the day to support overall health."
+                android:textColor="#334E68"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Food -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🥗  Eat Healthy"
+                android:textColor="#102A43"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose fresh fruits, vegetables and nutritious foods as part of your daily diet."
+                android:textColor="#334E68"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Exercise -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏃  Stay Active"
+                android:textColor="#102A43"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exercise regularly and aim for around 30 minutes of physical activity each day."
+                android:textColor="#334E68"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Sleep -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="😴  Get Enough Sleep"
+                android:textColor="#102A43"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maintain a regular sleep schedule and aim for 7–8 hours of sleep."
+                android:textColor="#334E68"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Avoid Smoking -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚭  Avoid Harmful Habits"
+                android:textColor="#102A43"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avoid smoking and excessive alcohol consumption to support long-term wellbeing."
+                android:textColor="#334E68"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Checkups -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🩺  Regular Checkups"
+                android:textColor="#102A43"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Schedule regular health checkups and consult healthcare professionals when needed."
+                android:textColor="#334E68"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+        <!-- Footer -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💙 Small healthy habits can make a big difference."
+            android:textColor="#64748B"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

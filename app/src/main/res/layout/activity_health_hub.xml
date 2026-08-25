@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9F3FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏥 Health Hub"
+            android:textColor="#102A43"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your personal collection of health &amp; wellness tools"
+            android:textColor="#64748B"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp" />
+
+        <!-- About Medinex -->
+
+        <LinearLayout
+            android:id="@+id/aboutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/health_hub_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📘"
+                android:textSize="28sp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Medinex"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- BMI Calculator -->
+
+        <LinearLayout
+            android:id="@+id/bmiBtn"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/health_hub_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚖"
+                android:textSize="28sp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI Calculator"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Health Tips -->
+
+        <LinearLayout
+            android:id="@+id/tipsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/health_hub_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡"
+                android:textSize="28sp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Tips"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Water Tracker -->
+
+        <LinearLayout
+            android:id="@+id/waterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/health_hub_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💧"
+                android:textSize="28sp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water Tracker"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Apple Health Advisor -->
+
+        <LinearLayout
+            android:id="@+id/appleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/health_hub_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍎"
+                android:textSize="28sp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple Health Advisor"
+                android:textColor="#102A43"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
