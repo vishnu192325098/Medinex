@@ -41,6 +41,14 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
 
+        // If user already authenticated with a valid session, navigate directly to Dashboard
+        SharedPreferences existingPrefs = getSharedPreferences("MedinexUser", MODE_PRIVATE);
+        if (existingPrefs.getBoolean("isLoggedIn", false) && auth.getCurrentUser() != null) {
+            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+            finish();
+            return;
+        }
+
         loginBtn.setOnClickListener(v -> loginUser());
 
         registerText.setOnClickListener(v ->
@@ -66,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         loginBtn.setEnabled(false);
+        loginBtn.setText("Logging in...");
 
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
@@ -74,86 +83,75 @@ public class LoginActivity extends AppCompatActivity {
 
                         if (firebaseUser == null) {
                             loginBtn.setEnabled(true);
+                            loginBtn.setText("Login");
                             showMessage("Unable to load your account");
                             return;
                         }
 
                         String uid = firebaseUser.getUid();
+                        String fallbackName = firebaseUser.getDisplayName();
+                        if (fallbackName == null || fallbackName.trim().isEmpty()) {
+                            fallbackName = email.contains("@") ? email.split("@")[0] : email;
+                        }
 
-                        firestore.collection("users")
-                                .document(uid)
-                                .get()
-                                .addOnCompleteListener(profileTask -> {
-                                    loginBtn.setEnabled(true);
+                        // Save authenticated session immediately
+                        SharedPreferences prefs = getSharedPreferences("MedinexUser", MODE_PRIVATE);
+                        prefs.edit()
+                                .putBoolean("isLoggedIn", true)
+                                .putString("userId", uid)
+                                .putString("userName", fallbackName)
+                                .putString("userEmail", email)
+                                .apply();
 
-                                    String name = null;
-                                    String phone = null;
+                        Toast.makeText(LoginActivity.this, "Welcome " + fallbackName + " 👋", Toast.LENGTH_SHORT).show();
 
-                                    if (profileTask.isSuccessful() && profileTask.getResult() != null) {
-                                        if (profileTask.getResult().exists()) {
-                                            name = profileTask.getResult().getString("name");
-                                            phone = profileTask.getResult().getString("phone");
-                                        } else {
-                                            // Document does not exist in Firestore yet: create it gracefully
-                                            String fallbackName = firebaseUser.getDisplayName();
-                                            if (fallbackName == null || fallbackName.trim().isEmpty()) {
-                                                fallbackName = email.contains("@") ? email.split("@")[0] : email;
+                        // Asynchronously synchronize Firestore profile without blocking navigation
+                        try {
+                            final String initialName = fallbackName;
+                            firestore.collection("users")
+                                    .document(uid)
+                                    .get()
+                                    .addOnSuccessListener(snapshot -> {
+                                        if (snapshot != null && snapshot.exists()) {
+                                            String remoteName = snapshot.getString("name");
+                                            String remotePhone = snapshot.getString("phone");
+                                            if (remoteName != null && !remoteName.trim().isEmpty()) {
+                                                prefs.edit()
+                                                        .putString("userName", remoteName)
+                                                        .putString("userPhone", remotePhone != null ? remotePhone : "")
+                                                        .apply();
                                             }
+                                        } else {
                                             Map<String, Object> autoProfile = new HashMap<>();
                                             autoProfile.put("uid", uid);
-                                            autoProfile.put("name", fallbackName);
+                                            autoProfile.put("name", initialName);
                                             autoProfile.put("email", email);
                                             autoProfile.put("phone", "");
                                             autoProfile.put("createdAt", com.google.firebase.firestore.FieldValue.serverTimestamp());
                                             firestore.collection("users").document(uid).set(autoProfile);
-                                            name = fallbackName;
                                         }
-                                    }
+                                    });
+                        } catch (Exception ignored) {}
 
-                                    if (name == null || name.trim().isEmpty()) {
-                                        name = firebaseUser.getDisplayName();
-                                    }
-
-                                    if (name == null || name.trim().isEmpty()) {
-                                        name = email.contains("@") ? email.split("@")[0] : email;
-                                    }
-
-                                    SharedPreferences prefs =
-                                            getSharedPreferences(
-                                                    "MedinexUser",
-                                                    MODE_PRIVATE
-                                            );
-
-                                    prefs.edit()
-                                            .putBoolean("isLoggedIn", true)
-                                            .putString("userId", uid)
-                                            .putString("userName", name)
-                                            .putString("userEmail", email)
-                                            .putString("userPhone",
-                                                    phone == null ? "" : phone)
-                                            .apply();
-
-                                    Toast.makeText(
-                                            LoginActivity.this,
-                                            "Welcome " + name,
-                                            Toast.LENGTH_SHORT
-                                    ).show();
-
-                                    Intent intent = new Intent(
-                                            LoginActivity.this,
-                                            DashboardActivity.class
-                                    );
-
-                                    startActivity(intent);
-                                    finish();
-                                });
+                        // Navigate immediately to Dashboard
+                        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        finish();
 
                     } else {
                         loginBtn.setEnabled(true);
-                        String message = task.getException() != null
-                                ? task.getException().getMessage()
-                                : "Login failed";
-
+                        loginBtn.setText("Login");
+                        String message;
+                        if (task.getException() instanceof com.google.firebase.auth.FirebaseAuthInvalidUserException) {
+                            message = "No account found with this email. Please register first.";
+                        } else if (task.getException() instanceof com.google.firebase.auth.FirebaseAuthInvalidCredentialsException) {
+                            message = "Invalid password. Please check your credentials.";
+                        } else {
+                            message = task.getException() != null
+                                    ? task.getException().getMessage()
+                                    : "Login failed";
+                        }
                         showMessage(message);
                     }
                 });

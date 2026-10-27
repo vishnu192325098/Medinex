@@ -12,10 +12,10 @@ export class MedicineApi {
   static RXNORM_BASE_URL = "https://rxnav.nlm.nih.gov/";
   static OPENFDA_BASE_URL = "https://api.fda.gov/";
 
-  // Production backend HTTPS URL placeholder (replace with your actual Render service URL, e.g. "https://medinex-backend.onrender.com")
-  static PRODUCTION_BACKEND_URL = "https://YOUR-RENDER-SERVICE-NAME.onrender.com";
+  // Production backend HTTPS URL (deployed on Render)
+  static PRODUCTION_BACKEND_URL = "https://medinex-backend-bukx.onrender.com";
   static LOCAL_BACKEND_URL = "http://127.0.0.1:8000";
-  static TIMEOUT_MS = 10000;
+  static TIMEOUT_MS = 25000;
 
   /**
    * Dynamic backend URL resolution:
@@ -67,7 +67,7 @@ export class MedicineApi {
     formData.append("file", imageBlob, "packaging.jpg");
 
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 20000);
+    const timeout = setTimeout(() => controller.abort(), 45000);
 
     try {
       const response = await fetch(`${this.SHARED_BACKEND_URL}/api/medicine/recognize`, {

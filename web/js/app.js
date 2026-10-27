@@ -1218,13 +1218,13 @@ class MedinexApp {
             this.currentImageRotation
           );
 
-          // Standardize max dimension to 1400px preserving natural RGB colors
+          // Standardize max dimension to 1024px preserving natural RGB colors
           let targetW = rawCroppedCanvas.width;
           let targetH = rawCroppedCanvas.height;
           const maxDim = Math.max(targetW, targetH);
           let uploadCanvas = rawCroppedCanvas;
-          if (maxDim > 1400) {
-            const scale = 1400 / maxDim;
+          if (maxDim > 1024) {
+            const scale = 1024 / maxDim;
             targetW = Math.round(targetW * scale);
             targetH = Math.round(targetH * scale);
             uploadCanvas = document.createElement("canvas");
