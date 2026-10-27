@@ -34,6 +34,8 @@ import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -635,6 +637,19 @@ public class UploadActivity extends AppCompatActivity {
 
             byte[] data = baos.toByteArray();
 
+            // Always preserve scan image locally in on-device storage first
+            File localScanDir = new File(getFilesDir(), "scans");
+            if (!localScanDir.exists()) {
+                localScanDir.mkdirs();
+            }
+            File localScanFile = new File(localScanDir, scanId + ".jpg");
+            try (FileOutputStream fos = new FileOutputStream(localScanFile)) {
+                fos.write(data);
+                fos.flush();
+            } catch (IOException ioEx) {
+                Log.e(TAG, "Could not cache scan image locally", ioEx);
+            }
+
             StorageReference storageRef = FirebaseStorage.getInstance()
                     .getReference()
                     .child(storagePath);
@@ -645,6 +660,7 @@ public class UploadActivity extends AppCompatActivity {
                             Map<String, Object> update = new HashMap<>();
                             update.put("imageUrl", downloadUri.toString());
                             update.put("imageUploadStatus", "uploaded");
+                            update.put("localImagePath", localScanFile.getAbsolutePath());
 
                             FirebaseFirestore db = FirebaseFirestore.getInstance();
                             db.collection("users").document(uid).collection("prescriptions").document(scanId).set(update, SetOptions.merge());
@@ -655,18 +671,19 @@ public class UploadActivity extends AppCompatActivity {
                         });
                     })
                     .addOnFailureListener(e -> {
-                        Log.e(TAG, "Prescription image upload failed: " + e.getMessage(), e);
+                        Log.w(TAG, "Cloud storage bucket not configured or unreachable: " + e.getMessage() + ". Preserved scan locally at " + localScanFile.getAbsolutePath());
                         Map<String, Object> update = new HashMap<>();
-                        update.put("imageUploadStatus", "failed");
-                        update.put("uploadError", e.getMessage());
+                        update.put("imageStorageStatus", "saved_locally");
+                        update.put("localImagePath", localScanFile.getAbsolutePath());
+                        update.put("storageNotice", "Preserved in on-device storage (Cloud storage unconfigured)");
 
                         FirebaseFirestore db = FirebaseFirestore.getInstance();
                         db.collection("users").document(uid).collection("prescriptions").document(scanId).set(update, SetOptions.merge());
                         db.collection("users").document(uid).collection("scanHistory").document(scanId).set(update, SetOptions.merge());
 
                         Toast.makeText(this,
-                                "Prescription analyzed, but image storage failed: " + e.getMessage(),
-                                Toast.LENGTH_LONG).show();
+                                "Prescription analyzed and image saved locally on device.",
+                                Toast.LENGTH_SHORT).show();
                     });
 
         } catch (Exception e) {

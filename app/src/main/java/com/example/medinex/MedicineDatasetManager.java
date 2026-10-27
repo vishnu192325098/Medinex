@@ -921,6 +921,10 @@ public class MedicineDatasetManager {
         if (a.length() < 3 || b.length() < 3) return 0f;
 
         int distance = computeLevenshteinDistance(a, b);
+        // Medical Safety Guard: Minor OCR typos should have distance <= 2.
+        // A distance > 2 between pharmaceutical names is too large and risks false-positive matching.
+        if (distance > 2) return 0.0f;
+
         int maxLen = Math.max(a.length(), b.length());
         return 1.0f - ((float) distance / (float) maxLen);
     }

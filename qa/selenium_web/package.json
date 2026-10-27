@@ -1,0 +1,13 @@
+{
+  "name": "medinex-selenium-web-qa",
+  "version": "1.0.0",
+  "description": "Medinex Web E2E Selenium WebDriver Automated Test Suite",
+  "main": "test_runner.js",
+  "scripts": {
+    "test": "node test_runner.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.20.0",
+    "chromedriver": "^125.0.0"
+  }
+}

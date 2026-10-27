@@ -78,6 +78,17 @@ def verify_dosage_consistency(detected_strength: str, candidate_expected_strengt
     det_nums = re.findall(r"\b\d+(?:\.\d+)?\b", norm_det)
     exp_nums = re.findall(r"\b\d+(?:\.\d+)?\b", norm_exp)
 
+    # Metric equivalence: 1 g == 1000 mg
+    if (norm_det in ["1 g", "1.0 g"] and norm_exp in ["1000 mg", "1000mg"]) or \
+       (norm_exp in ["1 g", "1.0 g"] and norm_det in ["1000 mg", "1000mg"]):
+        return True, "normalized_match"
+
+    # Known combination antibiotic formulations (e.g. 875/125 mg == 1 g Augmentin/amoxicillin-clavulanate)
+    if ("875" in det_nums and "125" in det_nums) and (norm_exp in ["1 g", "1000 mg", "875/125 mg"]):
+        return True, "normalized_match"
+    if ("875" in exp_nums and "125" in exp_nums) and (norm_det in ["1 g", "1000 mg", "875/125 mg"]):
+        return True, "normalized_match"
+
     # Check for direct discrepancy between 500 and 5
     if "500" in det_nums and "5" in exp_nums and "500" not in exp_nums:
         return False, "critical_discrepancy_500_vs_5"

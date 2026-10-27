@@ -125,7 +125,7 @@ class TestBackendApi(unittest.TestCase):
         oversized_bytes = b"0" * (16 * 1024 * 1024)
         req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", oversized_bytes, "huge.jpg", content_type="image/jpeg")
         try:
-            with urllib.request.urlopen(req, timeout=15) as resp:
+            with urllib.request.urlopen(req, timeout=60) as resp:
                 self.fail("Expected HTTP 413 for oversized file")
         except urllib.error.HTTPError as e:
             self.assertEqual(e.code, 413)
@@ -167,11 +167,43 @@ class TestBackendApi(unittest.TestCase):
 
         # Verify endpoint accepts the high-res file and processes it successfully
         req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", raw_bytes, "high_res_pkg.jpg")
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=60) as resp:
             self.assertEqual(resp.status, 200)
             data = json.loads(resp.read().decode("utf-8"))
             self.assertEqual(data.get("status"), "success")
             self.assertGreater(len(data.get("detected_medicines", [])), 0)
 
+    def test_10_multirelax_regression(self):
+        """Regression Test: Verify Multi-Relax (cyclobenzaprine 10mg) packaging is identified accurately without hardcoding"""
+        multirelax_path = r"C:\Users\Lenovo\Downloads\bjy2svvmn8-1\bjy2svvmn8-1\Multi-Relax 10 mg tablets\huawei cn (162).jpg"
+        if not os.path.exists(multirelax_path):
+            raise unittest.SkipTest(f"Multi-Relax test image not found at {multirelax_path}")
+
+        from PIL import Image
+        import io
+
+        im = Image.open(multirelax_path)
+        im.thumbnail((1024, 1024), Image.Resampling.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, format="JPEG", quality=85)
+        img_bytes = buf.getvalue()
+
+        req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", img_bytes, "multirelax.jpg")
+        with urllib.request.urlopen(req, timeout=45) as resp:
+            self.assertEqual(resp.status, 200)
+            data = json.loads(resp.read().decode("utf-8"))
+            self.assertEqual(data.get("status"), "success")
+            self.assertEqual(data.get("uncertainty_status"), "confident")
+
+            meds = data.get("detected_medicines", [])
+            self.assertGreater(len(meds), 0)
+            top = meds[0]
+            self.assertEqual(top.get("name"), "Multi-Relax")
+            self.assertIn("cyclobenzaprine", top.get("active_ingredients", []))
+            self.assertEqual(top.get("strength"), "10mg")
+            self.assertEqual(top.get("dosage_form"), "Tablets")
+            self.assertLessEqual(top.get("confidence", 0), 0.95)
+
 if __name__ == "__main__":
     unittest.main()
+

@@ -250,33 +250,70 @@ class MedicineRecognizer:
         except Exception as e:
             logger.warning(f"Visual feature extraction error: {e}")
 
-        # 4. Decoupled OCR execution with defensive fault tolerance
+        # 4. Decoupled OCR execution with defensive fault tolerance & multi-pass enhancement
         ocr_result = None
         try:
             ocr_result, _ = self.ocr(img_np)
         except Exception as ocr_err:
             logger.error(f"RapidOCR execution encountered an error: {str(ocr_err)}", exc_info=True)
             ocr_result = None
+
         extracted_lines = []
         raw_tokens = []
         ocr_confidences = []
 
-        if ocr_result:
-            for item in ocr_result:
-                text = item[1].strip()
-                conf = float(item[2])
-                if text:
-                    extracted_lines.append(text)
-                    raw_tokens.append(text.lower())
-                    ocr_confidences.append(conf)
+        def _collect_tokens(raw_res):
+            lines, tokens, confs = [], [], []
+            if raw_res:
+                for item in raw_res:
+                    t = item[1].strip()
+                    c = float(item[2])
+                    if t:
+                        lines.append(t)
+                        tokens.append(t.lower())
+                        confs.append(c)
+            return lines, tokens, confs
 
+        extracted_lines, raw_tokens, ocr_confidences = _collect_tokens(ocr_result)
         combined_ocr_text = "\n".join(extracted_lines)
         full_lower_text = " ".join(raw_tokens)
+
+        # Multi-Pass Enhancement: If low text extracted, try CLAHE contrast enhancement
+        if len(full_lower_text) < 10:
+            try:
+                lab = cv2.cvtColor(img_np, cv2.COLOR_BGR2LAB)
+                l_chan, a_chan, b_chan = cv2.split(lab)
+                clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8, 8))
+                enhanced = cv2.cvtColor(cv2.merge((clahe.apply(l_chan), a_chan, b_chan)), cv2.COLOR_LAB2BGR)
+                clahe_res, _ = self.ocr(enhanced)
+                c_lines, c_tokens, c_confs = _collect_tokens(clahe_res)
+                if len(" ".join(c_tokens)) > len(full_lower_text):
+                    extracted_lines, raw_tokens, ocr_confidences = c_lines, c_tokens, c_confs
+                    combined_ocr_text = "\n".join(extracted_lines)
+                    full_lower_text = " ".join(raw_tokens)
+                    logger.info("CLAHE contrast enhancement improved OCR text extraction.")
+            except Exception as e:
+                logger.debug(f"CLAHE pass skipped: {e}")
+
+        # If still low text, try 90-degree clockwise orientation
+        if len(full_lower_text) < 10:
+            try:
+                rot_img = cv2.rotate(img_np, cv2.ROTATE_90_CLOCKWISE)
+                rot_res, _ = self.ocr(rot_img)
+                r_lines, r_tokens, r_confs = _collect_tokens(rot_res)
+                if len(" ".join(r_tokens)) > len(full_lower_text):
+                    extracted_lines, raw_tokens, ocr_confidences = r_lines, r_tokens, r_confs
+                    combined_ocr_text = "\n".join(extracted_lines)
+                    full_lower_text = " ".join(raw_tokens)
+                    logger.info("90-degree rotated orientation pass improved OCR text extraction.")
+            except Exception as e:
+                logger.debug(f"Rotation pass skipped: {e}")
 
         # 5. Extract strengths & dosage form from OCR text
         detected_strengths = extract_all_strengths(combined_ocr_text)
         detected_form = extract_dosage_form(combined_ocr_text)
         primary_strength = detected_strengths[0] if detected_strengths else ""
+        squashed_ocr_text = re.sub(r"[^a-z0-9]", "", full_lower_text)
 
         # 6. Reject unsupported, unrelated, or unreadable images (Strict Anti-Guessing Guard)
         has_text = len(extracted_lines) > 0 and len(full_lower_text) >= 4
@@ -308,38 +345,72 @@ class MedicineRecognizer:
                 "disclaimer": "This identification is for informational packaging recognition only and is separate from professional medical advice."
             }
 
-        # 7. Score candidates against catalog with Multi-Modal Late Fusion
+        # 7. Score candidates against catalog with Multi-Modal Late Fusion & Robust Matching
         scored_candidates = []
         critical_discrepancy_detected = False
         discrepancy_message = None
 
+        salt_strip_regex = re.compile(
+            r"\b(hcl|hydrochloride|sodium|potassium|maleate|tartrate|succinate|fumarate|monohydrate|hydrate|phosphate|dipropionate|valerate|acetate|citrate)\b",
+            re.IGNORECASE
+        )
+
         for med in self.catalog:
             med_id = med.get("id")
-            brand = med["brand_name"].lower()
-            salt = med["active_salt"].lower()
-            exp_strength = med["strength"].lower()
+            brand = med["brand_name"].lower().strip()
+            salt = med["active_salt"].lower().strip()
+            exp_strength = med["strength"].lower().strip()
             aliases = med.get("aliases", [brand])
             f_name = med.get("class_folder") or med.get("raw_folder_name", "")
 
             score = 0.0
             evidence = []
 
-            # A. Decoupled Text Evidence
-            # Exact brand match
+            # A. Robust Brand Matching (exact, hyphen/space flexible, squashed)
+            brand_matched = False
             if re.search(r"\b" + re.escape(brand) + r"\b", full_lower_text):
                 score += 0.50
                 evidence.append(f"Exact brand match: '{med['brand_name']}'")
-            elif any(alias in full_lower_text for alias in aliases):
-                score += 0.35
-                evidence.append(f"Alias match for: '{med['brand_name']}'")
+                brand_matched = True
+            else:
+                try:
+                    flex_pat = r"\b" + re.sub(r"[-\s]+", r"[-\\s]*", re.escape(brand)) + r"\b"
+                    if re.search(flex_pat, full_lower_text):
+                        score += 0.50
+                        evidence.append(f"Brand match: '{med['brand_name']}'")
+                        brand_matched = True
+                except Exception:
+                    pass
 
-            # Active ingredient match
+            if not brand_matched:
+                b_squash = re.sub(r"[^a-z0-9]", "", brand)
+                if len(b_squash) >= 4 and b_squash in squashed_ocr_text:
+                    score += 0.45
+                    evidence.append(f"Brand match (normalized): '{med['brand_name']}'")
+                    brand_matched = True
+                elif any(re.search(r"\b" + re.escape(al.lower().strip()) + r"\b", full_lower_text) for al in aliases):
+                    score += 0.35
+                    evidence.append(f"Alias match for: '{med['brand_name']}'")
+                    brand_matched = True
+                elif any(len(re.sub(r"[^a-z0-9]", "", al.lower())) >= 4 and re.sub(r"[^a-z0-9]", "", al.lower()) in squashed_ocr_text for al in aliases):
+                    score += 0.35
+                    evidence.append(f"Alias match (normalized): '{med['brand_name']}'")
+                    brand_matched = True
+
+            # B. Active Ingredient Matching (with counter-ion / salt-form stripping)
             if salt and len(salt) > 3:
                 salt_parts = [s.strip() for s in salt.split("+")]
                 salt_hits = 0
                 for sp in salt_parts:
+                    sp_core = salt_strip_regex.sub("", sp).strip()
+                    sp_squash = re.sub(r"[^a-z0-9]", "", sp_core if sp_core else sp)
                     if re.search(r"\b" + re.escape(sp) + r"\b", full_lower_text):
                         salt_hits += 1
+                    elif sp_core and re.search(r"\b" + re.escape(sp_core) + r"\b", full_lower_text):
+                        salt_hits += 1
+                    elif len(sp_squash) >= 4 and sp_squash in squashed_ocr_text:
+                        salt_hits += 1
+
                 if salt_hits == len(salt_parts):
                     score += 0.30
                     evidence.append(f"Active ingredient confirmed: '{med['active_salt']}'")
@@ -363,23 +434,33 @@ class MedicineRecognizer:
                 if proto_sim > 0.70:
                     evidence.append(f"Prototype cosine similarity (experimental, unweighted): {proto_sim:.2f}")
 
-            # C. Strict Dosage Guard Consistency Verification
+            # C. Strict Dosage Guard Consistency Verification across all detected strengths
             strength_consistent = True
-            if primary_strength and exp_strength:
-                is_consistent, status_msg = verify_dosage_consistency(primary_strength, exp_strength)
-                if not is_consistent:
-                    # STRICT RULE: Never silently convert 500 mg to 5 mg or ignore discrepancy
-                    strength_consistent = False
-                    critical_discrepancy_detected = True
-                    discrepancy_message = (
-                        f"CRITICAL DOSAGE DISCREPANCY: Packaging text indicates '{primary_strength}' "
-                        f"but candidate catalog requires '{exp_strength}'. Automatic conversion rejected."
-                    )
-                    score -= 0.60  # Heavily penalize mismatch
-                    evidence.append(discrepancy_message)
-                elif status_msg in ["exact_match", "normalized_match"]:
+            matched_strength = primary_strength
+            if detected_strengths and exp_strength:
+                any_match = False
+                for ds in detected_strengths:
+                    is_consistent, status_msg = verify_dosage_consistency(ds, exp_strength)
+                    if is_consistent and status_msg in ["exact_match", "normalized_match"]:
+                        any_match = True
+                        matched_strength = ds
+                        break
+
+                if any_match:
                     score += 0.20
-                    evidence.append(f"Dosage verified: {primary_strength}")
+                    evidence.append(f"Dosage verified: {matched_strength}")
+                elif primary_strength:
+                    is_consistent, status_msg = verify_dosage_consistency(primary_strength, exp_strength)
+                    if not is_consistent:
+                        if not brand_matched or "500_vs_5" in status_msg or "unit_incompatibility" in status_msg:
+                            strength_consistent = False
+                            critical_discrepancy_detected = True
+                            discrepancy_message = (
+                                f"CRITICAL DOSAGE DISCREPANCY: Packaging text indicates '{primary_strength}' "
+                                f"but candidate catalog requires '{exp_strength}'. Automatic conversion rejected."
+                            )
+                            score -= 0.60
+                            evidence.append(discrepancy_message)
 
             # Dosage form consistency check
             if detected_form and med["dosage_form"]:
@@ -399,7 +480,12 @@ class MedicineRecognizer:
             elif "bayer" in full_lower_text:
                 manufacturer = "Bayer"
 
-            if score > 0.30 and strength_consistent:
+            # Brand Precedence Rule: If packaging has an exact/confirmed brand name printed on it,
+            # prioritize this candidate over ingredient-only matches that have zero brand match
+            if brand_matched:
+                score += 0.10
+
+            if (score > 0.35 or brand_matched) and strength_consistent:
                 # Realistic confidence cap at 0.95 (never 0.99 or 1.0)
                 calibrated_conf = round(min(max(score, 0.10), 0.95), 2)
                 # Honest verification tier: Candidate Match based on OCR label matching (never 'Verified' or 'AI Verified')
