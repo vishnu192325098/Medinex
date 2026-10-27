@@ -1,19 +1,29 @@
+
 package com.example.medinex;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
+
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FieldValue;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.UUID;
+
 public class StockPredictionActivity extends AppCompatActivity {
 
-    EditText medicineName, totalTablets, dailyUsage;
-    Button calculateBtn;
-    TextView resultText;
+    private EditText medicineName, totalTablets, dailyUsage;
+    private Button calculateBtn;
+    private TextView resultText;
+    private FirebaseDataManager dataManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,107 +36,131 @@ public class StockPredictionActivity extends AppCompatActivity {
         calculateBtn = findViewById(R.id.calculateBtn);
         resultText = findViewById(R.id.resultText);
 
-        calculateBtn.setOnClickListener(v -> {
+        dataManager = new FirebaseDataManager();
 
-            String medicine =
-                    medicineName.getText().toString();
+        calculateBtn.setOnClickListener(v -> calculateStock());
+    }
 
-            String totalStr =
-                    totalTablets.getText().toString();
+    private void calculateStock() {
+        String medicine = medicineName.getText().toString().trim();
+        String totalStr = totalTablets.getText().toString().trim();
+        String usageStr = dailyUsage.getText().toString().trim();
 
-            String usageStr =
-                    dailyUsage.getText().toString();
+        if (medicine.isEmpty() || totalStr.isEmpty() || usageStr.isEmpty()) {
+            resultText.setText("Please fill all fields.");
+            return;
+        }
 
-            if (medicine.isEmpty()
-                    || totalStr.isEmpty()
-                    || usageStr.isEmpty()) {
+        final int total;
+        final int usage;
 
-                resultText.setText(
-                        "Please fill all fields");
-                return;
-            }
+        try {
+            total = Integer.parseInt(totalStr);
+            usage = Integer.parseInt(usageStr);
+        } catch (NumberFormatException e) {
+            resultText.setText("Enter valid whole numbers.");
+            return;
+        }
 
-            int total =
-                    Integer.parseInt(totalStr);
+        if (total <= 0 || usage <= 0) {
+            resultText.setText(
+                    "Stock and daily usage must be greater than zero."
+            );
+            return;
+        }
 
-            int usage =
-                    Integer.parseInt(usageStr);
+        int daysRemaining = total / usage;
 
-            int daysRemaining =
-                    total / usage;
-            Calendar calendar = Calendar.getInstance();
-            calendar.add(Calendar.DAY_OF_YEAR, daysRemaining);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_YEAR, daysRemaining);
 
-            String refillDate =
-                    new SimpleDateFormat(
-                            "dd MMM yyyy",
-                            Locale.getDefault())
-                            .format(calendar.getTime());
+        String refillDate = new SimpleDateFormat(
+                "dd MMM yyyy",
+                Locale.getDefault()
+        ).format(calendar.getTime());
 
-            String result =
-                    "📦 MEDINEX STOCK PREDICTION REPORT\n\n" +
+        String status;
+        String urgency;
+        String recommendation;
 
-                            "💊 Medicine Name:\n" +
-                            medicine + "\n\n" +
+        if (daysRemaining <= 3) {
+            status = "CRITICAL";
+            urgency = "HIGH";
+            recommendation = "Plan a refill promptly.";
+        } else if (daysRemaining <= 7) {
+            status = "WARNING";
+            urgency = "MEDIUM";
+            recommendation = "Plan a refill soon.";
+        } else {
+            status = "SAFE";
+            urgency = "LOW";
+            recommendation = "Current stock is estimated to last longer.";
+        }
 
-                            "📦 Current Stock:\n" +
-                            total + " Tablets\n\n" +
+        String result =
+                "📦 MEDINEX STOCK PREDICTION REPORT\n\n" +
+                        "💊 Medicine Name:\n" + medicine + "\n\n" +
+                        "📦 Current Stock:\n" + total + " Tablets\n\n" +
+                        "💊 Daily Consumption:\n" + usage + " Tablets/Day\n\n" +
+                        "📅 Predicted Remaining:\n" + daysRemaining + " Days\n\n" +
+                        "🗓 Expected Exhaustion Date:\n" + refillDate + "\n\n" +
+                        "⚠ STOCK STATUS: " + status + "\n\n" +
+                        "AI Recommendation:\n" + recommendation + "\n\n" +
+                        "Refill Urgency: " + urgency + "\n\n" +
+                        "📊 STOCK ANALYSIS COMPLETE";
 
-                            "💊 Daily Consumption:\n" +
-                            usage + " Tablets/Day\n\n" +
+        resultText.setText(result);
 
-                            "📅 Predicted Remaining:\n" +
-                            daysRemaining + " Days\n\n" +
+        savePrediction(
+                medicine,
+                total,
+                usage,
+                daysRemaining,
+                refillDate,
+                status,
+                urgency,
+                recommendation
+        );
+    }
 
-                            "🗓 Expected Exhaustion Date:\n" +
-                            refillDate + "\n\n";
+    private void savePrediction(
+            String medicine,
+            int total,
+            int usage,
+            int daysRemaining,
+            String refillDate,
+            String status,
+            String urgency,
+            String recommendation
+    ) {
+        Map<String, Object> record = new HashMap<>();
+        record.put("medicineName", medicine);
+        record.put("totalTablets", total);
+        record.put("dailyUsage", usage);
+        record.put("daysRemaining", daysRemaining);
+        record.put("predictedExhaustionDate", refillDate);
+        record.put("stockStatus", status);
+        record.put("refillUrgency", urgency);
+        record.put("recommendation", recommendation);
+        record.put("createdAt", FieldValue.serverTimestamp());
 
-            if (daysRemaining <= 3) {
+        calculateBtn.setEnabled(false);
 
-                result +=
-                        "🚨 STOCK STATUS: CRITICAL\n\n" +
+        dataManager.saveRecord(
+                "stockPredictions",
+                UUID.randomUUID().toString(),
+                record,
+                (success, message) -> {
+                    calculateBtn.setEnabled(true);
 
-                                "Risk:\n" +
-                                "Medicine stock will finish very soon.\n\n" +
-
-                                "AI Recommendation:\n" +
-                                "Purchase medicine immediately.\n\n" +
-
-                                "Refill Urgency: HIGH\n";
-
-            }
-            else if (daysRemaining <= 7) {
-
-                result +=
-                        "⚠ STOCK STATUS: WARNING\n\n" +
-
-                                "Risk:\n" +
-                                "Stock running low.\n\n" +
-
-                                "AI Recommendation:\n" +
-                                "Refill within the next few days.\n\n" +
-
-                                "Refill Urgency: MEDIUM\n";
-
-            }
-            else {
-
-                result +=
-                        "✅ STOCK STATUS: SAFE\n\n" +
-
-                                "Risk:\n" +
-                                "No immediate shortage expected.\n\n" +
-
-                                "AI Recommendation:\n" +
-                                "Current stock is sufficient.\n\n" +
-
-                                "Refill Urgency: LOW\n";
-            }
-
-            result +=
-                    "\n📊 STOCK ANALYSIS COMPLETE";
-
-            resultText.setText(result);
-        });
+                    Toast.makeText(
+                            this,
+                            success
+                                    ? "Prediction saved to Firebase"
+                                    : "Saving failed: " + message,
+                            success ? Toast.LENGTH_SHORT : Toast.LENGTH_LONG
+                    ).show();
+                }
+        );
     }
 }

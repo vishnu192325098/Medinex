@@ -1,0 +1,470 @@
+{
+  "medicines": [
+    {
+      "name": "paracetamol",
+      "active_salt": "paracetamol",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, Headache, Body Pain",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "dolo",
+      "active_salt": "paracetamol",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, Body Ache",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "crocin",
+      "active_salt": "paracetamol",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, Mild Pain",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "calpol",
+      "active_salt": "paracetamol",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, High Temperature",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "ibuprofen",
+      "active_salt": "ibuprofen",
+      "category": "Fever & Pain Relief",
+      "indication": "Inflammation, Joint Pain, Fever",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "combiflam",
+      "active_salt": "ibuprofen + paracetamol",
+      "category": "Fever & Pain Relief",
+      "indication": "Severe Body Pain, Joint Pain",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "zerodol",
+      "active_salt": "aceclofenac",
+      "category": "Fever & Pain Relief",
+      "indication": "Body Ache, Joint Pain, Arthritis",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "zerodol-p",
+      "active_salt": "aceclofenac + paracetamol",
+      "category": "Fever & Pain Relief",
+      "indication": "Body Ache, Post-injury Pain, Fever",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "diclofenac",
+      "active_salt": "diclofenac",
+      "category": "Fever & Pain Relief",
+      "indication": "Severe Inflammatory Pain",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "aceclofenac",
+      "active_salt": "aceclofenac",
+      "category": "Fever & Pain Relief",
+      "indication": "Pain and Inflammation",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "naproxen",
+      "active_salt": "naproxen",
+      "category": "Fever & Pain Relief",
+      "indication": "Migraine, Joint Pain",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "cetirizine",
+      "active_salt": "cetirizine",
+      "category": "Allergy Medicine",
+      "indication": "Sneezing, Runny Nose, Allergies",
+      "recommended_timing": "Night Time"
+    },
+    {
+      "name": "levocetirizine",
+      "active_salt": "levocetirizine",
+      "category": "Allergy Medicine",
+      "indication": "Allergies, Skin Rash, Rhinitis",
+      "recommended_timing": "Night Time"
+    },
+    {
+      "name": "montek",
+      "active_salt": "montelukast",
+      "category": "Allergy & Asthma Care",
+      "indication": "Asthma, Seasonal Allergies",
+      "recommended_timing": "Night Time"
+    },
+    {
+      "name": "montek lc",
+      "active_salt": "montelukast + levocetirizine",
+      "category": "Allergy & Respiratory",
+      "indication": "Chronic Cold, Allergic Cough",
+      "recommended_timing": "Night Time"
+    },
+    {
+      "name": "fexofenadine",
+      "active_salt": "fexofenadine",
+      "category": "Allergy Medicine",
+      "indication": "Seasonal Allergies",
+      "recommended_timing": "Morning"
+    },
+    {
+      "name": "allegra",
+      "active_salt": "fexofenadine",
+      "category": "Allergy Medicine",
+      "indication": "Hives, Runny Nose, Sneezing",
+      "recommended_timing": "Morning"
+    },
+    {
+      "name": "azithromycin",
+      "active_salt": "azithromycin",
+      "category": "Antibiotic Medicine",
+      "indication": "Bacterial Throat / Respiratory Infection",
+      "recommended_timing": "Once Daily (After Food)"
+    },
+    {
+      "name": "amoxicillin",
+      "active_salt": "amoxicillin",
+      "category": "Antibiotic Medicine",
+      "indication": "Bacterial Infections",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "augmentin",
+      "active_salt": "amoxicillin + clavulanic acid",
+      "category": "Antibiotic Medicine",
+      "indication": "Severe Bacterial Infection",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "cefixime",
+      "active_salt": "cefixime",
+      "category": "Antibiotic Medicine",
+      "indication": "Typhoid, Urinary & Ear Infections",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "monocef",
+      "active_salt": "ceftriaxone",
+      "category": "Antibiotic Medicine",
+      "indication": "Bacterial Infection Control",
+      "recommended_timing": "As Directed by Doctor"
+    },
+    {
+      "name": "ofloxacin",
+      "active_salt": "ofloxacin",
+      "category": "Antibiotic Medicine",
+      "indication": "Gastrointestinal & Respiratory Infection",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "ciprofloxacin",
+      "active_salt": "ciprofloxacin",
+      "category": "Antibiotic Medicine",
+      "indication": "Bacterial Infection",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "metformin",
+      "active_salt": "metformin",
+      "category": "Diabetes Medicine",
+      "indication": "Blood Sugar Control (Type 2 Diabetes)",
+      "recommended_timing": "With Meal"
+    },
+    {
+      "name": "glycomet",
+      "active_salt": "metformin",
+      "category": "Diabetes Medicine",
+      "indication": "High Blood Sugar Management",
+      "recommended_timing": "With Meal"
+    },
+    {
+      "name": "glimepiride",
+      "active_salt": "glimepiride",
+      "category": "Diabetes Medicine",
+      "indication": "Type 2 Diabetes",
+      "recommended_timing": "Before Breakfast"
+    },
+    {
+      "name": "pantoprazole",
+      "active_salt": "pantoprazole",
+      "category": "Stomach Care Medicine",
+      "indication": "Acidity, GERD, Gastric Irritation",
+      "recommended_timing": "30 Mins Before Breakfast"
+    },
+    {
+      "name": "pantocid",
+      "active_salt": "pantoprazole",
+      "category": "Stomach Care Medicine",
+      "indication": "Acid Reflux, Ulcers",
+      "recommended_timing": "Before Breakfast"
+    },
+    {
+      "name": "omeprazole",
+      "active_salt": "omeprazole",
+      "category": "Stomach Care Medicine",
+      "indication": "Heartburn, Acid Reflux",
+      "recommended_timing": "Before Meal"
+    },
+    {
+      "name": "rabeprazole",
+      "active_salt": "rabeprazole",
+      "category": "Stomach Care Medicine",
+      "indication": "Acidity & Stomach Discomfort",
+      "recommended_timing": "Before Breakfast"
+    },
+    {
+      "name": "pan-d",
+      "active_salt": "pantoprazole + domperidone",
+      "category": "Stomach Care Medicine",
+      "indication": "Acidity with Nausea / Vomiting",
+      "recommended_timing": "Before Breakfast"
+    },
+    {
+      "name": "rantac",
+      "active_salt": "ranitidine",
+      "category": "Stomach Care Medicine",
+      "indication": "Acidity & Gas Relief",
+      "recommended_timing": "Before Food"
+    },
+    {
+      "name": "amlodipine",
+      "active_salt": "amlodipine",
+      "category": "Blood Pressure Medicine",
+      "indication": "Hypertension, High BP",
+      "recommended_timing": "Morning or Night as Advised"
+    },
+    {
+      "name": "telma",
+      "active_salt": "telmisartan",
+      "category": "Blood Pressure Medicine",
+      "indication": "High Blood Pressure & Cardiovascular Risk",
+      "recommended_timing": "Morning"
+    },
+    {
+      "name": "telmisartan",
+      "active_salt": "telmisartan",
+      "category": "Blood Pressure Medicine",
+      "indication": "Hypertension Management",
+      "recommended_timing": "Morning"
+    },
+    {
+      "name": "losartan",
+      "active_salt": "losartan",
+      "category": "Blood Pressure Medicine",
+      "indication": "High Blood Pressure",
+      "recommended_timing": "Morning"
+    },
+    {
+      "name": "atorvastatin",
+      "active_salt": "atorvastatin",
+      "category": "Cholesterol Medicine",
+      "indication": "High Cholesterol, Heart Protection",
+      "recommended_timing": "At Bedtime"
+    },
+    {
+      "name": "rosuvastatin",
+      "active_salt": "rosuvastatin",
+      "category": "Cholesterol Medicine",
+      "indication": "Cholesterol Reduction",
+      "recommended_timing": "At Bedtime"
+    },
+    {
+      "name": "aspirin",
+      "active_salt": "aspirin",
+      "category": "Heart Care & Pain Relief",
+      "indication": "Blood Thinner, Pain Relief",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "calpol 500",
+      "active_salt": "paracetamol",
+      "manufacturer": "GlaxoSmithKline Pharmaceuticals Ltd",
+      "strength": "500 mg",
+      "dosage_form": "Tablet",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, Headache, Mild to Moderate Pain",
+      "uses": "Treatment of fever and mild to moderate pain relief",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "dolo 650",
+      "active_salt": "paracetamol",
+      "manufacturer": "Micro Labs Ltd",
+      "strength": "650 mg",
+      "dosage_form": "Tablet",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, Body Ache, Headache",
+      "uses": "Treatment of fever, body ache, and pain relief",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "crocin advance",
+      "active_salt": "paracetamol",
+      "manufacturer": "GlaxoSmithKline Consumer Healthcare",
+      "strength": "500 mg",
+      "dosage_form": "Tablet",
+      "category": "Fever & Pain Relief",
+      "indication": "Fever, Headache, Mild Pain",
+      "uses": "Fast relief from fever and common aches",
+      "recommended_timing": "Morning & Night (After Food)"
+    },
+    {
+      "name": "zerodol-th",
+      "active_salt": "aceclofenac + thiocolchicoside",
+      "manufacturer": "Ipca Laboratories Ltd",
+      "strength": "100 mg / 4 mg",
+      "dosage_form": "Tablet",
+      "category": "Pain & Muscle Relaxant",
+      "indication": "Pain and Muscle Spasm, Spondylitis, Osteoarthritis",
+      "uses": "Relief of pain and inflammation associated with musculoskeletal spasms",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "thiocolchicoside",
+      "active_salt": "thiocolchicoside",
+      "manufacturer": "Generic / Various",
+      "strength": "4 mg",
+      "dosage_form": "Capsule / Tablet",
+      "category": "Muscle Relaxant",
+      "indication": "Acute Muscle Contractures, Muscle Spasms, Low Back Pain",
+      "uses": "Relief of painful muscular spasms and muscle contractures",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "myoril",
+      "active_salt": "thiocolchicoside",
+      "manufacturer": "Sanofi India Ltd",
+      "strength": "4 mg",
+      "dosage_form": "Capsule",
+      "category": "Muscle Relaxant",
+      "indication": "Muscle Spasms and Stiffness",
+      "uses": "Muscle spasm and contracture management",
+      "recommended_timing": "After Food"
+    },
+    {
+      "name": "sacubitril + valsartan",
+      "active_salt": "sacubitril + valsartan",
+      "manufacturer": "Generic / Various",
+      "strength": "50 mg / 100 mg / 200 mg",
+      "dosage_form": "Tablet",
+      "category": "Cardiovascular Medicine",
+      "indication": "Chronic Heart Failure with Reduced Ejection Fraction (HFrEF)",
+      "uses": "Reduction of cardiovascular death and heart failure hospitalization risk in adult patients with chronic heart failure",
+      "recommended_timing": "Twice Daily as Directed by Cardiologist"
+    },
+    {
+      "name": "entresto",
+      "active_salt": "sacubitril + valsartan",
+      "manufacturer": "Novartis Pharmaceuticals Corporation",
+      "strength": "24 mg / 26 mg, 49 mg / 51 mg, 97 mg / 103 mg",
+      "dosage_form": "Film Coated Tablet",
+      "category": "Cardiovascular Medicine",
+      "indication": "Heart Failure (HFrEF)",
+      "uses": "Heart failure treatment to reduce cardiovascular mortality and hospitalization",
+      "recommended_timing": "Twice Daily as Prescribed by Cardiologist"
+    },
+    {
+      "name": "azmarda",
+      "active_salt": "sacubitril + valsartan",
+      "manufacturer": "J B Chemicals and Pharmaceuticals Ltd",
+      "strength": "50 mg / 100 mg / 200 mg",
+      "dosage_form": "Tablet",
+      "category": "Cardiovascular Medicine",
+      "indication": "Heart Failure (HFrEF)",
+      "uses": "Chronic heart failure management",
+      "recommended_timing": "Twice Daily as Directed by Cardiologist"
+    },
+    {
+      "name": "cidmus",
+      "active_salt": "sacubitril + valsartan",
+      "manufacturer": "Dr Reddy's Laboratories Ltd",
+      "strength": "50 mg / 100 mg / 200 mg",
+      "dosage_form": "Tablet",
+      "category": "Cardiovascular Medicine",
+      "indication": "Heart Failure (HFrEF)",
+      "uses": "Management of symptomatic chronic heart failure",
+      "recommended_timing": "Twice Daily as Directed by Cardiologist"
+    },
+    {
+      "name": "vymada",
+      "active_salt": "sacubitril + valsartan",
+      "manufacturer": "Novartis India Ltd",
+      "strength": "50 mg / 100 mg / 200 mg",
+      "dosage_form": "Tablet",
+      "category": "Cardiovascular Medicine",
+      "indication": "Heart Failure (HFrEF)",
+      "uses": "Chronic heart failure management",
+      "recommended_timing": "Twice Daily as Directed by Cardiologist"
+    },
+    {
+      "name": "warfarin",
+      "active_salt": "warfarin",
+      "category": "Anticoagulant / Blood Thinner",
+      "indication": "Blood Clot Prevention",
+      "recommended_timing": "Same Time Daily as Directed"
+    }
+  ],
+  "interactions": [
+    {
+      "drug1": "aspirin",
+      "drug2": "warfarin",
+      "risk_level": "HIGH",
+      "description": "These medicines significantly increase internal bleeding risks.",
+      "recommendation": "Consult doctor immediately before combining blood thinners."
+    },
+    {
+      "drug1": "ibuprofen",
+      "drug2": "aspirin",
+      "risk_level": "MEDIUM",
+      "description": "Ibuprofen may reduce Aspirin's cardioprotective effect and increase stomach irritation.",
+      "recommendation": "Use with caution under medical supervision."
+    },
+    {
+      "drug1": "azithromycin",
+      "drug2": "levocetirizine",
+      "risk_level": "MEDIUM",
+      "description": "May cause enhanced drowsiness and dizziness when taken simultaneously.",
+      "recommendation": "Avoid operating heavy machinery or driving after taking both."
+    },
+    {
+      "drug1": "paracetamol",
+      "drug2": "cetirizine",
+      "risk_level": "LOW",
+      "description": "No significant adverse interaction identified.",
+      "recommendation": "Generally safe when taken as directed."
+    },
+    {
+      "drug1": "aceclofenac",
+      "drug2": "warfarin",
+      "risk_level": "HIGH",
+      "description": "Combining NSAIDs like Aceclofenac with blood thinners significantly increases gastrointestinal and systemic bleeding risks.",
+      "recommendation": "Avoid combination unless strictly monitored by your physician."
+    },
+    {
+      "drug1": "aceclofenac",
+      "drug2": "aspirin",
+      "risk_level": "MEDIUM",
+      "description": "Concurrent use increases the risk of serious gastrointestinal ulceration and reduces cardioprotective efficacy.",
+      "recommendation": "Consult a healthcare professional before taking together."
+    },
+    {
+      "drug1": "sacubitril + valsartan",
+      "drug2": "losartan",
+      "risk_level": "HIGH",
+      "description": "Dual angiotensin receptor blockade increases risk of severe hypotension, syncope, hyperkalemia, and renal impairment.",
+      "recommendation": "Do not combine ARBs with Sacubitril/Valsartan."
+    },
+    {
+      "drug1": "sacubitril + valsartan",
+      "drug2": "telmisartan",
+      "risk_level": "HIGH",
+      "description": "Dual angiotensin blockade increases risk of severe hypotension, hyperkalemia, and renal dysfunction.",
+      "recommendation": "Do not co-administer ARBs with Sacubitril/Valsartan."
+    }
+  ]
+}

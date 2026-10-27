@@ -1,8 +1,10 @@
+
 package com.example.medinex;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,16 +12,25 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class LoginActivity extends AppCompatActivity {
 
-    EditText emailInput, passwordInput;
-    Button loginBtn;
-    TextView registerText;
+    private EditText emailInput, passwordInput;
+    private Button loginBtn;
+    private TextView registerText;
+
+    private FirebaseAuth auth;
+    private FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_login);
 
         emailInput = findViewById(R.id.emailInput);
@@ -27,103 +38,128 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.loginBtn);
         registerText = findViewById(R.id.registerText);
 
-        loginBtn.setOnClickListener(v -> {
+        auth = FirebaseAuth.getInstance();
+        firestore = FirebaseFirestore.getInstance();
 
-            String username =
-                    emailInput.getText()
-                            .toString()
-                            .trim();
+        loginBtn.setOnClickListener(v -> loginUser());
 
-            String password =
-                    passwordInput.getText()
-                            .toString()
-                            .trim();
-
-            if (username.isEmpty() || password.isEmpty()) {
-
-                Toast.makeText(
+        registerText.setOnClickListener(v ->
+                startActivity(new Intent(
                         LoginActivity.this,
-                        "Please fill all fields",
-                        Toast.LENGTH_SHORT
-                ).show();
+                        RegisterActivity.class
+                ))
+        );
+    }
 
-                return;
-            }
+    private void loginUser() {
+        String email = emailInput.getText().toString().trim().toLowerCase();
+        String password = passwordInput.getText().toString();
 
-            AppDatabase db =
-                    AppDatabase.getInstance(
-                            LoginActivity.this
-                    );
+        if (email.isEmpty() || password.isEmpty()) {
+            showMessage("Please fill all fields");
+            return;
+        }
 
-            UserDao userDao = db.userDao();
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            showMessage("Please enter a valid email address");
+            return;
+        }
 
-            User user;
+        loginBtn.setEnabled(false);
 
-            if (username.contains("@")) {
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser firebaseUser = auth.getCurrentUser();
 
-                user = userDao.loginWithEmail(
-                        username,
-                        password
-                );
+                        if (firebaseUser == null) {
+                            loginBtn.setEnabled(true);
+                            showMessage("Unable to load your account");
+                            return;
+                        }
 
-            } else {
+                        String uid = firebaseUser.getUid();
 
-                user = userDao.loginWithPhone(
-                        username,
-                        password
-                );
-            }
+                        firestore.collection("users")
+                                .document(uid)
+                                .get()
+                                .addOnCompleteListener(profileTask -> {
+                                    loginBtn.setEnabled(true);
 
-            if (user != null) {
+                                    String name = null;
+                                    String phone = null;
 
-                SharedPreferences prefs =
-                        getSharedPreferences(
-                                "MedinexUser",
-                                MODE_PRIVATE
-                        );
+                                    if (profileTask.isSuccessful() && profileTask.getResult() != null) {
+                                        if (profileTask.getResult().exists()) {
+                                            name = profileTask.getResult().getString("name");
+                                            phone = profileTask.getResult().getString("phone");
+                                        } else {
+                                            // Document does not exist in Firestore yet: create it gracefully
+                                            String fallbackName = firebaseUser.getDisplayName();
+                                            if (fallbackName == null || fallbackName.trim().isEmpty()) {
+                                                fallbackName = email.contains("@") ? email.split("@")[0] : email;
+                                            }
+                                            Map<String, Object> autoProfile = new HashMap<>();
+                                            autoProfile.put("uid", uid);
+                                            autoProfile.put("name", fallbackName);
+                                            autoProfile.put("email", email);
+                                            autoProfile.put("phone", "");
+                                            autoProfile.put("createdAt", com.google.firebase.firestore.FieldValue.serverTimestamp());
+                                            firestore.collection("users").document(uid).set(autoProfile);
+                                            name = fallbackName;
+                                        }
+                                    }
 
-                prefs.edit()
-                        .putBoolean("isLoggedIn", true)
-                        .putString("userName", user.getName())
-                        .putString("userEmail", user.getEmail())
-                        .putString("userPhone", user.getPhone())
-                        .apply();
+                                    if (name == null || name.trim().isEmpty()) {
+                                        name = firebaseUser.getDisplayName();
+                                    }
 
-                Toast.makeText(
-                        LoginActivity.this,
-                        "Welcome " + user.getName(),
-                        Toast.LENGTH_SHORT
-                ).show();
+                                    if (name == null || name.trim().isEmpty()) {
+                                        name = email.contains("@") ? email.split("@")[0] : email;
+                                    }
 
-                Intent intent =
-                        new Intent(
-                                LoginActivity.this,
-                                DashboardActivity.class
-                        );
+                                    SharedPreferences prefs =
+                                            getSharedPreferences(
+                                                    "MedinexUser",
+                                                    MODE_PRIVATE
+                                            );
 
-                startActivity(intent);
+                                    prefs.edit()
+                                            .putBoolean("isLoggedIn", true)
+                                            .putString("userId", uid)
+                                            .putString("userName", name)
+                                            .putString("userEmail", email)
+                                            .putString("userPhone",
+                                                    phone == null ? "" : phone)
+                                            .apply();
 
-                finish();
+                                    Toast.makeText(
+                                            LoginActivity.this,
+                                            "Welcome " + name,
+                                            Toast.LENGTH_SHORT
+                                    ).show();
 
-            } else {
+                                    Intent intent = new Intent(
+                                            LoginActivity.this,
+                                            DashboardActivity.class
+                                    );
 
-                Toast.makeText(
-                        LoginActivity.this,
-                        "Invalid Email/Phone or Password",
-                        Toast.LENGTH_LONG
-                ).show();
-            }
-        });
+                                    startActivity(intent);
+                                    finish();
+                                });
 
-        registerText.setOnClickListener(v -> {
+                    } else {
+                        loginBtn.setEnabled(true);
+                        String message = task.getException() != null
+                                ? task.getException().getMessage()
+                                : "Login failed";
 
-            Intent intent =
-                    new Intent(
-                            LoginActivity.this,
-                            RegisterActivity.class
-                    );
+                        showMessage(message);
+                    }
+                });
+    }
 
-            startActivity(intent);
-        });
+    private void showMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 }

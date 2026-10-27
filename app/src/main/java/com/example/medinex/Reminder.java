@@ -16,4 +16,10 @@ public class Reminder {
     public String status;
 
     public String triggeredAt;
+
+    public String userId;
+
+    public String firestoreId;
+
+    public long scheduledTimeMillis;
 }

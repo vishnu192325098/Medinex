@@ -1,0 +1,2402 @@
+[
+  {
+    "id": 1,
+    "brand_name": "Acretin",
+    "raw_folder_name": "Acretin 0.05% 30 g cream",
+    "dose_spec": "0.05%",
+    "strength": "0.05%",
+    "dosage_form": "Cream",
+    "active_salt": "tretinoin",
+    "category": "Dermatology / Acne",
+    "route": "Topical",
+    "aliases": [
+      "acretin",
+      "acretin",
+      "acretin"
+    ]
+  },
+  {
+    "id": 2,
+    "brand_name": "Adol",
+    "raw_folder_name": "Adol 500 mg 24 caplets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Caplets",
+    "active_salt": "paracetamol",
+    "category": "Analgesic / Antipyretic",
+    "route": "Oral",
+    "aliases": [
+      "adol",
+      "adol",
+      "adol"
+    ]
+  },
+  {
+    "id": 3,
+    "brand_name": "Aggrex",
+    "raw_folder_name": "Aggrex 75 mg 60 tablets",
+    "dose_spec": "75 mg",
+    "strength": "75 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "aspirin",
+    "category": "Antiplatelet / Cardiovascular",
+    "route": "Oral",
+    "aliases": [
+      "aggrex",
+      "aggrex",
+      "aggrex"
+    ]
+  },
+  {
+    "id": 4,
+    "brand_name": "Airoplast",
+    "raw_folder_name": "Airoplast 5 cm Tape",
+    "dose_spec": "5 cm",
+    "strength": "",
+    "dosage_form": "Tape",
+    "active_salt": "surgical tape",
+    "category": "First Aid / Wound Care",
+    "route": "Topical",
+    "aliases": [
+      "airoplast",
+      "airoplast",
+      "airoplast"
+    ]
+  },
+  {
+    "id": 5,
+    "brand_name": "All-Vent",
+    "raw_folder_name": "All-Vent 125 ml syrup",
+    "dose_spec": "125 ml",
+    "strength": "125 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "bromhexine + guaifenesin",
+    "category": "Cough & Cold / Expectorant",
+    "route": "Oral",
+    "aliases": [
+      "all-vent",
+      "all vent",
+      "all-vent"
+    ]
+  },
+  {
+    "id": 6,
+    "brand_name": "Alphintern",
+    "raw_folder_name": "Alphintern 30 tablets",
+    "dose_spec": "30",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "chymotrypsin + trypsin",
+    "category": "Anti-inflammatory / Antiedema",
+    "route": "Oral",
+    "aliases": [
+      "alphintern",
+      "alphintern",
+      "alphintern"
+    ]
+  },
+  {
+    "id": 7,
+    "brand_name": "Ambezim-G",
+    "raw_folder_name": "Ambezim-G 30 tablets",
+    "dose_spec": "30",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "chymotrypsin + trypsin",
+    "category": "Anti-inflammatory",
+    "route": "Oral",
+    "aliases": [
+      "ambezim-g",
+      "ambezim g",
+      "ambezim-g"
+    ]
+  },
+  {
+    "id": 8,
+    "brand_name": "Amrizole",
+    "raw_folder_name": "Amrizole 500 mg 20 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "metronidazole",
+    "category": "Antibiotic / Antiprotozoal",
+    "route": "Oral",
+    "aliases": [
+      "amrizole",
+      "amrizole",
+      "amrizole"
+    ]
+  },
+  {
+    "id": 9,
+    "brand_name": "Antopral",
+    "raw_folder_name": "Antopral 40 mg 14 tablets",
+    "dose_spec": "40 mg",
+    "strength": "40 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "pantoprazole",
+    "category": "Gastric Care / Proton Pump Inhibitor",
+    "route": "Oral",
+    "aliases": [
+      "antopral",
+      "antopral",
+      "antopral"
+    ]
+  },
+  {
+    "id": 10,
+    "brand_name": "Anuva",
+    "raw_folder_name": "Anuva 50 mg 10 tablets",
+    "dose_spec": "50 mg",
+    "strength": "50 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "diclofenac potassium",
+    "category": "NSAID / Pain Relief",
+    "route": "Oral",
+    "aliases": [
+      "anuva",
+      "anuva",
+      "anuva"
+    ]
+  },
+  {
+    "id": 11,
+    "brand_name": "Apidone",
+    "raw_folder_name": "Apidone syrup",
+    "dose_spec": "syrup",
+    "strength": "",
+    "dosage_form": "Medication Package",
+    "active_salt": "dexamethasone + chlorpheniramine",
+    "category": "Antiallergic / Anti-inflammatory",
+    "route": "Oral",
+    "aliases": [
+      "apidone",
+      "apidone",
+      "apidone"
+    ]
+  },
+  {
+    "id": 12,
+    "brand_name": "Asmakast",
+    "raw_folder_name": "Asmakast 10 mg 30 tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "montelukast",
+    "category": "Antiasthmatic / Leukotriene Antagonist",
+    "route": "Oral",
+    "aliases": [
+      "asmakast",
+      "asmakast",
+      "asmakast"
+    ]
+  },
+  {
+    "id": 13,
+    "brand_name": "Atoreza",
+    "raw_folder_name": "Atoreza 10/10 mg 28 tablets",
+    "dose_spec": "10/10 mg",
+    "strength": "10/10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "atorvastatin + ezetimibe",
+    "category": "Cholesterol / Lipid Lowering",
+    "route": "Oral",
+    "aliases": [
+      "atoreza",
+      "atoreza",
+      "atoreza"
+    ]
+  },
+  {
+    "id": 14,
+    "brand_name": "Augmentin",
+    "raw_folder_name": "Augmentin 1 g 14 tablets",
+    "dose_spec": "1 g",
+    "strength": "1 g",
+    "dosage_form": "Tablets",
+    "active_salt": "amoxicillin + clavulanic acid",
+    "category": "Antibiotic / Penicillin",
+    "route": "Oral",
+    "aliases": [
+      "augmentin",
+      "augmentin",
+      "augmentin"
+    ]
+  },
+  {
+    "id": 15,
+    "brand_name": "Avosoya",
+    "raw_folder_name": "Avosoya 300 mg 30 capsules",
+    "dose_spec": "300 mg",
+    "strength": "300 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "avocado + soybean unsaponifiables",
+    "category": "Osteoarthritis / Joint Care",
+    "route": "Oral",
+    "aliases": [
+      "avosoya",
+      "avosoya",
+      "avosoya"
+    ]
+  },
+  {
+    "id": 16,
+    "brand_name": "B.B.C.",
+    "raw_folder_name": "B.B.C. 25 ml spray solution",
+    "dose_spec": "25 ml",
+    "strength": "25 ml",
+    "dosage_form": "Spray solution",
+    "active_salt": "benzocaine + benzydamine",
+    "category": "Oral Antiseptic & Analgesic Spray",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "b.b.c.",
+      "b.b.c.",
+      "b.b.c."
+    ]
+  },
+  {
+    "id": 17,
+    "brand_name": "Benogen",
+    "raw_folder_name": "Benogen 10 sachets",
+    "dose_spec": "10",
+    "strength": "",
+    "dosage_form": "Sachets",
+    "active_salt": "collagen + vitamin c",
+    "category": "Joint & Cartilage Support",
+    "route": "Oral",
+    "aliases": [
+      "benogen",
+      "benogen",
+      "benogen"
+    ]
+  },
+  {
+    "id": 18,
+    "brand_name": "Betaderm",
+    "raw_folder_name": "Betaderm 30 gm cream",
+    "dose_spec": "30  gm",
+    "strength": "30  gm",
+    "dosage_form": "Cream",
+    "active_salt": "betamethasone",
+    "category": "Corticosteroid / Topical",
+    "route": "Topical",
+    "aliases": [
+      "betaderm",
+      "betaderm",
+      "betaderm"
+    ]
+  },
+  {
+    "id": 19,
+    "brand_name": "Betadine",
+    "raw_folder_name": "Betadine 120 ml solution",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Solution",
+    "active_salt": "povidone iodine",
+    "category": "Antiseptic & Disinfectant",
+    "route": "Topical",
+    "aliases": [
+      "betadine",
+      "betadine",
+      "betadine"
+    ]
+  },
+  {
+    "id": 20,
+    "brand_name": "Betadine",
+    "raw_folder_name": "Betadine 10% 60 g ointment",
+    "dose_spec": "10%",
+    "strength": "10%",
+    "dosage_form": "Ointment",
+    "active_salt": "povidone iodine",
+    "category": "Antiseptic & Disinfectant",
+    "route": "Topical",
+    "aliases": [
+      "betadine",
+      "betadine",
+      "betadine"
+    ]
+  },
+  {
+    "id": 21,
+    "brand_name": "Betadine",
+    "raw_folder_name": "Betadine 120 ml mouth wash",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Mouth wash",
+    "active_salt": "povidone iodine",
+    "category": "Antiseptic & Disinfectant",
+    "route": "Topical",
+    "aliases": [
+      "betadine",
+      "betadine",
+      "betadine"
+    ]
+  },
+  {
+    "id": 22,
+    "brand_name": "Bivatracin",
+    "raw_folder_name": "Bivatracin 150 ml spray",
+    "dose_spec": "150 ml",
+    "strength": "150 ml",
+    "dosage_form": "Spray",
+    "active_salt": "neomycin + bacitracin",
+    "category": "Topical Antibiotic Spray",
+    "route": "Topical",
+    "aliases": [
+      "bivatracin",
+      "bivatracin",
+      "bivatracin"
+    ]
+  },
+  {
+    "id": 23,
+    "brand_name": "Bronchicum Elixir",
+    "raw_folder_name": "Bronchicum Elixir 100 ml",
+    "dose_spec": "100 ml",
+    "strength": "100 ml",
+    "dosage_form": "Medication Package",
+    "active_salt": "thyme extract + primula root",
+    "category": "Herbal Cough Expectorant",
+    "route": "Oral",
+    "aliases": [
+      "bronchicum elixir",
+      "bronchicum elixir",
+      "bronchicumelixir"
+    ]
+  },
+  {
+    "id": 24,
+    "brand_name": "Bronchopro",
+    "raw_folder_name": "Bronchopro 100 ml syrup",
+    "dose_spec": "100 ml",
+    "strength": "100 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "ambroxol",
+    "category": "Mucolytic / Bronchial Care",
+    "route": "Oral",
+    "aliases": [
+      "bronchopro",
+      "bronchopro",
+      "bronchopro"
+    ]
+  },
+  {
+    "id": 25,
+    "brand_name": "Brufen",
+    "raw_folder_name": "Brufen 400 mg 30 tablets",
+    "dose_spec": "400 mg",
+    "strength": "400 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "ibuprofen",
+    "category": "NSAID / Pain & Fever Relief",
+    "route": "Oral",
+    "aliases": [
+      "brufen",
+      "brufen",
+      "brufen"
+    ]
+  },
+  {
+    "id": 26,
+    "brand_name": "Brufen",
+    "raw_folder_name": "Brufen 100 mg/5 ml 150 ml syrup",
+    "dose_spec": "100 mg/5 ml",
+    "strength": "100 mg/5 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "ibuprofen",
+    "category": "NSAID / Pain & Fever Relief",
+    "route": "Oral",
+    "aliases": [
+      "brufen",
+      "brufen",
+      "brufen"
+    ]
+  },
+  {
+    "id": 27,
+    "brand_name": "C Zinc",
+    "raw_folder_name": "C Zinc 30 capsules",
+    "dose_spec": "30",
+    "strength": "",
+    "dosage_form": "Capsules",
+    "active_salt": "vitamin c + zinc",
+    "category": "Immune Support & Antioxidant",
+    "route": "Oral",
+    "aliases": [
+      "c zinc",
+      "c zinc",
+      "czinc"
+    ]
+  },
+  {
+    "id": 28,
+    "brand_name": "Candalkan Plus",
+    "raw_folder_name": "Candalkan Plus 16/12.5 mg 14 tablets",
+    "dose_spec": "16/12.5 mg",
+    "strength": "16/12.5 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "candesartan + hydrochlorothiazide",
+    "category": "Antihypertensive",
+    "route": "Oral",
+    "aliases": [
+      "candalkan plus",
+      "candalkan plus",
+      "candalkanplus"
+    ]
+  },
+  {
+    "id": 29,
+    "brand_name": "Carbamide",
+    "raw_folder_name": "Carbamide 30 g cream",
+    "dose_spec": "30 g",
+    "strength": "30 g",
+    "dosage_form": "Cream",
+    "active_salt": "urea",
+    "category": "Emollient / Keratolytic Cream",
+    "route": "Topical",
+    "aliases": [
+      "carbamide",
+      "carbamide",
+      "carbamide"
+    ]
+  },
+  {
+    "id": 30,
+    "brand_name": "Catafast",
+    "raw_folder_name": "Catafast 50 mg 9 sachets",
+    "dose_spec": "50 mg",
+    "strength": "50 mg",
+    "dosage_form": "Sachets",
+    "active_salt": "diclofenac potassium",
+    "category": "Rapid Pain Relief / NSAID",
+    "route": "Oral",
+    "aliases": [
+      "catafast",
+      "catafast",
+      "catafast"
+    ]
+  },
+  {
+    "id": 31,
+    "brand_name": "Cataflam",
+    "raw_folder_name": "Cataflam 50 mg 20 tablets",
+    "dose_spec": "50 mg",
+    "strength": "50 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "diclofenac potassium",
+    "category": "NSAID / Anti-inflammatory",
+    "route": "Oral",
+    "aliases": [
+      "cataflam",
+      "cataflam",
+      "cataflam"
+    ]
+  },
+  {
+    "id": 32,
+    "brand_name": "Ceftriaxone",
+    "raw_folder_name": "Ceftriaxone 1000 mg 1 Vial",
+    "dose_spec": "1000 mg",
+    "strength": "1000 mg",
+    "dosage_form": "Vial",
+    "active_salt": "ceftriaxone",
+    "category": "Cephalosporin Antibiotic",
+    "route": "Injectable",
+    "aliases": [
+      "ceftriaxone",
+      "ceftriaxone",
+      "ceftriaxone"
+    ]
+  },
+  {
+    "id": 33,
+    "brand_name": "Celebrex",
+    "raw_folder_name": "Celebrex 200 mg 15 capsules",
+    "dose_spec": "200 mg",
+    "strength": "200 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "celecoxib",
+    "category": "COX-2 Selective NSAID",
+    "route": "Oral",
+    "aliases": [
+      "celebrex",
+      "celebrex",
+      "celebrex"
+    ]
+  },
+  {
+    "id": 34,
+    "brand_name": "Cemicresto",
+    "raw_folder_name": "Cemicresto 10 mg 28 tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "rosuvastatin",
+    "category": "Cardiovascular / Statin",
+    "route": "Oral",
+    "aliases": [
+      "cemicresto",
+      "cemicresto",
+      "cemicresto"
+    ]
+  },
+  {
+    "id": 35,
+    "brand_name": "Cetal",
+    "raw_folder_name": "Cetal 250 mg/5 ml 60 ml oral suspension",
+    "dose_spec": "250 mg/5 ml",
+    "strength": "250 mg/5 ml",
+    "dosage_form": "Oral suspension",
+    "active_salt": "paracetamol",
+    "category": "Analgesic & Antipyretic",
+    "route": "Oral",
+    "aliases": [
+      "cetal",
+      "cetal",
+      "cetal"
+    ]
+  },
+  {
+    "id": 36,
+    "brand_name": "Cetal Sinus",
+    "raw_folder_name": "Cetal Sinus 20 capsules",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Capsules",
+    "active_salt": "paracetamol + pseudoephedrine",
+    "category": "Sinus & Decongestant",
+    "route": "Oral",
+    "aliases": [
+      "cetal sinus",
+      "cetal sinus",
+      "cetalsinus"
+    ]
+  },
+  {
+    "id": 37,
+    "brand_name": "Cholerose",
+    "raw_folder_name": "Cholerose 10 mg 21 tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "rosuvastatin",
+    "category": "Cholesterol Lowering",
+    "route": "Oral",
+    "aliases": [
+      "cholerose",
+      "cholerose",
+      "cholerose"
+    ]
+  },
+  {
+    "id": 38,
+    "brand_name": "Choletimb",
+    "raw_folder_name": "Choletimb 10 mg 14 tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "ezetimibe",
+    "category": "Lipid Lowering",
+    "route": "Oral",
+    "aliases": [
+      "choletimb",
+      "choletimb",
+      "choletimb"
+    ]
+  },
+  {
+    "id": 39,
+    "brand_name": "Ciprodiazole",
+    "raw_folder_name": "Ciprodiazole 20 tablets",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "ciprofloxacin + metronidazole",
+    "category": "Broad-spectrum Antibacterial",
+    "route": "Oral",
+    "aliases": [
+      "ciprodiazole",
+      "ciprodiazole",
+      "ciprodiazole"
+    ]
+  },
+  {
+    "id": 40,
+    "brand_name": "Ciprofar",
+    "raw_folder_name": "Ciprofar 500 mg 10 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "ciprofloxacin",
+    "category": "Fluoroquinolone Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "ciprofar",
+      "ciprofar",
+      "ciprofar"
+    ]
+  },
+  {
+    "id": 41,
+    "brand_name": "Ciprofloxacin Tablets USP 39",
+    "raw_folder_name": "Ciprofloxacin Tablets USP 39 500 mg 10 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "ciprofloxacin",
+    "category": "Fluoroquinolone Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "ciprofloxacin tablets usp 39",
+      "ciprofloxacin tablets usp 39",
+      "ciprofloxacintabletsusp39"
+    ]
+  },
+  {
+    "id": 42,
+    "brand_name": "Clarinase",
+    "raw_folder_name": "Clarinase 14 repetabs",
+    "dose_spec": "14",
+    "strength": "",
+    "dosage_form": "Repetabs",
+    "active_salt": "loratadine + pseudoephedrine",
+    "category": "Antihistamine & Decongestant",
+    "route": "Oral",
+    "aliases": [
+      "clarinase",
+      "clarinase",
+      "clarinase"
+    ]
+  },
+  {
+    "id": 43,
+    "brand_name": "Claritine",
+    "raw_folder_name": "Claritine 20 tablets",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "loratadine",
+    "category": "Second-generation Antihistamine",
+    "route": "Oral",
+    "aliases": [
+      "claritine",
+      "claritine",
+      "claritine"
+    ]
+  },
+  {
+    "id": 44,
+    "brand_name": "Clindasol",
+    "raw_folder_name": "Clindasol 1% 20 g gel",
+    "dose_spec": "1%",
+    "strength": "1%",
+    "dosage_form": "Gel",
+    "active_salt": "clindamycin",
+    "category": "Topical Antibacterial Gel",
+    "route": "Topical",
+    "aliases": [
+      "clindasol",
+      "clindasol",
+      "clindasol"
+    ]
+  },
+  {
+    "id": 45,
+    "brand_name": "Comfort Massage Gel",
+    "raw_folder_name": "Comfort Massage Gel 50 gm gel",
+    "dose_spec": "50 gm",
+    "strength": "50 gm",
+    "dosage_form": "Gel",
+    "active_salt": "menthol + camphor",
+    "category": "Topical Pain Relief Gel",
+    "route": "Topical",
+    "aliases": [
+      "comfort massage gel",
+      "comfort massage gel",
+      "comfortmassagegel"
+    ]
+  },
+  {
+    "id": 46,
+    "brand_name": "Congestal",
+    "raw_folder_name": "Congestal 20 tablets",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "paracetamol + chlorpheniramine + pseudoephedrine",
+    "category": "Cold & Flu Treatment",
+    "route": "Oral",
+    "aliases": [
+      "congestal",
+      "congestal",
+      "congestal"
+    ]
+  },
+  {
+    "id": 47,
+    "brand_name": "Conta-flu",
+    "raw_folder_name": "Conta-flu 20 tablets",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "paracetamol + pseudoephedrine",
+    "category": "Flu Relief",
+    "route": "Oral",
+    "aliases": [
+      "conta-flu",
+      "conta flu",
+      "conta-flu"
+    ]
+  },
+  {
+    "id": 48,
+    "brand_name": "Corasore",
+    "raw_folder_name": "Corasore 25 oral drops",
+    "dose_spec": "25",
+    "strength": "",
+    "dosage_form": "Oral drops",
+    "active_salt": "heptaminol",
+    "category": "Cardiovascular / Hypotension Support",
+    "route": "Oral",
+    "aliases": [
+      "corasore",
+      "corasore",
+      "corasore"
+    ]
+  },
+  {
+    "id": 49,
+    "brand_name": "C-Retard",
+    "raw_folder_name": "C-Retard 500 mg 10 capsules",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "vitamin c",
+    "category": "Vitamin C Supplement",
+    "route": "Oral",
+    "aliases": [
+      "c-retard",
+      "c retard",
+      "c-retard"
+    ]
+  },
+  {
+    "id": 50,
+    "brand_name": "C-vit",
+    "raw_folder_name": "C-vit 15 ml oral drops",
+    "dose_spec": "15 ml",
+    "strength": "15 ml",
+    "dosage_form": "Oral drops",
+    "active_salt": "ascorbic acid",
+    "category": "Vitamin C Drops",
+    "route": "Oral",
+    "aliases": [
+      "c-vit",
+      "c vit",
+      "c-vit"
+    ]
+  },
+  {
+    "id": 51,
+    "brand_name": "Daflon",
+    "raw_folder_name": "Daflon 500 mg 30 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "purified flavonoid fraction",
+    "category": "Venotonic / Vascular Protection",
+    "route": "Oral",
+    "aliases": [
+      "daflon",
+      "daflon",
+      "daflon"
+    ]
+  },
+  {
+    "id": 52,
+    "brand_name": "Daktarin",
+    "raw_folder_name": "Daktarin 40 g gel oral",
+    "dose_spec": "40 g",
+    "strength": "40 g",
+    "dosage_form": "Gel oral",
+    "active_salt": "miconazole",
+    "category": "Antifungal Oral Gel",
+    "route": "Oral",
+    "aliases": [
+      "daktarin",
+      "daktarin",
+      "daktarin"
+    ]
+  },
+  {
+    "id": 53,
+    "brand_name": "Dalacin C",
+    "raw_folder_name": "Dalacin C 300 mg 10 capsules",
+    "dose_spec": "300 mg",
+    "strength": "300 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "clindamycin",
+    "category": "Lincosamide Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "dalacin c",
+      "dalacin c",
+      "dalacinc"
+    ]
+  },
+  {
+    "id": 54,
+    "brand_name": "Davalindi",
+    "raw_folder_name": "Davalindi 1000 IU 100 tablets",
+    "dose_spec": "1000 IU",
+    "strength": "1000 IU",
+    "dosage_form": "Tablets",
+    "active_salt": "cholecalciferol (vitamin d3)",
+    "category": "Vitamin D3 Supplement",
+    "route": "Oral",
+    "aliases": [
+      "davalindi",
+      "davalindi",
+      "davalindi"
+    ]
+  },
+  {
+    "id": 55,
+    "brand_name": "Dentinox",
+    "raw_folder_name": "Dentinox colic drops",
+    "dose_spec": "colic drops",
+    "strength": "",
+    "dosage_form": "Medication Package",
+    "active_salt": "activated dimethicone",
+    "category": "Infant Colic Relief",
+    "route": "Oral",
+    "aliases": [
+      "dentinox",
+      "dentinox",
+      "dentinox"
+    ]
+  },
+  {
+    "id": 56,
+    "brand_name": "Diclac",
+    "raw_folder_name": "Diclac 5% 30 gm gel",
+    "dose_spec": "5%",
+    "strength": "5%",
+    "dosage_form": "Gel",
+    "active_salt": "diclofenac sodium",
+    "category": "NSAID / Anti-inflammatory",
+    "route": "Topical",
+    "aliases": [
+      "diclac",
+      "diclac",
+      "diclac"
+    ]
+  },
+  {
+    "id": 57,
+    "brand_name": "Diclac 75 ID",
+    "raw_folder_name": "Diclac 75 ID 75 mg 20 tablets",
+    "dose_spec": "75 mg",
+    "strength": "75 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "diclofenac sodium",
+    "category": "NSAID Prolonged Release",
+    "route": "Oral",
+    "aliases": [
+      "diclac 75 id",
+      "diclac 75 id",
+      "diclac75id"
+    ]
+  },
+  {
+    "id": 58,
+    "brand_name": "Diflucan",
+    "raw_folder_name": "Diflucan 50 mg 7 capsules",
+    "dose_spec": "50 mg",
+    "strength": "50 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "fluconazole",
+    "category": "Antifungal Medication",
+    "route": "Oral",
+    "aliases": [
+      "diflucan",
+      "diflucan",
+      "diflucan"
+    ]
+  },
+  {
+    "id": 59,
+    "brand_name": "Diflucan",
+    "raw_folder_name": "Diflucan 150 mg 1 capsule",
+    "dose_spec": "150 mg",
+    "strength": "150 mg",
+    "dosage_form": "Capsule",
+    "active_salt": "fluconazole",
+    "category": "Antifungal Medication",
+    "route": "Oral",
+    "aliases": [
+      "diflucan",
+      "diflucan",
+      "diflucan"
+    ]
+  },
+  {
+    "id": 60,
+    "brand_name": "Ectomethrin",
+    "raw_folder_name": "Ectomethrin 5% 50 ml emulsion",
+    "dose_spec": "5%",
+    "strength": "5%",
+    "dosage_form": "Emulsion",
+    "active_salt": "permethrin",
+    "category": "Antiparasitic / Scabicide",
+    "route": "Topical",
+    "aliases": [
+      "ectomethrin",
+      "ectomethrin",
+      "ectomethrin"
+    ]
+  },
+  {
+    "id": 61,
+    "brand_name": "Enrich",
+    "raw_folder_name": "Enrich 30 ml oral drops",
+    "dose_spec": "30 ml",
+    "strength": "30 ml",
+    "dosage_form": "Oral drops",
+    "active_salt": "iron + folic acid",
+    "category": "Hematinic / Iron Supplement",
+    "route": "Oral",
+    "aliases": [
+      "enrich",
+      "enrich",
+      "enrich"
+    ]
+  },
+  {
+    "id": 62,
+    "brand_name": "Enrich",
+    "raw_folder_name": "Enrich 100 ml syrup",
+    "dose_spec": "100 ml",
+    "strength": "100 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "iron + folic acid",
+    "category": "Hematinic / Iron Supplement",
+    "route": "Oral",
+    "aliases": [
+      "enrich",
+      "enrich",
+      "enrich"
+    ]
+  },
+  {
+    "id": 63,
+    "brand_name": "Ezamol-C",
+    "raw_folder_name": "Ezamol-C 20 tablets",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "paracetamol + vitamin c + caffeine",
+    "category": "Analgesic & Flu Care",
+    "route": "Oral",
+    "aliases": [
+      "ezamol-c",
+      "ezamol c",
+      "ezamol-c"
+    ]
+  },
+  {
+    "id": 64,
+    "brand_name": "Farcolin",
+    "raw_folder_name": "Farcolin 120 ml syrup",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "salbutamol",
+    "category": "Bronchodilator / Respiratory",
+    "route": "Oral",
+    "aliases": [
+      "farcolin",
+      "farcolin",
+      "farcolin"
+    ]
+  },
+  {
+    "id": 65,
+    "brand_name": "Fenistil",
+    "raw_folder_name": "Fenistil 15 ml oral drops",
+    "dose_spec": "15 ml",
+    "strength": "15 ml",
+    "dosage_form": "Oral drops",
+    "active_salt": "dimetindene maleate",
+    "category": "Antiallergic Drops",
+    "route": "Oral",
+    "aliases": [
+      "fenistil",
+      "fenistil",
+      "fenistil"
+    ]
+  },
+  {
+    "id": 66,
+    "brand_name": "Feroglobin",
+    "raw_folder_name": "Feroglobin capsules",
+    "dose_spec": "capsules",
+    "strength": "",
+    "dosage_form": "Medication Package",
+    "active_salt": "iron + zinc + b-complex",
+    "category": "Hematinic Nutritional Care",
+    "route": "Oral",
+    "aliases": [
+      "feroglobin",
+      "feroglobin",
+      "feroglobin"
+    ]
+  },
+  {
+    "id": 67,
+    "brand_name": "Ferrofol",
+    "raw_folder_name": "Ferrofol 30 spansules",
+    "dose_spec": "30",
+    "strength": "",
+    "dosage_form": "Spansules",
+    "active_salt": "ferrous sulfate + folic acid",
+    "category": "Iron Deficiency Supplement",
+    "route": "Oral",
+    "aliases": [
+      "ferrofol",
+      "ferrofol",
+      "ferrofol"
+    ]
+  },
+  {
+    "id": 68,
+    "brand_name": "Flagyl",
+    "raw_folder_name": "Flagyl 500 mg 20 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "metronidazole",
+    "category": "Antibacterial & Antiprotozoal",
+    "route": "Oral",
+    "aliases": [
+      "flagyl",
+      "flagyl",
+      "flagyl"
+    ]
+  },
+  {
+    "id": 69,
+    "brand_name": "Flector EP",
+    "raw_folder_name": "Flector EP 25 gm gel",
+    "dose_spec": "25  gm",
+    "strength": "25  gm",
+    "dosage_form": "Gel",
+    "active_salt": "diclofenac epolamine",
+    "category": "Topical Anti-inflammatory Gel",
+    "route": "Topical",
+    "aliases": [
+      "flector ep",
+      "flector ep",
+      "flectorep"
+    ]
+  },
+  {
+    "id": 70,
+    "brand_name": "Flix",
+    "raw_folder_name": "Flix 16 g nasal spray",
+    "dose_spec": "16 g",
+    "strength": "16 g",
+    "dosage_form": "Nasal spray",
+    "active_salt": "fluticasone propionate",
+    "category": "Nasal Corticosteroid Spray",
+    "route": "Nasal",
+    "aliases": [
+      "flix",
+      "flix",
+      "flix"
+    ]
+  },
+  {
+    "id": 71,
+    "brand_name": "Floxabact",
+    "raw_folder_name": "Floxabact 500 mg 10 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "ciprofloxacin",
+    "category": "Fluoroquinolone Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "floxabact",
+      "floxabact",
+      "floxabact"
+    ]
+  },
+  {
+    "id": 72,
+    "brand_name": "Flumox",
+    "raw_folder_name": "Flumox 500 16 capsules",
+    "dose_spec": "500",
+    "strength": "",
+    "dosage_form": "Capsules",
+    "active_salt": "amoxicillin + flucloxacillin",
+    "category": "Dual Penicillin Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "flumox",
+      "flumox",
+      "flumox"
+    ]
+  },
+  {
+    "id": 73,
+    "brand_name": "Flumox",
+    "raw_folder_name": "Flumox 1000 15 tablets",
+    "dose_spec": "1000",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "amoxicillin + flucloxacillin",
+    "category": "Dual Penicillin Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "flumox",
+      "flumox",
+      "flumox"
+    ]
+  },
+  {
+    "id": 74,
+    "brand_name": "Foradil",
+    "raw_folder_name": "Foradil 12 mcg 30 capsules",
+    "dose_spec": "12 mcg",
+    "strength": "12 mcg",
+    "dosage_form": "Capsules",
+    "active_salt": "formoterol fumarate",
+    "category": "Long-acting Beta2 Agonist",
+    "route": "Inhalation",
+    "aliases": [
+      "foradil",
+      "foradil",
+      "foradil"
+    ]
+  },
+  {
+    "id": 75,
+    "brand_name": "Free Nose",
+    "raw_folder_name": "Free Nose 30 ml nasal spray",
+    "dose_spec": "30 ml",
+    "strength": "30 ml",
+    "dosage_form": "Nasal spray",
+    "active_salt": "saline solution",
+    "category": "Nasal Decongestant Spray",
+    "route": "Nasal",
+    "aliases": [
+      "free nose",
+      "free nose",
+      "freenose"
+    ]
+  },
+  {
+    "id": 76,
+    "brand_name": "Frost",
+    "raw_folder_name": "Frost 100 ml spray",
+    "dose_spec": "100 ml",
+    "strength": "100 ml",
+    "dosage_form": "Spray",
+    "active_salt": "menthol cold spray",
+    "category": "Topical Cold Analgesic Spray",
+    "route": "Topical",
+    "aliases": [
+      "frost",
+      "frost",
+      "frost"
+    ]
+  },
+  {
+    "id": 77,
+    "brand_name": "Fucicort",
+    "raw_folder_name": "Fucicort 15 g cream",
+    "dose_spec": "15 g",
+    "strength": "15 g",
+    "dosage_form": "Cream",
+    "active_salt": "fusidic acid + betamethasone",
+    "category": "Antibacterial & Corticosteroid Cream",
+    "route": "Topical",
+    "aliases": [
+      "fucicort",
+      "fucicort",
+      "fucicort"
+    ]
+  },
+  {
+    "id": 78,
+    "brand_name": "Fucidin",
+    "raw_folder_name": "Fucidin 30 g cream",
+    "dose_spec": "30 g",
+    "strength": "30 g",
+    "dosage_form": "Cream",
+    "active_salt": "fusidic acid",
+    "category": "Topical Antibacterial",
+    "route": "Topical",
+    "aliases": [
+      "fucidin",
+      "fucidin",
+      "fucidin"
+    ]
+  },
+  {
+    "id": 79,
+    "brand_name": "Fucidin",
+    "raw_folder_name": "Fucidin 20 g cream",
+    "dose_spec": "20 g",
+    "strength": "20 g",
+    "dosage_form": "Cream",
+    "active_salt": "fusidic acid",
+    "category": "Topical Antibacterial",
+    "route": "Topical",
+    "aliases": [
+      "fucidin",
+      "fucidin",
+      "fucidin"
+    ]
+  },
+  {
+    "id": 80,
+    "brand_name": "Fucidin",
+    "raw_folder_name": "Fucidin 15 g cream",
+    "dose_spec": "15 g",
+    "strength": "15 g",
+    "dosage_form": "Cream",
+    "active_salt": "fusidic acid",
+    "category": "Topical Antibacterial",
+    "route": "Topical",
+    "aliases": [
+      "fucidin",
+      "fucidin",
+      "fucidin"
+    ]
+  },
+  {
+    "id": 81,
+    "brand_name": "Gabalepsy",
+    "raw_folder_name": "Gabalepsy 300 mg 20 capsules",
+    "dose_spec": "300 mg",
+    "strength": "300 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "gabapentin",
+    "category": "Neuropathic Pain & Anticonvulsant",
+    "route": "Oral",
+    "aliases": [
+      "gabalepsy",
+      "gabalepsy",
+      "gabalepsy"
+    ]
+  },
+  {
+    "id": 82,
+    "brand_name": "Garamycin",
+    "raw_folder_name": "Garamycin 15 g cream",
+    "dose_spec": "15 g",
+    "strength": "15 g",
+    "dosage_form": "Cream",
+    "active_salt": "gentamicin",
+    "category": "Aminoglycoside Antibiotic Cream",
+    "route": "Topical",
+    "aliases": [
+      "garamycin",
+      "garamycin",
+      "garamycin"
+    ]
+  },
+  {
+    "id": 83,
+    "brand_name": "Gengigel",
+    "raw_folder_name": "Gengigel hydrogel",
+    "dose_spec": "hydrogel",
+    "strength": "hydrogel",
+    "dosage_form": "Medication Package",
+    "active_salt": "hyaluronic acid",
+    "category": "Oral Gum Care Hydrogel",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "gengigel",
+      "gengigel",
+      "gengigel"
+    ]
+  },
+  {
+    "id": 84,
+    "brand_name": "Glucophage",
+    "raw_folder_name": "Glucophage 500 mg 50 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "metformin",
+    "category": "Type 2 Diabetes / Antidiabetic",
+    "route": "Oral",
+    "aliases": [
+      "glucophage",
+      "glucophage",
+      "glucophage"
+    ]
+  },
+  {
+    "id": 85,
+    "brand_name": "GTN",
+    "raw_folder_name": "GTN 50 ml cream",
+    "dose_spec": "50 ml",
+    "strength": "50 ml",
+    "dosage_form": "Cream",
+    "active_salt": "glyceryl trinitrate",
+    "category": "Cardiovascular / Vasodilator Cream",
+    "route": "Topical",
+    "aliases": [
+      "gtn",
+      "gtn",
+      "gtn"
+    ]
+  },
+  {
+    "id": 86,
+    "brand_name": "Haemostop",
+    "raw_folder_name": "Haemostop 250 mg 20 tablets",
+    "dose_spec": "250 mg",
+    "strength": "250 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "etamsylate",
+    "category": "Hemostatic / Bleeding Control",
+    "route": "Oral",
+    "aliases": [
+      "haemostop",
+      "haemostop",
+      "haemostop"
+    ]
+  },
+  {
+    "id": 87,
+    "brand_name": "Hemoclar",
+    "raw_folder_name": "Hemoclar 0.5% 40 g cream",
+    "dose_spec": "0.5%",
+    "strength": "0.5%",
+    "dosage_form": "Cream",
+    "active_salt": "pentosan polysulfate",
+    "category": "Bruise & Hematoma Cream",
+    "route": "Topical",
+    "aliases": [
+      "hemoclar",
+      "hemoclar",
+      "hemoclar"
+    ]
+  },
+  {
+    "id": 88,
+    "brand_name": "Hibiotic",
+    "raw_folder_name": "Hibiotic 1 gm 16 tablets",
+    "dose_spec": "1 gm",
+    "strength": "1 gm",
+    "dosage_form": "Tablets",
+    "active_salt": "amoxicillin + clavulanic acid",
+    "category": "Broad-spectrum Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "hibiotic",
+      "hibiotic",
+      "hibiotic"
+    ]
+  },
+  {
+    "id": 89,
+    "brand_name": "Histazine-1",
+    "raw_folder_name": "Histazine-1 10 mg 20 tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "cetirizine",
+    "category": "Antiallergic Antihistamine",
+    "route": "Oral",
+    "aliases": [
+      "histazine-1",
+      "histazine 1",
+      "histazine-1"
+    ]
+  },
+  {
+    "id": 90,
+    "brand_name": "ImmuGuard",
+    "raw_folder_name": "ImmuGuard 14 sachets",
+    "dose_spec": "14",
+    "strength": "",
+    "dosage_form": "Sachets",
+    "active_salt": "lactoferrin",
+    "category": "Immune Defense Supplement",
+    "route": "Oral",
+    "aliases": [
+      "immuguard",
+      "immuguard",
+      "immuguard"
+    ]
+  },
+  {
+    "id": 91,
+    "brand_name": "Ivypront",
+    "raw_folder_name": "Ivypront 120 ml syrup",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "ivy leaf extract",
+    "category": "Herbal Cough Syrup",
+    "route": "Oral",
+    "aliases": [
+      "ivypront",
+      "ivypront",
+      "ivypront"
+    ]
+  },
+  {
+    "id": 92,
+    "brand_name": "Janumet",
+    "raw_folder_name": "Janumet 50 mg/1000 mg 56 tablets",
+    "dose_spec": "50 mg/1000 mg",
+    "strength": "50 mg/1000 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "sitagliptin + metformin",
+    "category": "Dual Type 2 Diabetes Therapy",
+    "route": "Oral",
+    "aliases": [
+      "janumet",
+      "janumet",
+      "janumet"
+    ]
+  },
+  {
+    "id": 93,
+    "brand_name": "Jogel",
+    "raw_folder_name": "Jogel 20 gm oral gel",
+    "dose_spec": "20  gm",
+    "strength": "20  gm",
+    "dosage_form": "Oral gel",
+    "active_salt": "choline salicylate + cetalkonium",
+    "category": "Oral Pain Relief Gel",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "jogel",
+      "jogel",
+      "jogel"
+    ]
+  },
+  {
+    "id": 94,
+    "brand_name": "Jusprin",
+    "raw_folder_name": "Jusprin 81 mg 60 tablets",
+    "dose_spec": "81 mg",
+    "strength": "81 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "aspirin",
+    "category": "Cardiovascular Low-dose Antiplatelet",
+    "route": "Oral",
+    "aliases": [
+      "jusprin",
+      "jusprin",
+      "jusprin"
+    ]
+  },
+  {
+    "id": 95,
+    "brand_name": "Lactulose",
+    "raw_folder_name": "Lactulose 120 ml syrup",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "lactulose",
+    "category": "Osmotic Laxative",
+    "route": "Oral",
+    "aliases": [
+      "lactulose",
+      "lactulose",
+      "lactulose"
+    ]
+  },
+  {
+    "id": 96,
+    "brand_name": "Lamifen",
+    "raw_folder_name": "Lamifen 1% 15 gm cream",
+    "dose_spec": "1%",
+    "strength": "1%",
+    "dosage_form": "Cream",
+    "active_salt": "terbinafine",
+    "category": "Antifungal Cream",
+    "route": "Topical",
+    "aliases": [
+      "lamifen",
+      "lamifen",
+      "lamifen"
+    ]
+  },
+  {
+    "id": 97,
+    "brand_name": "Lamisil",
+    "raw_folder_name": "Lamisil 1% 15 g cream",
+    "dose_spec": "1%",
+    "strength": "1%",
+    "dosage_form": "Cream",
+    "active_salt": "terbinafine",
+    "category": "Antifungal Cream",
+    "route": "Topical",
+    "aliases": [
+      "lamisil",
+      "lamisil",
+      "lamisil"
+    ]
+  },
+  {
+    "id": 98,
+    "brand_name": "La-vie",
+    "raw_folder_name": "La-vie gel",
+    "dose_spec": "gel",
+    "strength": "gel",
+    "dosage_form": "Medication Package",
+    "active_salt": "aloe vera + herbal gel",
+    "category": "Skin Soothing Gel",
+    "route": "Topical",
+    "aliases": [
+      "la-vie",
+      "la vie",
+      "la-vie"
+    ]
+  },
+  {
+    "id": 99,
+    "brand_name": "Lovir",
+    "raw_folder_name": "Lovir 400 mg 10 tablets",
+    "dose_spec": "400 mg",
+    "strength": "400 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "acyclovir",
+    "category": "Antiviral Medication",
+    "route": "Oral",
+    "aliases": [
+      "lovir",
+      "lovir",
+      "lovir"
+    ]
+  },
+  {
+    "id": 100,
+    "brand_name": "Mebo",
+    "raw_folder_name": "Mebo 30 mg ointment",
+    "dose_spec": "30 mg",
+    "strength": "30 mg",
+    "dosage_form": "Ointment",
+    "active_salt": "beta-sitosterol",
+    "category": "Burn & Wound Healing Ointment",
+    "route": "Topical",
+    "aliases": [
+      "mebo",
+      "mebo",
+      "mebo"
+    ]
+  },
+  {
+    "id": 101,
+    "brand_name": "Megamox",
+    "raw_folder_name": "Megamox 625 mg 14 tablets",
+    "dose_spec": "625 mg",
+    "strength": "625 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "amoxicillin + clavulanic acid",
+    "category": "Antibiotic",
+    "route": "Oral",
+    "aliases": [
+      "megamox",
+      "megamox",
+      "megamox"
+    ]
+  },
+  {
+    "id": 102,
+    "brand_name": "Micropore",
+    "raw_folder_name": "Micropore 7.5 cm Tape",
+    "dose_spec": "7.5 cm",
+    "strength": "",
+    "dosage_form": "Tape",
+    "active_salt": "surgical paper tape",
+    "category": "Medical Dressing Tape",
+    "route": "Topical",
+    "aliases": [
+      "micropore",
+      "micropore",
+      "micropore"
+    ]
+  },
+  {
+    "id": 103,
+    "brand_name": "Midodrine",
+    "raw_folder_name": "Midodrine 2.5 mg 20 tablets",
+    "dose_spec": "2.5 mg",
+    "strength": "2.5 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "midodrine",
+    "category": "Alpha-1 Agonist / Orthostatic Support",
+    "route": "Oral",
+    "aliases": [
+      "midodrine",
+      "midodrine",
+      "midodrine"
+    ]
+  },
+  {
+    "id": 104,
+    "brand_name": "Miflonide",
+    "raw_folder_name": "Miflonide 400 ug 60 capsules",
+    "dose_spec": "400 ug",
+    "strength": "400 ug",
+    "dosage_form": "Capsules",
+    "active_salt": "budesonide",
+    "category": "Inhaled Corticosteroid",
+    "route": "Inhalation",
+    "aliases": [
+      "miflonide",
+      "miflonide",
+      "miflonide"
+    ]
+  },
+  {
+    "id": 105,
+    "brand_name": "Milga",
+    "raw_folder_name": "Milga 40 tablets",
+    "dose_spec": "40",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "benfotiamine + vitamin b6 + b12",
+    "category": "Neurotropic Vitamin Complex",
+    "route": "Oral",
+    "aliases": [
+      "milga",
+      "milga",
+      "milga"
+    ]
+  },
+  {
+    "id": 106,
+    "brand_name": "Minalax",
+    "raw_folder_name": "Minalax 10 tablets",
+    "dose_spec": "10",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "bisacodyl",
+    "category": "Constipation Relief / Laxative",
+    "route": "Oral",
+    "aliases": [
+      "minalax",
+      "minalax",
+      "minalax"
+    ]
+  },
+  {
+    "id": 107,
+    "brand_name": "Motilium",
+    "raw_folder_name": "Motilium 40 tablets",
+    "dose_spec": "40",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "domperidone",
+    "category": "Antiemetic / Prokinetic",
+    "route": "Oral",
+    "aliases": [
+      "motilium",
+      "motilium",
+      "motilium"
+    ]
+  },
+  {
+    "id": 108,
+    "brand_name": "Mucophylline",
+    "raw_folder_name": "Mucophylline 125 ml syrup",
+    "dose_spec": "125 ml",
+    "strength": "125 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "acebrophylline",
+    "category": "Bronchodilator & Mucolytic",
+    "route": "Oral",
+    "aliases": [
+      "mucophylline",
+      "mucophylline",
+      "mucophylline"
+    ]
+  },
+  {
+    "id": 109,
+    "brand_name": "Mucosta",
+    "raw_folder_name": "Mucosta 100 mg 20 tablets",
+    "dose_spec": "100 mg",
+    "strength": "100 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "rebamipide",
+    "category": "Gastric Mucosal Protective Agent",
+    "route": "Oral",
+    "aliases": [
+      "mucosta",
+      "mucosta",
+      "mucosta"
+    ]
+  },
+  {
+    "id": 110,
+    "brand_name": "Multi-Relax",
+    "raw_folder_name": "Multi-Relax 10 mg tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "cyclobenzaprine",
+    "category": "Skeletal Muscle Relaxant",
+    "route": "Oral",
+    "aliases": [
+      "multi-relax",
+      "multi relax",
+      "multi-relax"
+    ]
+  },
+  {
+    "id": 111,
+    "brand_name": "Mupirax",
+    "raw_folder_name": "Mupirax 2% 10 g ointment",
+    "dose_spec": "2%",
+    "strength": "2%",
+    "dosage_form": "Ointment",
+    "active_salt": "mupirocin",
+    "category": "Topical Antibiotic Ointment",
+    "route": "Topical",
+    "aliases": [
+      "mupirax",
+      "mupirax",
+      "mupirax"
+    ]
+  },
+  {
+    "id": 112,
+    "brand_name": "Neurovit",
+    "raw_folder_name": "Neurovit 30 tablets",
+    "dose_spec": "30",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "vitamin b1 + b6 + b12",
+    "category": "Neurotropic B Complex",
+    "route": "Oral",
+    "aliases": [
+      "neurovit",
+      "neurovit",
+      "neurovit"
+    ]
+  },
+  {
+    "id": 113,
+    "brand_name": "Night & Day",
+    "raw_folder_name": "Night & Day 10 tablets",
+    "dose_spec": "10",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "paracetamol + pseudoephedrine",
+    "category": "Day & Night Cold Remedy",
+    "route": "Oral",
+    "aliases": [
+      "night & day",
+      "night & day",
+      "night&day"
+    ]
+  },
+  {
+    "id": 114,
+    "brand_name": "Oracure",
+    "raw_folder_name": "Oracure 30 gm oral gel",
+    "dose_spec": "30  gm",
+    "strength": "30  gm",
+    "dosage_form": "Oral gel",
+    "active_salt": "lidocaine + cetylpyridinium",
+    "category": "Oral Mouth Ulcer Gel",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "oracure",
+      "oracure",
+      "oracure"
+    ]
+  },
+  {
+    "id": 115,
+    "brand_name": "Orex",
+    "raw_folder_name": "Orex 60 ml solution",
+    "dose_spec": "60 ml",
+    "strength": "60 ml",
+    "dosage_form": "Solution",
+    "active_salt": "chlorhexidine mouth wash",
+    "category": "Oral Antiseptic Solution",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "orex",
+      "orex",
+      "orex"
+    ]
+  },
+  {
+    "id": 116,
+    "brand_name": "Orovex Delicate",
+    "raw_folder_name": "Orovex Delicate 250 ml mouth wash",
+    "dose_spec": "250 ml",
+    "strength": "250 ml",
+    "dosage_form": "Mouth wash",
+    "active_salt": "chlorhexidine mouth wash",
+    "category": "Antiseptic Mouth Wash",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "orovex delicate",
+      "orovex delicate",
+      "orovexdelicate"
+    ]
+  },
+  {
+    "id": 117,
+    "brand_name": "Osteocare",
+    "raw_folder_name": "Osteocare 120 ml liquid",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Liquid",
+    "active_salt": "calcium + magnesium + vitamin d3",
+    "category": "Bone & Joint Care Liquid",
+    "route": "Oral",
+    "aliases": [
+      "osteocare",
+      "osteocare",
+      "osteocare"
+    ]
+  },
+  {
+    "id": 118,
+    "brand_name": "Pandermal",
+    "raw_folder_name": "Pandermal 15 g cream",
+    "dose_spec": "15 g",
+    "strength": "15 g",
+    "dosage_form": "Cream",
+    "active_salt": "nystatin + neomycin + triamcinolone",
+    "category": "Quadruple Action Cream",
+    "route": "Topical",
+    "aliases": [
+      "pandermal",
+      "pandermal",
+      "pandermal"
+    ]
+  },
+  {
+    "id": 119,
+    "brand_name": "Panthenol",
+    "raw_folder_name": "Panthenol 2% 20 g cream",
+    "dose_spec": "2%",
+    "strength": "2%",
+    "dosage_form": "Cream",
+    "active_salt": "d-panthenol",
+    "category": "Skin Regenerating Cream",
+    "route": "Topical",
+    "aliases": [
+      "panthenol",
+      "panthenol",
+      "panthenol"
+    ]
+  },
+  {
+    "id": 120,
+    "brand_name": "Paramol",
+    "raw_folder_name": "Paramol 500 mg 20 tablets",
+    "dose_spec": "500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "paracetamol",
+    "category": "Analgesic & Antipyretic",
+    "route": "Oral",
+    "aliases": [
+      "paramol",
+      "paramol",
+      "paramol"
+    ]
+  },
+  {
+    "id": 121,
+    "brand_name": "Pedical",
+    "raw_folder_name": "Pedical syrup",
+    "dose_spec": "syrup",
+    "strength": "",
+    "dosage_form": "Medication Package",
+    "active_salt": "calcium + vitamin d3",
+    "category": "Pediatric Calcium Supplement",
+    "route": "Oral",
+    "aliases": [
+      "pedical",
+      "pedical",
+      "pedical"
+    ]
+  },
+  {
+    "id": 122,
+    "brand_name": "Pentamix",
+    "raw_folder_name": "Pentamix 120 ml syrup",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "herbal cough syrup",
+    "category": "Cough & Cold Relief",
+    "route": "Oral",
+    "aliases": [
+      "pentamix",
+      "pentamix",
+      "pentamix"
+    ]
+  },
+  {
+    "id": 123,
+    "brand_name": "Phenadone",
+    "raw_folder_name": "Phenadone 100 ml syrup",
+    "dose_spec": "100 ml",
+    "strength": "100 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "dexamethasone + chlorpheniramine",
+    "category": "Antiallergic Syrup",
+    "route": "Oral",
+    "aliases": [
+      "phenadone",
+      "phenadone",
+      "phenadone"
+    ]
+  },
+  {
+    "id": 124,
+    "brand_name": "Picolax",
+    "raw_folder_name": "Picolax 15 ml oral drops",
+    "dose_spec": "15 ml",
+    "strength": "15 ml",
+    "dosage_form": "Oral drops",
+    "active_salt": "sodium picosulfate",
+    "category": "Laxative Oral Drops",
+    "route": "Oral",
+    "aliases": [
+      "picolax",
+      "picolax",
+      "picolax"
+    ]
+  },
+  {
+    "id": 125,
+    "brand_name": "Predsol",
+    "raw_folder_name": "Predsol 50 ml syrup",
+    "dose_spec": "50 ml",
+    "strength": "50 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "prednisolone",
+    "category": "Oral Corticosteroid Syrup",
+    "route": "Oral",
+    "aliases": [
+      "predsol",
+      "predsol",
+      "predsol"
+    ]
+  },
+  {
+    "id": 126,
+    "brand_name": "Pridocaine",
+    "raw_folder_name": "Pridocaine 15 g cream",
+    "dose_spec": "15 g",
+    "strength": "15 g",
+    "dosage_form": "Cream",
+    "active_salt": "lidocaine + prilocaine",
+    "category": "Topical Anesthetic Cream",
+    "route": "Topical",
+    "aliases": [
+      "pridocaine",
+      "pridocaine",
+      "pridocaine"
+    ]
+  },
+  {
+    "id": 127,
+    "brand_name": "Primrose Plus",
+    "raw_folder_name": "Primrose Plus 1000 mg 30 capsules",
+    "dose_spec": "1000  mg",
+    "strength": "1000  mg",
+    "dosage_form": "Capsules",
+    "active_salt": "evening primrose oil",
+    "category": "Nutritional Supplement",
+    "route": "Oral",
+    "aliases": [
+      "primrose plus",
+      "primrose plus",
+      "primroseplus"
+    ]
+  },
+  {
+    "id": 128,
+    "brand_name": "Prinorelax",
+    "raw_folder_name": "Prinorelax 30 mg 10 capsules",
+    "dose_spec": "30 mg",
+    "strength": "30 mg",
+    "dosage_form": "Capsules",
+    "active_salt": "chlorzoxazone + paracetamol",
+    "category": "Muscle Relaxant & Analgesic",
+    "route": "Oral",
+    "aliases": [
+      "prinorelax",
+      "prinorelax",
+      "prinorelax"
+    ]
+  },
+  {
+    "id": 129,
+    "brand_name": "Remowax",
+    "raw_folder_name": "Remowax 15 ml ear drops",
+    "dose_spec": "15 ml",
+    "strength": "15 ml",
+    "dosage_form": "Ear drops",
+    "active_salt": "carbamide peroxide",
+    "category": "Earwax Removal Drops",
+    "route": "Otic",
+    "aliases": [
+      "remowax",
+      "remowax",
+      "remowax"
+    ]
+  },
+  {
+    "id": 130,
+    "brand_name": "Rennie",
+    "raw_folder_name": "Rennie 96 chewable tablets",
+    "dose_spec": "96",
+    "strength": "",
+    "dosage_form": "Chewable tablets",
+    "active_salt": "calcium carbonate + magnesium carbonate",
+    "category": "Antacid Chewable Tablets",
+    "route": "Oral",
+    "aliases": [
+      "rennie",
+      "rennie",
+      "rennie"
+    ]
+  },
+  {
+    "id": 131,
+    "brand_name": "Reparil-Gel N",
+    "raw_folder_name": "Reparil-Gel N 40 g gel",
+    "dose_spec": "40 g",
+    "strength": "40 g",
+    "dosage_form": "Gel",
+    "active_salt": "aescin + diethylamine salicylate",
+    "category": "Anti-inflammatory & Decongestant Gel",
+    "route": "Topical",
+    "aliases": [
+      "reparil-gel n",
+      "reparil gel n",
+      "reparil-geln"
+    ]
+  },
+  {
+    "id": 132,
+    "brand_name": "Rheumatizen",
+    "raw_folder_name": "Rheumatizen 60 g cream",
+    "dose_spec": "60 g",
+    "strength": "60 g",
+    "dosage_form": "Cream",
+    "active_salt": "methyl salicylate + menthol",
+    "category": "Musculoskeletal Rub Cream",
+    "route": "Topical",
+    "aliases": [
+      "rheumatizen",
+      "rheumatizen",
+      "rheumatizen"
+    ]
+  },
+  {
+    "id": 133,
+    "brand_name": "Rhinopro",
+    "raw_folder_name": "Rhinopro 20 capsules",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Capsules",
+    "active_salt": "pseudoephedrine + carbinoxamine",
+    "category": "Nasal Decongestant Capsules",
+    "route": "Oral",
+    "aliases": [
+      "rhinopro",
+      "rhinopro",
+      "rhinopro"
+    ]
+  },
+  {
+    "id": 134,
+    "brand_name": "Salivex-L",
+    "raw_folder_name": "Salivex-L 10 ml paint",
+    "dose_spec": "10 ml",
+    "strength": "10 ml",
+    "dosage_form": "Paint",
+    "active_salt": "rhubarb extract + salicylic acid",
+    "category": "Gingival & Oral Paint",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "salivex-l",
+      "salivex l",
+      "salivex-l"
+    ]
+  },
+  {
+    "id": 135,
+    "brand_name": "Sediproct",
+    "raw_folder_name": "Sediproct 20 g cream",
+    "dose_spec": "20 g",
+    "strength": "20 g",
+    "dosage_form": "Cream",
+    "active_salt": "hydrocortisone + cinchocaine",
+    "category": "Anti-hemorrhoidal Cream",
+    "route": "Rectal",
+    "aliases": [
+      "sediproct",
+      "sediproct",
+      "sediproct"
+    ]
+  },
+  {
+    "id": 136,
+    "brand_name": "SelokenZOC",
+    "raw_folder_name": "SelokenZOC 100 mg 28 tablets",
+    "dose_spec": "100 mg",
+    "strength": "100 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "metoprolol succinate",
+    "category": "Cardiovascular Beta-Blocker",
+    "route": "Oral",
+    "aliases": [
+      "selokenzoc",
+      "selokenzoc",
+      "selokenzoc"
+    ]
+  },
+  {
+    "id": 137,
+    "brand_name": "Solvadol",
+    "raw_folder_name": "Solvadol 20 ml spray",
+    "dose_spec": "20 ml",
+    "strength": "20 ml",
+    "dosage_form": "Spray",
+    "active_salt": "benzydamine spray",
+    "category": "Throat & Mouth Spray",
+    "route": "Oral Mucosal",
+    "aliases": [
+      "solvadol",
+      "solvadol",
+      "solvadol"
+    ]
+  },
+  {
+    "id": 138,
+    "brand_name": "Steronate",
+    "raw_folder_name": "Steronate 20 tablets",
+    "dose_spec": "20",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "norethisterone",
+    "category": "Progestin Hormone Therapy",
+    "route": "Oral",
+    "aliases": [
+      "steronate",
+      "steronate",
+      "steronate"
+    ]
+  },
+  {
+    "id": 139,
+    "brand_name": "Streptoquin",
+    "raw_folder_name": "Streptoquin 10 tablets",
+    "dose_spec": "10",
+    "strength": "",
+    "dosage_form": "Tablets",
+    "active_salt": "diiodohydroxyquinoline + phthalylsulfathiazole",
+    "category": "Antidiarrheal",
+    "route": "Oral",
+    "aliases": [
+      "streptoquin",
+      "streptoquin",
+      "streptoquin"
+    ]
+  },
+  {
+    "id": 140,
+    "brand_name": "Tareg",
+    "raw_folder_name": "Tareg 40 40 mg tablets",
+    "dose_spec": "40",
+    "strength": "40 mg",
+    "dosage_form": "40",
+    "active_salt": "valsartan",
+    "category": "Angiotensin Receptor Blocker",
+    "route": "Oral",
+    "aliases": [
+      "tareg",
+      "tareg",
+      "tareg"
+    ]
+  },
+  {
+    "id": 141,
+    "brand_name": "Tears Guard",
+    "raw_folder_name": "Tears Guard 15 ml eye drops",
+    "dose_spec": "15 ml",
+    "strength": "15 ml",
+    "dosage_form": "Eye drops",
+    "active_salt": "hydroxypropyl methylcellulose",
+    "category": "Artificial Tears Eye Drops",
+    "route": "Ophthalmic",
+    "aliases": [
+      "tears guard",
+      "tears guard",
+      "tearsguard"
+    ]
+  },
+  {
+    "id": 142,
+    "brand_name": "Tentavair",
+    "raw_folder_name": "Tentavair 160 mcg oral inhalation",
+    "dose_spec": "160 mcg",
+    "strength": "160 mcg",
+    "dosage_form": "Oral inhalation",
+    "active_salt": "fluticasone + salmeterol",
+    "category": "Inhaled Asthma & COPD Care",
+    "route": "Inhalation",
+    "aliases": [
+      "tentavair",
+      "tentavair",
+      "tentavair"
+    ]
+  },
+  {
+    "id": 143,
+    "brand_name": "Vidrop",
+    "raw_folder_name": "Vidrop 2800 I.U. 15 ml oral drops",
+    "dose_spec": "2800 I.U.",
+    "strength": "15 ml",
+    "dosage_form": "2800 i.u.",
+    "active_salt": "vitamin d3",
+    "category": "Vitamin D3 Oral Drops",
+    "route": "Oral",
+    "aliases": [
+      "vidrop",
+      "vidrop",
+      "vidrop"
+    ]
+  },
+  {
+    "id": 144,
+    "brand_name": "Visceralgine",
+    "raw_folder_name": "Visceralgine 120 ml syrup",
+    "dose_spec": "120 ml",
+    "strength": "120 ml",
+    "dosage_form": "Syrup",
+    "active_salt": "tiemonium methylsulfate",
+    "category": "Antispasmodic Syrup",
+    "route": "Oral",
+    "aliases": [
+      "visceralgine",
+      "visceralgine",
+      "visceralgine"
+    ]
+  },
+  {
+    "id": 145,
+    "brand_name": "Vitacid C",
+    "raw_folder_name": "Vitacid C 1 g 12 tablets",
+    "dose_spec": "1 g",
+    "strength": "1 g",
+    "dosage_form": "Tablets",
+    "active_salt": "ascorbic acid (vitamin c)",
+    "category": "Effervescent Vitamin C Tablets",
+    "route": "Oral",
+    "aliases": [
+      "vitacid c",
+      "vitacid c",
+      "vitacidc"
+    ]
+  },
+  {
+    "id": 146,
+    "brand_name": "Vitamax",
+    "raw_folder_name": "Vitamax 15 capsules",
+    "dose_spec": "15",
+    "strength": "",
+    "dosage_form": "Capsules",
+    "active_salt": "multivitamins + minerals",
+    "category": "Multivitamin Complex",
+    "route": "Oral",
+    "aliases": [
+      "vitamax",
+      "vitamax",
+      "vitamax"
+    ]
+  },
+  {
+    "id": 147,
+    "brand_name": "Zantac",
+    "raw_folder_name": "Zantac 150 mg 20 tablets",
+    "dose_spec": "150 mg",
+    "strength": "150 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "ranitidine",
+    "category": "H2 Receptor Blocker Antacid",
+    "route": "Oral",
+    "aliases": [
+      "zantac",
+      "zantac",
+      "zantac"
+    ]
+  },
+  {
+    "id": 148,
+    "brand_name": "Zenta",
+    "raw_folder_name": "Zenta 100 gm cream",
+    "dose_spec": "100  gm",
+    "strength": "100  gm",
+    "dosage_form": "Cream",
+    "active_salt": "fluocinolone acetonide",
+    "category": "Corticosteroid Cream",
+    "route": "Topical",
+    "aliases": [
+      "zenta",
+      "zenta",
+      "zenta"
+    ]
+  },
+  {
+    "id": 149,
+    "brand_name": "Zyrtec",
+    "raw_folder_name": "Zyrtec 10 ml oral drops",
+    "dose_spec": "10 ml",
+    "strength": "10 ml",
+    "dosage_form": "Oral drops",
+    "active_salt": "cetirizine",
+    "category": "Antiallergic Antihistamine",
+    "route": "Oral",
+    "aliases": [
+      "zyrtec",
+      "zyrtec",
+      "zyrtec"
+    ]
+  },
+  {
+    "id": 150,
+    "brand_name": "Zyrtec",
+    "raw_folder_name": "Zyrtec 10 mg 20 tablets",
+    "dose_spec": "10 mg",
+    "strength": "10 mg",
+    "dosage_form": "Tablets",
+    "active_salt": "cetirizine",
+    "category": "Antiallergic Antihistamine",
+    "route": "Oral",
+    "aliases": [
+      "zyrtec",
+      "zyrtec",
+      "zyrtec"
+    ]
+  }
+]

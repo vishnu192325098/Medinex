@@ -1,0 +1,155 @@
+{
+  "status": "EVALUATION_SUCCESSFUL",
+  "validation_metrics": {
+    "top1_accuracy": 0.05,
+    "top3_accuracy": 0.0983,
+    "top5_accuracy": 0.14
+  },
+  "test_metrics": {
+    "test_sample_count": 600,
+    "top1_accuracy": 0.0217,
+    "top3_accuracy": 0.0667,
+    "top5_accuracy": 0.1,
+    "macro_precision": 0.0268,
+    "macro_recall": 0.0217,
+    "macro_f1": 0.0155,
+    "weighted_f1": 0.0155
+  },
+  "most_confused_pairs": [
+    {
+      "true_class_index": 2,
+      "true_class_name": "Adol",
+      "true_class_folder": "Adol 24 caplets",
+      "predicted_class_index": 98,
+      "predicted_class_name": "La-vie",
+      "predicted_class_folder": "La-vie nan gel",
+      "count": 2
+    },
+    {
+      "true_class_index": 5,
+      "true_class_name": "All-Vent",
+      "true_class_folder": "All-Vent 125 ml syrup",
+      "predicted_class_index": 12,
+      "predicted_class_name": "Asmakast",
+      "predicted_class_folder": "Asmakast 30 tablets",
+      "count": 2
+    },
+    {
+      "true_class_index": 8,
+      "true_class_name": "Amrizole",
+      "true_class_folder": "Amrizole 20 tablets",
+      "predicted_class_index": 14,
+      "predicted_class_name": "Augmentin",
+      "predicted_class_folder": "Augmentin 14 tablets",
+      "count": 2
+    },
+    {
+      "true_class_index": 10,
+      "true_class_name": "Anuva",
+      "true_class_folder": "Anuva 10 tablets",
+      "predicted_class_index": 83,
+      "predicted_class_name": "Gengigel",
+      "predicted_class_folder": "Gengigel nan hydrogel",
+      "count": 2
+    },
+    {
+      "true_class_index": 11,
+      "true_class_name": "Apidone",
+      "true_class_folder": "Apidone nan syrup",
+      "predicted_class_index": 66,
+      "predicted_class_name": "Feroglobin",
+      "predicted_class_folder": "Feroglobin nan capsules",
+      "count": 2
+    },
+    {
+      "true_class_index": 16,
+      "true_class_name": "B.B.C.",
+      "true_class_folder": "B.B.C. 25 ml spray solution",
+      "predicted_class_index": 98,
+      "predicted_class_name": "La-vie",
+      "predicted_class_folder": "La-vie nan gel",
+      "count": 2
+    },
+    {
+      "true_class_index": 19,
+      "true_class_name": "Betadine",
+      "true_class_folder": "Betadine 120 ml solution",
+      "predicted_class_index": 66,
+      "predicted_class_name": "Feroglobin",
+      "predicted_class_folder": "Feroglobin nan capsules",
+      "count": 2
+    },
+    {
+      "true_class_index": 20,
+      "true_class_name": "Betadine",
+      "true_class_folder": "Betadine 60  g ointment",
+      "predicted_class_index": 66,
+      "predicted_class_name": "Feroglobin",
+      "predicted_class_folder": "Feroglobin nan capsules",
+      "count": 2
+    },
+    {
+      "true_class_index": 21,
+      "true_class_name": "Betadine",
+      "true_class_folder": "Betadine 120 ml mouth wash",
+      "predicted_class_index": 98,
+      "predicted_class_name": "La-vie",
+      "predicted_class_folder": "La-vie nan gel",
+      "count": 2
+    },
+    {
+      "true_class_index": 23,
+      "true_class_name": "Bronchicum Elixir",
+      "true_class_folder": "Bronchicum Elixir 100 ml nan",
+      "predicted_class_index": 122,
+      "predicted_class_name": "Pentamix",
+      "predicted_class_folder": "Pentamix 120 ml syrup",
+      "count": 2
+    },
+    {
+      "true_class_index": 24,
+      "true_class_name": "Bronchopro",
+      "true_class_folder": "Bronchopro 100 ml syrup",
+      "predicted_class_index": 12,
+      "predicted_class_name": "Asmakast",
+      "predicted_class_folder": "Asmakast 30 tablets",
+      "count": 2
+    },
+    {
+      "true_class_index": 27,
+      "true_class_name": "C Zinc",
+      "true_class_folder": "C Zinc 30 capsules",
+      "predicted_class_index": 122,
+      "predicted_class_name": "Pentamix",
+      "predicted_class_folder": "Pentamix 120 ml syrup",
+      "count": 2
+    },
+    {
+      "true_class_index": 29,
+      "true_class_name": "Carbamide",
+      "true_class_folder": "Carbamide 30 g cream",
+      "predicted_class_index": 14,
+      "predicted_class_name": "Augmentin",
+      "predicted_class_folder": "Augmentin 14 tablets",
+      "count": 2
+    },
+    {
+      "true_class_index": 30,
+      "true_class_name": "Catafast",
+      "true_class_folder": "Catafast 9 sachets",
+      "predicted_class_index": 123,
+      "predicted_class_name": "Phenadone",
+      "predicted_class_folder": "Phenadone 100 ml syrup",
+      "count": 2
+    },
+    {
+      "true_class_index": 31,
+      "true_class_name": "Cataflam",
+      "true_class_folder": "Cataflam 20 tablets",
+      "predicted_class_index": 14,
+      "predicted_class_name": "Augmentin",
+      "predicted_class_folder": "Augmentin 14 tablets",
+      "count": 2
+    }
+  ]
+}

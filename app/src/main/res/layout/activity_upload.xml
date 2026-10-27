@@ -183,6 +183,19 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- VIEW HISTORY BUTTON -->
+        <Button
+            android:id="@+id/viewHistoryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/glass_card"
+            android:backgroundTint="@null"
+            android:text="📋  View Scan History"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
 
         <!-- RESULT SECTION -->
         <LinearLayout
@@ -220,7 +233,8 @@
             <!-- RESULTS CARD -->
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
+                android:minHeight="220dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/glass_card"
                 android:fillViewport="true">

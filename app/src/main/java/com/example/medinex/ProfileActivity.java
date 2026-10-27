@@ -75,6 +75,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         logoutBtn.setOnClickListener(v -> {
 
+            com.google.firebase.auth.FirebaseAuth.getInstance().signOut();
+
             prefs.edit().clear().apply();
 
             Intent intent =

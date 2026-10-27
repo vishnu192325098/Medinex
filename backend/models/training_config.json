@@ -1,0 +1,18 @@
+{
+  "model_architecture": "Multi-scale Visual Feature Representation (HSV + Lab Spatial Layout + Sobel Gradient Texture) + Multinomial Calibrated Classifier",
+  "feature_dimension": 1504,
+  "total_classes": 150,
+  "total_images": 3900,
+  "train_samples": 2700,
+  "val_samples": 600,
+  "test_samples": 600,
+  "train_samples_per_class": 18,
+  "val_samples_per_class": 4,
+  "test_samples_per_class": 4,
+  "solver": "lbfgs",
+  "C_regularization": 2.5,
+  "max_iter": 400,
+  "training_duration_seconds": 1.07,
+  "total_stage2_duration_seconds": 80.53,
+  "reproducible_command": "python ai_model/train_packaging_model.py"
+}

@@ -11,6 +11,13 @@
 
     <!-- Exact medicine reminders -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- Camera and Storage for prescription scanning -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +27,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Medinex">
+        android:theme="@style/Theme.Medinex"
+        android:usesCleartextTraffic="true">
 
         <!-- Splash Screen -->
         <activity
@@ -164,11 +172,27 @@
             android:name=".ReminderHistoryActivity"
             android:exported="false" />
 
+        <!-- Prescription Scan History -->
+        <activity
+            android:name=".ScanHistoryActivity"
+            android:exported="false" />
+
 
         <!-- Notification Receiver -->
         <receiver
             android:name=".NotificationReceiver"
             android:exported="false" />
+
+        <!-- Boot Receiver for Alarm Rescheduling -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
 
 
         <!-- Main Activity -->

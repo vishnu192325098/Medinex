@@ -1,0 +1,1357 @@
+{
+  "total_classes": 150,
+  "folder_to_label": {
+    "Acretin 30 g cream": 0,
+    "Adol 24 caplets": 1,
+    "Aggrex 60 tablets": 2,
+    "Airoplast nan Tape": 3,
+    "All-Vent 125 ml syrup": 4,
+    "Alphintern 30 tablets": 5,
+    "Ambezim-G 30 tablets": 6,
+    "Amrizole 20 tablets": 7,
+    "Antopral 14 tablets": 8,
+    "Anuva 10 tablets": 9,
+    "Apidone nan syrup": 10,
+    "Asmakast 30 tablets": 11,
+    "Atoreza 28 tablets": 12,
+    "Augmentin 14 tablets": 13,
+    "Avosoya 30 capsules": 14,
+    "B.B.C. 25 ml spray solution": 15,
+    "Benogen 10 sachets": 16,
+    "Betaderm 30  gm cream": 17,
+    "Betadine 120 ml solution": 18,
+    "Betadine 60  g ointment": 19,
+    "Betadine 120 ml mouth wash": 20,
+    "Bivatracin 150 ml spray": 21,
+    "Bronchicum Elixir 100 ml nan": 22,
+    "Bronchopro 100 ml syrup": 23,
+    "Brufen 30 tablets": 24,
+    "Brufen 150 ml syrup": 25,
+    "C Zinc 30 capsules": 26,
+    "Candalkan Plus 14 tablets": 27,
+    "Carbamide 30 g cream": 28,
+    "Catafast 9 sachets": 29,
+    "Cataflam 20 tablets": 30,
+    "Ceftriaxone 1 Vial": 31,
+    "Celebrex 15 capsules": 32,
+    "Cemicresto 28 tablets": 33,
+    "Cetal 60 ml oral suspension": 34,
+    "Cetal Sinus 20 capsules": 35,
+    "Cholerose 21 tablets": 36,
+    "Choletimb 14 tablets": 37,
+    "Ciprodiazole 20 tablets": 38,
+    "Ciprofar 10 tablets": 39,
+    "Ciprofloxacin Tablets USP 39 10 tablets": 40,
+    "Clarinase 14 repetabs": 41,
+    "Claritine 20 tablets": 42,
+    "Clindasol 20 g gel": 43,
+    "Comfort Massage Gel 50 gm gel": 44,
+    "Congestal 20 tablets": 45,
+    "Conta-flu 20 tablets": 46,
+    "Corasore 25 oral drops": 47,
+    "C-Retard 10 capsules": 48,
+    "C-vit 15 ml oral drops": 49,
+    "Daflon 30 tablets": 50,
+    "Daktarin 40 g gel oral": 51,
+    "Dalacin C 10 capsules": 52,
+    "Davalindi 100 tablets": 53,
+    "Dentinox nan colic drops": 54,
+    "Diclac 30  gm gel": 55,
+    "Diclac 75 ID 20 tablets": 56,
+    "Diflucan 7 capsules": 57,
+    "Diflucan 1 capsule": 58,
+    "Ectomethrin 50 ml emulsion": 59,
+    "Enrich 30 ml oral drops": 60,
+    "Enrich 100 ml syrup": 61,
+    "Ezamol-C 20 tablets": 62,
+    "Farcolin 120 ml syrup": 63,
+    "Fenistil 15 ml oral drops": 64,
+    "Feroglobin nan capsules": 65,
+    "Ferrofol 30 spansules": 66,
+    "Flagyl 20 tablets": 67,
+    "Flector EP 25  gm gel": 68,
+    "Flix 16 g nasal spray": 69,
+    "Floxabact 10 tablets": 70,
+    "Flumox 16 capsules": 71,
+    "Flumox 15 tablets": 72,
+    "Foradil 30 capsules": 73,
+    "Free Nose 30 ml nasal spray": 74,
+    "Frost 100 ml spray": 75,
+    "Fucicort 15 g cream": 76,
+    "Fucidin 30 g cream": 77,
+    "Fucidin 20 g cream": 78,
+    "Fucidin 15 g cream": 79,
+    "Gabalepsy 20 capsules": 80,
+    "Garamycin 15 g cream": 81,
+    "Gengigel nan hydrogel": 82,
+    "Glucophage 50 tablets": 83,
+    "GTN 50 ml cream": 84,
+    "Haemostop 20 tablets": 85,
+    "Hemoclar 40 g cream": 86,
+    "Hibiotic 16 tablets": 87,
+    "Histazine-1 20 tablets": 88,
+    "ImmuGuard 14 sachets": 89,
+    "Ivypront 120 ml syrup": 90,
+    "Janumet 56 tablets": 91,
+    "Jogel 20  gm oral gel": 92,
+    "Jusprin 60 tablets": 93,
+    "Lactulose 120 ml syrup": 94,
+    "Lamifen 15  gm cream": 95,
+    "Lamisil 15 g cream": 96,
+    "La-vie nan gel": 97,
+    "Lovir 10 tablets": 98,
+    "Mebo 30 mg ointment": 99,
+    "Megamox 14 tablets": 100,
+    "Micropore nan Tape": 101,
+    "Midodrine 20 tablets": 102,
+    "Miflonide 60 capsules": 103,
+    "Milga 40 tablets": 104,
+    "Minalax 10 tablets": 105,
+    "Motilium 40 tablets": 106,
+    "Mucophylline 125 ml syrup": 107,
+    "Mucosta 20 tablets": 108,
+    "Multi-Relax 10 mg tablets": 109,
+    "Mupirax 10 g ointment": 110,
+    "Neurovit 30 tablets": 111,
+    "Night & Day 10 tablets": 112,
+    "Oracure 30  gm oral gel": 113,
+    "Orex 60 ml solution": 114,
+    "Orovex Delicate 250 ml mouth wash": 115,
+    "Osteocare 120 ml liquid": 116,
+    "Pandermal 15 g cream": 117,
+    "Panthenol 20 g cream": 118,
+    "Paramol 20 tablets": 119,
+    "Pedical nan syrup": 120,
+    "Pentamix 120 ml syrup": 121,
+    "Phenadone 100 ml syrup": 122,
+    "Picolax 15 ml oral drops": 123,
+    "Predsol 50 ml syrup": 124,
+    "Pridocaine 15 g cream": 125,
+    "Primrose Plus 30 capsules": 126,
+    "Prinorelax 10 capsules": 127,
+    "Remowax 15 ml ear drops": 128,
+    "Rennie 96 chewable tablets": 129,
+    "Reparil-Gel N 40 g gel": 130,
+    "Rheumatizen 60 g cream": 131,
+    "Rhinopro 20 capsules": 132,
+    "Salivex-L 10 ml paint": 133,
+    "Sediproct 20 g cream": 134,
+    "SelokenZOC 28 tablets": 135,
+    "Solvadol 20 ml spray": 136,
+    "Steronate 20 tablets": 137,
+    "Streptoquin 10 tablets": 138,
+    "Tareg 40 mg tablets": 139,
+    "Tears Guard 15 ml eye drops": 140,
+    "Tentavair 160 mcg oral inhalation": 141,
+    "Vidrop 15 ml oral drops": 142,
+    "Visceralgine 120 ml syrup": 143,
+    "Vitacid C 12 tablets": 144,
+    "Vitamax 15 capsules": 145,
+    "Zantac 20 tablets": 146,
+    "Zenta 100  gm cream": 147,
+    "Zyrtec 10 ml oral drops": 148,
+    "Zyrtec 20 tablets": 149
+  },
+  "label_to_info": {
+    "0": {
+      "class_index": 1,
+      "class_folder": "Acretin 30 g cream",
+      "medicine_name": "Acretin",
+      "dose": "0.05%",
+      "size": "30 g",
+      "type": "cream"
+    },
+    "1": {
+      "class_index": 2,
+      "class_folder": "Adol 24 caplets",
+      "medicine_name": "Adol",
+      "dose": "500 mg",
+      "size": "24",
+      "type": "caplets"
+    },
+    "2": {
+      "class_index": 3,
+      "class_folder": "Aggrex 60 tablets",
+      "medicine_name": "Aggrex",
+      "dose": "75 mg",
+      "size": "60",
+      "type": "tablets"
+    },
+    "3": {
+      "class_index": 4,
+      "class_folder": "Airoplast nan Tape",
+      "medicine_name": "Airoplast",
+      "dose": "5 cm",
+      "size": "Tape",
+      "type": ""
+    },
+    "4": {
+      "class_index": 5,
+      "class_folder": "All-Vent 125 ml syrup",
+      "medicine_name": "All-Vent",
+      "dose": "125 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "5": {
+      "class_index": 6,
+      "class_folder": "Alphintern 30 tablets",
+      "medicine_name": "Alphintern",
+      "dose": "30",
+      "size": "tablets",
+      "type": ""
+    },
+    "6": {
+      "class_index": 7,
+      "class_folder": "Ambezim-G 30 tablets",
+      "medicine_name": "Ambezim-G",
+      "dose": "30",
+      "size": "tablets",
+      "type": ""
+    },
+    "7": {
+      "class_index": 8,
+      "class_folder": "Amrizole 20 tablets",
+      "medicine_name": "Amrizole",
+      "dose": "500 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "8": {
+      "class_index": 9,
+      "class_folder": "Antopral 14 tablets",
+      "medicine_name": "Antopral",
+      "dose": "40 mg",
+      "size": "14",
+      "type": "tablets"
+    },
+    "9": {
+      "class_index": 10,
+      "class_folder": "Anuva 10 tablets",
+      "medicine_name": "Anuva",
+      "dose": "50 mg",
+      "size": "10",
+      "type": "tablets"
+    },
+    "10": {
+      "class_index": 11,
+      "class_folder": "Apidone nan syrup",
+      "medicine_name": "Apidone",
+      "dose": "syrup",
+      "size": "",
+      "type": ""
+    },
+    "11": {
+      "class_index": 12,
+      "class_folder": "Asmakast 30 tablets",
+      "medicine_name": "Asmakast",
+      "dose": "10 mg",
+      "size": "30",
+      "type": "tablets"
+    },
+    "12": {
+      "class_index": 13,
+      "class_folder": "Atoreza 28 tablets",
+      "medicine_name": "Atoreza",
+      "dose": "10/10 mg",
+      "size": "28",
+      "type": "tablets"
+    },
+    "13": {
+      "class_index": 14,
+      "class_folder": "Augmentin 14 tablets",
+      "medicine_name": "Augmentin",
+      "dose": "1 g",
+      "size": "14",
+      "type": "tablets"
+    },
+    "14": {
+      "class_index": 15,
+      "class_folder": "Avosoya 30 capsules",
+      "medicine_name": "Avosoya",
+      "dose": "300 mg",
+      "size": "30",
+      "type": "capsules"
+    },
+    "15": {
+      "class_index": 16,
+      "class_folder": "B.B.C. 25 ml spray solution",
+      "medicine_name": "B.B.C.",
+      "dose": "25 ml",
+      "size": "spray solution",
+      "type": ""
+    },
+    "16": {
+      "class_index": 17,
+      "class_folder": "Benogen 10 sachets",
+      "medicine_name": "Benogen",
+      "dose": "10",
+      "size": "sachets",
+      "type": ""
+    },
+    "17": {
+      "class_index": 18,
+      "class_folder": "Betaderm 30  gm cream",
+      "medicine_name": "Betaderm",
+      "dose": "30  gm",
+      "size": "cream",
+      "type": ""
+    },
+    "18": {
+      "class_index": 19,
+      "class_folder": "Betadine 120 ml solution",
+      "medicine_name": "Betadine",
+      "dose": "120 ml",
+      "size": "solution",
+      "type": ""
+    },
+    "19": {
+      "class_index": 20,
+      "class_folder": "Betadine 60  g ointment",
+      "medicine_name": "Betadine",
+      "dose": "10%",
+      "size": "60  g",
+      "type": "ointment"
+    },
+    "20": {
+      "class_index": 21,
+      "class_folder": "Betadine 120 ml mouth wash",
+      "medicine_name": "Betadine",
+      "dose": "120 ml",
+      "size": "mouth wash",
+      "type": ""
+    },
+    "21": {
+      "class_index": 22,
+      "class_folder": "Bivatracin 150 ml spray",
+      "medicine_name": "Bivatracin",
+      "dose": "150 ml",
+      "size": "spray",
+      "type": ""
+    },
+    "22": {
+      "class_index": 23,
+      "class_folder": "Bronchicum Elixir 100 ml nan",
+      "medicine_name": "Bronchicum Elixir",
+      "dose": "100 ml",
+      "size": "",
+      "type": ""
+    },
+    "23": {
+      "class_index": 24,
+      "class_folder": "Bronchopro 100 ml syrup",
+      "medicine_name": "Bronchopro",
+      "dose": "100 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "24": {
+      "class_index": 25,
+      "class_folder": "Brufen 30 tablets",
+      "medicine_name": "Brufen",
+      "dose": "400 mg",
+      "size": "30",
+      "type": "tablets"
+    },
+    "25": {
+      "class_index": 26,
+      "class_folder": "Brufen 150 ml syrup",
+      "medicine_name": "Brufen",
+      "dose": "100 mg/5 ml",
+      "size": "150 ml",
+      "type": "syrup"
+    },
+    "26": {
+      "class_index": 27,
+      "class_folder": "C Zinc 30 capsules",
+      "medicine_name": "C Zinc",
+      "dose": "30",
+      "size": "capsules",
+      "type": ""
+    },
+    "27": {
+      "class_index": 28,
+      "class_folder": "Candalkan Plus 14 tablets",
+      "medicine_name": "Candalkan Plus",
+      "dose": "16/12.5 mg",
+      "size": "14",
+      "type": "tablets"
+    },
+    "28": {
+      "class_index": 29,
+      "class_folder": "Carbamide 30 g cream",
+      "medicine_name": "Carbamide",
+      "dose": "30 g",
+      "size": "cream",
+      "type": ""
+    },
+    "29": {
+      "class_index": 30,
+      "class_folder": "Catafast 9 sachets",
+      "medicine_name": "Catafast",
+      "dose": "50 mg",
+      "size": "9",
+      "type": "sachets"
+    },
+    "30": {
+      "class_index": 31,
+      "class_folder": "Cataflam 20 tablets",
+      "medicine_name": "Cataflam",
+      "dose": "50 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "31": {
+      "class_index": 32,
+      "class_folder": "Ceftriaxone 1 Vial",
+      "medicine_name": "Ceftriaxone",
+      "dose": "1000 mg",
+      "size": "1",
+      "type": "Vial"
+    },
+    "32": {
+      "class_index": 33,
+      "class_folder": "Celebrex 15 capsules",
+      "medicine_name": "Celebrex",
+      "dose": "200 mg",
+      "size": "15",
+      "type": "capsules"
+    },
+    "33": {
+      "class_index": 34,
+      "class_folder": "Cemicresto 28 tablets",
+      "medicine_name": "Cemicresto",
+      "dose": "10 mg",
+      "size": "28",
+      "type": "tablets"
+    },
+    "34": {
+      "class_index": 35,
+      "class_folder": "Cetal 60 ml oral suspension",
+      "medicine_name": "Cetal",
+      "dose": "250 mg/5 ml",
+      "size": "60 ml",
+      "type": "oral suspension"
+    },
+    "35": {
+      "class_index": 36,
+      "class_folder": "Cetal Sinus 20 capsules",
+      "medicine_name": "Cetal Sinus",
+      "dose": "20",
+      "size": "capsules",
+      "type": ""
+    },
+    "36": {
+      "class_index": 37,
+      "class_folder": "Cholerose 21 tablets",
+      "medicine_name": "Cholerose",
+      "dose": "10 mg",
+      "size": "21",
+      "type": "tablets"
+    },
+    "37": {
+      "class_index": 38,
+      "class_folder": "Choletimb 14 tablets",
+      "medicine_name": "Choletimb",
+      "dose": "10 mg",
+      "size": "14",
+      "type": "tablets"
+    },
+    "38": {
+      "class_index": 39,
+      "class_folder": "Ciprodiazole 20 tablets",
+      "medicine_name": "Ciprodiazole",
+      "dose": "20",
+      "size": "tablets",
+      "type": ""
+    },
+    "39": {
+      "class_index": 40,
+      "class_folder": "Ciprofar 10 tablets",
+      "medicine_name": "Ciprofar",
+      "dose": "500 mg",
+      "size": "10",
+      "type": "tablets"
+    },
+    "40": {
+      "class_index": 41,
+      "class_folder": "Ciprofloxacin Tablets USP 39 10 tablets",
+      "medicine_name": "Ciprofloxacin Tablets USP 39",
+      "dose": "500 mg",
+      "size": "10",
+      "type": "tablets"
+    },
+    "41": {
+      "class_index": 42,
+      "class_folder": "Clarinase 14 repetabs",
+      "medicine_name": "Clarinase",
+      "dose": "14",
+      "size": "repetabs",
+      "type": ""
+    },
+    "42": {
+      "class_index": 43,
+      "class_folder": "Claritine 20 tablets",
+      "medicine_name": "Claritine",
+      "dose": "20",
+      "size": "tablets",
+      "type": ""
+    },
+    "43": {
+      "class_index": 44,
+      "class_folder": "Clindasol 20 g gel",
+      "medicine_name": "Clindasol",
+      "dose": "1%",
+      "size": "20 g",
+      "type": "gel"
+    },
+    "44": {
+      "class_index": 45,
+      "class_folder": "Comfort Massage Gel 50 gm gel",
+      "medicine_name": "Comfort Massage Gel",
+      "dose": "50 gm",
+      "size": "gel",
+      "type": ""
+    },
+    "45": {
+      "class_index": 46,
+      "class_folder": "Congestal 20 tablets",
+      "medicine_name": "Congestal",
+      "dose": "20",
+      "size": "tablets",
+      "type": ""
+    },
+    "46": {
+      "class_index": 47,
+      "class_folder": "Conta-flu 20 tablets",
+      "medicine_name": "Conta-flu",
+      "dose": "20",
+      "size": "tablets",
+      "type": ""
+    },
+    "47": {
+      "class_index": 48,
+      "class_folder": "Corasore 25 oral drops",
+      "medicine_name": "Corasore",
+      "dose": "25",
+      "size": "oral drops",
+      "type": ""
+    },
+    "48": {
+      "class_index": 49,
+      "class_folder": "C-Retard 10 capsules",
+      "medicine_name": "C-Retard",
+      "dose": "500 mg",
+      "size": "10",
+      "type": "capsules"
+    },
+    "49": {
+      "class_index": 50,
+      "class_folder": "C-vit 15 ml oral drops",
+      "medicine_name": "C-vit",
+      "dose": "15 ml",
+      "size": "oral drops",
+      "type": ""
+    },
+    "50": {
+      "class_index": 51,
+      "class_folder": "Daflon 30 tablets",
+      "medicine_name": "Daflon",
+      "dose": "500 mg",
+      "size": "30",
+      "type": "tablets"
+    },
+    "51": {
+      "class_index": 52,
+      "class_folder": "Daktarin 40 g gel oral",
+      "medicine_name": "Daktarin",
+      "dose": "40 g",
+      "size": "gel oral",
+      "type": ""
+    },
+    "52": {
+      "class_index": 53,
+      "class_folder": "Dalacin C 10 capsules",
+      "medicine_name": "Dalacin C",
+      "dose": "300 mg",
+      "size": "10",
+      "type": "capsules"
+    },
+    "53": {
+      "class_index": 54,
+      "class_folder": "Davalindi 100 tablets",
+      "medicine_name": "Davalindi",
+      "dose": "1000 IU",
+      "size": "100",
+      "type": "tablets"
+    },
+    "54": {
+      "class_index": 55,
+      "class_folder": "Dentinox nan colic drops",
+      "medicine_name": "Dentinox",
+      "dose": "colic drops",
+      "size": "",
+      "type": ""
+    },
+    "55": {
+      "class_index": 56,
+      "class_folder": "Diclac 30  gm gel",
+      "medicine_name": "Diclac",
+      "dose": "5%",
+      "size": "30  gm",
+      "type": "gel"
+    },
+    "56": {
+      "class_index": 57,
+      "class_folder": "Diclac 75 ID 20 tablets",
+      "medicine_name": "Diclac 75 ID",
+      "dose": "75 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "57": {
+      "class_index": 58,
+      "class_folder": "Diflucan 7 capsules",
+      "medicine_name": "Diflucan",
+      "dose": "50 mg",
+      "size": "7",
+      "type": "capsules"
+    },
+    "58": {
+      "class_index": 59,
+      "class_folder": "Diflucan 1 capsule",
+      "medicine_name": "Diflucan",
+      "dose": "150 mg",
+      "size": "1",
+      "type": "capsule"
+    },
+    "59": {
+      "class_index": 60,
+      "class_folder": "Ectomethrin 50 ml emulsion",
+      "medicine_name": "Ectomethrin",
+      "dose": "5%",
+      "size": "50 ml",
+      "type": "emulsion"
+    },
+    "60": {
+      "class_index": 61,
+      "class_folder": "Enrich 30 ml oral drops",
+      "medicine_name": "Enrich",
+      "dose": "30 ml",
+      "size": "oral drops",
+      "type": ""
+    },
+    "61": {
+      "class_index": 62,
+      "class_folder": "Enrich 100 ml syrup",
+      "medicine_name": "Enrich",
+      "dose": "100 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "62": {
+      "class_index": 63,
+      "class_folder": "Ezamol-C 20 tablets",
+      "medicine_name": "Ezamol-C",
+      "dose": "20",
+      "size": "tablets",
+      "type": ""
+    },
+    "63": {
+      "class_index": 64,
+      "class_folder": "Farcolin 120 ml syrup",
+      "medicine_name": "Farcolin",
+      "dose": "120 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "64": {
+      "class_index": 65,
+      "class_folder": "Fenistil 15 ml oral drops",
+      "medicine_name": "Fenistil",
+      "dose": "15 ml",
+      "size": "oral drops",
+      "type": ""
+    },
+    "65": {
+      "class_index": 66,
+      "class_folder": "Feroglobin nan capsules",
+      "medicine_name": "Feroglobin",
+      "dose": "capsules",
+      "size": "",
+      "type": ""
+    },
+    "66": {
+      "class_index": 67,
+      "class_folder": "Ferrofol 30 spansules",
+      "medicine_name": "Ferrofol",
+      "dose": "30",
+      "size": "spansules",
+      "type": ""
+    },
+    "67": {
+      "class_index": 68,
+      "class_folder": "Flagyl 20 tablets",
+      "medicine_name": "Flagyl",
+      "dose": "500 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "68": {
+      "class_index": 69,
+      "class_folder": "Flector EP 25  gm gel",
+      "medicine_name": "Flector EP",
+      "dose": "25  gm",
+      "size": "gel",
+      "type": ""
+    },
+    "69": {
+      "class_index": 70,
+      "class_folder": "Flix 16 g nasal spray",
+      "medicine_name": "Flix",
+      "dose": "16 g",
+      "size": "nasal spray",
+      "type": ""
+    },
+    "70": {
+      "class_index": 71,
+      "class_folder": "Floxabact 10 tablets",
+      "medicine_name": "Floxabact",
+      "dose": "500 mg",
+      "size": "10",
+      "type": "tablets"
+    },
+    "71": {
+      "class_index": 72,
+      "class_folder": "Flumox 16 capsules",
+      "medicine_name": "Flumox",
+      "dose": "500",
+      "size": "16",
+      "type": "capsules"
+    },
+    "72": {
+      "class_index": 73,
+      "class_folder": "Flumox 15 tablets",
+      "medicine_name": "Flumox",
+      "dose": "1000",
+      "size": "15",
+      "type": "tablets"
+    },
+    "73": {
+      "class_index": 74,
+      "class_folder": "Foradil 30 capsules",
+      "medicine_name": "Foradil",
+      "dose": "12 mcg",
+      "size": "30",
+      "type": "capsules"
+    },
+    "74": {
+      "class_index": 75,
+      "class_folder": "Free Nose 30 ml nasal spray",
+      "medicine_name": "Free Nose",
+      "dose": "30 ml",
+      "size": "nasal spray",
+      "type": ""
+    },
+    "75": {
+      "class_index": 76,
+      "class_folder": "Frost 100 ml spray",
+      "medicine_name": "Frost",
+      "dose": "100 ml",
+      "size": "spray",
+      "type": ""
+    },
+    "76": {
+      "class_index": 77,
+      "class_folder": "Fucicort 15 g cream",
+      "medicine_name": "Fucicort",
+      "dose": "15 g",
+      "size": "cream",
+      "type": ""
+    },
+    "77": {
+      "class_index": 78,
+      "class_folder": "Fucidin 30 g cream",
+      "medicine_name": "Fucidin",
+      "dose": "30 g",
+      "size": "cream",
+      "type": ""
+    },
+    "78": {
+      "class_index": 79,
+      "class_folder": "Fucidin 20 g cream",
+      "medicine_name": "Fucidin",
+      "dose": "20 g",
+      "size": "cream",
+      "type": ""
+    },
+    "79": {
+      "class_index": 80,
+      "class_folder": "Fucidin 15 g cream",
+      "medicine_name": "Fucidin",
+      "dose": "15 g",
+      "size": "cream",
+      "type": ""
+    },
+    "80": {
+      "class_index": 81,
+      "class_folder": "Gabalepsy 20 capsules",
+      "medicine_name": "Gabalepsy",
+      "dose": "300 mg",
+      "size": "20",
+      "type": "capsules"
+    },
+    "81": {
+      "class_index": 82,
+      "class_folder": "Garamycin 15 g cream",
+      "medicine_name": "Garamycin",
+      "dose": "15 g",
+      "size": "cream",
+      "type": ""
+    },
+    "82": {
+      "class_index": 83,
+      "class_folder": "Gengigel nan hydrogel",
+      "medicine_name": "Gengigel",
+      "dose": "hydrogel",
+      "size": "",
+      "type": ""
+    },
+    "83": {
+      "class_index": 84,
+      "class_folder": "Glucophage 50 tablets",
+      "medicine_name": "Glucophage",
+      "dose": "500 mg",
+      "size": "50",
+      "type": "tablets"
+    },
+    "84": {
+      "class_index": 85,
+      "class_folder": "GTN 50 ml cream",
+      "medicine_name": "GTN",
+      "dose": "50 ml",
+      "size": "cream",
+      "type": ""
+    },
+    "85": {
+      "class_index": 86,
+      "class_folder": "Haemostop 20 tablets",
+      "medicine_name": "Haemostop",
+      "dose": "250 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "86": {
+      "class_index": 87,
+      "class_folder": "Hemoclar 40 g cream",
+      "medicine_name": "Hemoclar",
+      "dose": "0.5%",
+      "size": "40 g",
+      "type": "cream"
+    },
+    "87": {
+      "class_index": 88,
+      "class_folder": "Hibiotic 16 tablets",
+      "medicine_name": "Hibiotic",
+      "dose": "1 gm",
+      "size": "16",
+      "type": "tablets"
+    },
+    "88": {
+      "class_index": 89,
+      "class_folder": "Histazine-1 20 tablets",
+      "medicine_name": "Histazine-1",
+      "dose": "10 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "89": {
+      "class_index": 90,
+      "class_folder": "ImmuGuard 14 sachets",
+      "medicine_name": "ImmuGuard",
+      "dose": "14",
+      "size": "sachets",
+      "type": ""
+    },
+    "90": {
+      "class_index": 91,
+      "class_folder": "Ivypront 120 ml syrup",
+      "medicine_name": "Ivypront",
+      "dose": "120 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "91": {
+      "class_index": 92,
+      "class_folder": "Janumet 56 tablets",
+      "medicine_name": "Janumet",
+      "dose": "50 mg/1000 mg",
+      "size": "56",
+      "type": "tablets"
+    },
+    "92": {
+      "class_index": 93,
+      "class_folder": "Jogel 20  gm oral gel",
+      "medicine_name": "Jogel",
+      "dose": "20  gm",
+      "size": "oral gel",
+      "type": ""
+    },
+    "93": {
+      "class_index": 94,
+      "class_folder": "Jusprin 60 tablets",
+      "medicine_name": "Jusprin",
+      "dose": "81 mg",
+      "size": "60",
+      "type": "tablets"
+    },
+    "94": {
+      "class_index": 95,
+      "class_folder": "Lactulose 120 ml syrup",
+      "medicine_name": "Lactulose",
+      "dose": "120 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "95": {
+      "class_index": 96,
+      "class_folder": "Lamifen 15  gm cream",
+      "medicine_name": "Lamifen",
+      "dose": "1%",
+      "size": "15  gm",
+      "type": "cream"
+    },
+    "96": {
+      "class_index": 97,
+      "class_folder": "Lamisil 15 g cream",
+      "medicine_name": "Lamisil",
+      "dose": "1%",
+      "size": "15 g",
+      "type": "cream"
+    },
+    "97": {
+      "class_index": 98,
+      "class_folder": "La-vie nan gel",
+      "medicine_name": "La-vie",
+      "dose": "gel",
+      "size": "",
+      "type": ""
+    },
+    "98": {
+      "class_index": 99,
+      "class_folder": "Lovir 10 tablets",
+      "medicine_name": "Lovir",
+      "dose": "400 mg",
+      "size": "10",
+      "type": "tablets"
+    },
+    "99": {
+      "class_index": 100,
+      "class_folder": "Mebo 30 mg ointment",
+      "medicine_name": "Mebo",
+      "dose": "30 mg",
+      "size": "ointment",
+      "type": ""
+    },
+    "100": {
+      "class_index": 101,
+      "class_folder": "Megamox 14 tablets",
+      "medicine_name": "Megamox",
+      "dose": "625 mg",
+      "size": "14",
+      "type": "tablets"
+    },
+    "101": {
+      "class_index": 102,
+      "class_folder": "Micropore nan Tape",
+      "medicine_name": "Micropore",
+      "dose": "7.5 cm",
+      "size": "Tape",
+      "type": ""
+    },
+    "102": {
+      "class_index": 103,
+      "class_folder": "Midodrine 20 tablets",
+      "medicine_name": "Midodrine",
+      "dose": "2.5 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "103": {
+      "class_index": 104,
+      "class_folder": "Miflonide 60 capsules",
+      "medicine_name": "Miflonide",
+      "dose": "400 ug",
+      "size": "60",
+      "type": "capsules"
+    },
+    "104": {
+      "class_index": 105,
+      "class_folder": "Milga 40 tablets",
+      "medicine_name": "Milga",
+      "dose": "40",
+      "size": "tablets",
+      "type": ""
+    },
+    "105": {
+      "class_index": 106,
+      "class_folder": "Minalax 10 tablets",
+      "medicine_name": "Minalax",
+      "dose": "10",
+      "size": "tablets",
+      "type": ""
+    },
+    "106": {
+      "class_index": 107,
+      "class_folder": "Motilium 40 tablets",
+      "medicine_name": "Motilium",
+      "dose": "40",
+      "size": "tablets",
+      "type": ""
+    },
+    "107": {
+      "class_index": 108,
+      "class_folder": "Mucophylline 125 ml syrup",
+      "medicine_name": "Mucophylline",
+      "dose": "125 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "108": {
+      "class_index": 109,
+      "class_folder": "Mucosta 20 tablets",
+      "medicine_name": "Mucosta",
+      "dose": "100 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "109": {
+      "class_index": 110,
+      "class_folder": "Multi-Relax 10 mg tablets",
+      "medicine_name": "Multi-Relax",
+      "dose": "10 mg",
+      "size": "tablets",
+      "type": ""
+    },
+    "110": {
+      "class_index": 111,
+      "class_folder": "Mupirax 10 g ointment",
+      "medicine_name": "Mupirax",
+      "dose": "2%",
+      "size": "10 g",
+      "type": "ointment"
+    },
+    "111": {
+      "class_index": 112,
+      "class_folder": "Neurovit 30 tablets",
+      "medicine_name": "Neurovit",
+      "dose": "30",
+      "size": "tablets",
+      "type": ""
+    },
+    "112": {
+      "class_index": 113,
+      "class_folder": "Night & Day 10 tablets",
+      "medicine_name": "Night & Day",
+      "dose": "10",
+      "size": "tablets",
+      "type": ""
+    },
+    "113": {
+      "class_index": 114,
+      "class_folder": "Oracure 30  gm oral gel",
+      "medicine_name": "Oracure",
+      "dose": "30  gm",
+      "size": "oral gel",
+      "type": ""
+    },
+    "114": {
+      "class_index": 115,
+      "class_folder": "Orex 60 ml solution",
+      "medicine_name": "Orex",
+      "dose": "60 ml",
+      "size": "solution",
+      "type": ""
+    },
+    "115": {
+      "class_index": 116,
+      "class_folder": "Orovex Delicate 250 ml mouth wash",
+      "medicine_name": "Orovex Delicate",
+      "dose": "250 ml",
+      "size": "mouth wash",
+      "type": ""
+    },
+    "116": {
+      "class_index": 117,
+      "class_folder": "Osteocare 120 ml liquid",
+      "medicine_name": "Osteocare",
+      "dose": "120 ml",
+      "size": "liquid",
+      "type": ""
+    },
+    "117": {
+      "class_index": 118,
+      "class_folder": "Pandermal 15 g cream",
+      "medicine_name": "Pandermal",
+      "dose": "15 g",
+      "size": "cream",
+      "type": ""
+    },
+    "118": {
+      "class_index": 119,
+      "class_folder": "Panthenol 20 g cream",
+      "medicine_name": "Panthenol",
+      "dose": "2%",
+      "size": "20 g",
+      "type": "cream"
+    },
+    "119": {
+      "class_index": 120,
+      "class_folder": "Paramol 20 tablets",
+      "medicine_name": "Paramol",
+      "dose": "500 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "120": {
+      "class_index": 121,
+      "class_folder": "Pedical nan syrup",
+      "medicine_name": "Pedical",
+      "dose": "syrup",
+      "size": "",
+      "type": ""
+    },
+    "121": {
+      "class_index": 122,
+      "class_folder": "Pentamix 120 ml syrup",
+      "medicine_name": "Pentamix",
+      "dose": "120 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "122": {
+      "class_index": 123,
+      "class_folder": "Phenadone 100 ml syrup",
+      "medicine_name": "Phenadone",
+      "dose": "100 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "123": {
+      "class_index": 124,
+      "class_folder": "Picolax 15 ml oral drops",
+      "medicine_name": "Picolax",
+      "dose": "15 ml",
+      "size": "oral drops",
+      "type": ""
+    },
+    "124": {
+      "class_index": 125,
+      "class_folder": "Predsol 50 ml syrup",
+      "medicine_name": "Predsol",
+      "dose": "50 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "125": {
+      "class_index": 126,
+      "class_folder": "Pridocaine 15 g cream",
+      "medicine_name": "Pridocaine",
+      "dose": "15 g",
+      "size": "cream",
+      "type": ""
+    },
+    "126": {
+      "class_index": 127,
+      "class_folder": "Primrose Plus 30 capsules",
+      "medicine_name": "Primrose Plus",
+      "dose": "1000  mg",
+      "size": "30",
+      "type": "capsules"
+    },
+    "127": {
+      "class_index": 128,
+      "class_folder": "Prinorelax 10 capsules",
+      "medicine_name": "Prinorelax",
+      "dose": "30 mg",
+      "size": "10",
+      "type": "capsules"
+    },
+    "128": {
+      "class_index": 129,
+      "class_folder": "Remowax 15 ml ear drops",
+      "medicine_name": "Remowax",
+      "dose": "15 ml",
+      "size": "ear drops",
+      "type": ""
+    },
+    "129": {
+      "class_index": 130,
+      "class_folder": "Rennie 96 chewable tablets",
+      "medicine_name": "Rennie",
+      "dose": "96",
+      "size": "chewable tablets",
+      "type": ""
+    },
+    "130": {
+      "class_index": 131,
+      "class_folder": "Reparil-Gel N 40 g gel",
+      "medicine_name": "Reparil-Gel N",
+      "dose": "40 g",
+      "size": "gel",
+      "type": ""
+    },
+    "131": {
+      "class_index": 132,
+      "class_folder": "Rheumatizen 60 g cream",
+      "medicine_name": "Rheumatizen",
+      "dose": "60 g",
+      "size": "cream",
+      "type": ""
+    },
+    "132": {
+      "class_index": 133,
+      "class_folder": "Rhinopro 20 capsules",
+      "medicine_name": "Rhinopro",
+      "dose": "20",
+      "size": "capsules",
+      "type": ""
+    },
+    "133": {
+      "class_index": 134,
+      "class_folder": "Salivex-L 10 ml paint",
+      "medicine_name": "Salivex-L",
+      "dose": "10 ml",
+      "size": "paint",
+      "type": ""
+    },
+    "134": {
+      "class_index": 135,
+      "class_folder": "Sediproct 20 g cream",
+      "medicine_name": "Sediproct",
+      "dose": "20 g",
+      "size": "cream",
+      "type": ""
+    },
+    "135": {
+      "class_index": 136,
+      "class_folder": "SelokenZOC 28 tablets",
+      "medicine_name": "SelokenZOC",
+      "dose": "100 mg",
+      "size": "28",
+      "type": "tablets"
+    },
+    "136": {
+      "class_index": 137,
+      "class_folder": "Solvadol 20 ml spray",
+      "medicine_name": "Solvadol",
+      "dose": "20 ml",
+      "size": "spray",
+      "type": ""
+    },
+    "137": {
+      "class_index": 138,
+      "class_folder": "Steronate 20 tablets",
+      "medicine_name": "Steronate",
+      "dose": "20",
+      "size": "tablets",
+      "type": ""
+    },
+    "138": {
+      "class_index": 139,
+      "class_folder": "Streptoquin 10 tablets",
+      "medicine_name": "Streptoquin",
+      "dose": "10",
+      "size": "tablets",
+      "type": ""
+    },
+    "139": {
+      "class_index": 140,
+      "class_folder": "Tareg 40 mg tablets",
+      "medicine_name": "Tareg",
+      "dose": "40",
+      "size": "40 mg",
+      "type": "tablets"
+    },
+    "140": {
+      "class_index": 141,
+      "class_folder": "Tears Guard 15 ml eye drops",
+      "medicine_name": "Tears Guard",
+      "dose": "15 ml",
+      "size": "eye drops",
+      "type": ""
+    },
+    "141": {
+      "class_index": 142,
+      "class_folder": "Tentavair 160 mcg oral inhalation",
+      "medicine_name": "Tentavair",
+      "dose": "160 mcg",
+      "size": "oral inhalation",
+      "type": ""
+    },
+    "142": {
+      "class_index": 143,
+      "class_folder": "Vidrop 15 ml oral drops",
+      "medicine_name": "Vidrop",
+      "dose": "2800 I.U.",
+      "size": "15 ml",
+      "type": "oral drops"
+    },
+    "143": {
+      "class_index": 144,
+      "class_folder": "Visceralgine 120 ml syrup",
+      "medicine_name": "Visceralgine",
+      "dose": "120 ml",
+      "size": "syrup",
+      "type": ""
+    },
+    "144": {
+      "class_index": 145,
+      "class_folder": "Vitacid C 12 tablets",
+      "medicine_name": "Vitacid C",
+      "dose": "1 g",
+      "size": "12",
+      "type": "tablets"
+    },
+    "145": {
+      "class_index": 146,
+      "class_folder": "Vitamax 15 capsules",
+      "medicine_name": "Vitamax",
+      "dose": "15",
+      "size": "capsules",
+      "type": ""
+    },
+    "146": {
+      "class_index": 147,
+      "class_folder": "Zantac 20 tablets",
+      "medicine_name": "Zantac",
+      "dose": "150 mg",
+      "size": "20",
+      "type": "tablets"
+    },
+    "147": {
+      "class_index": 148,
+      "class_folder": "Zenta 100  gm cream",
+      "medicine_name": "Zenta",
+      "dose": "100  gm",
+      "size": "cream",
+      "type": ""
+    },
+    "148": {
+      "class_index": 149,
+      "class_folder": "Zyrtec 10 ml oral drops",
+      "medicine_name": "Zyrtec",
+      "dose": "10 ml",
+      "size": "oral drops",
+      "type": ""
+    },
+    "149": {
+      "class_index": 150,
+      "class_folder": "Zyrtec 20 tablets",
+      "medicine_name": "Zyrtec",
+      "dose": "10 mg",
+      "size": "20",
+      "type": "tablets"
+    }
+  }
+}

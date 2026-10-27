@@ -16,12 +16,6 @@ public interface UserDao {
     @Query("SELECT * FROM users WHERE phone = :phone LIMIT 1")
     User getUserByPhone(String phone);
 
-    @Query("SELECT * FROM users WHERE LOWER(email) = LOWER(:email) AND password = :password LIMIT 1")
-    User loginWithEmail(String email, String password);
-
-    @Query("SELECT * FROM users WHERE phone = :phone AND password = :password LIMIT 1")
-    User loginWithPhone(String phone, String password);
-
     @Query("SELECT COUNT(*) FROM users WHERE LOWER(email) = LOWER(:email)")
     int checkEmailExists(String email);
 
