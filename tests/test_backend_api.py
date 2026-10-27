@@ -9,7 +9,7 @@ import urllib.request
 import urllib.error
 import uuid
 
-BACKEND_BASE_URL = "http://127.0.0.1:8000"
+BACKEND_BASE_URL = os.environ.get("MEDINEX_BACKEND_URL", "https://medinex-backend-bukx.onrender.com").rstrip("/")
 TEST_IMAGE_PATH = r"C:\Users\Lenovo\Downloads\bjy2svvmn8-1\bjy2svvmn8-1\Zyrtec 20 tablets\huawei cn (27).jpg"
 
 def post_multipart(url, file_bytes, filename, content_type="image/jpeg"):
@@ -102,6 +102,76 @@ class TestBackendApi(unittest.TestCase):
             self.assertEqual(e.code, 400)
             err_body = json.loads(e.read().decode("utf-8"))
             self.assertIn("empty", err_body.get("detail", "").lower())
+
+    def test_06_reject_unreadable_or_tiny_image(self):
+        """Verify POST /api/medicine/recognize handles tiny/unreadable image safely without crashing (returns 200 with uncertain status)"""
+        # Create minimal 10x10 JPEG
+        import io
+        from PIL import Image
+        buf = io.BytesIO()
+        Image.new("RGB", (10, 10), color=(0, 0, 0)).save(buf, format="JPEG")
+        tiny_bytes = buf.getvalue()
+
+        req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", tiny_bytes, "tiny.jpg")
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            self.assertEqual(resp.status, 200)
+            data = json.loads(resp.read().decode("utf-8"))
+            self.assertEqual(data.get("status"), "uncertain")
+            self.assertEqual(len(data.get("detected_medicines", [])), 0)
+            self.assertIn("resolution too small", data.get("message", "").lower())
+
+    def test_07_reject_oversized_payload(self):
+        """Verify POST /api/medicine/recognize rejects files exceeding 15MB with 413 Payload Too Large"""
+        oversized_bytes = b"0" * (16 * 1024 * 1024)
+        req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", oversized_bytes, "huge.jpg", content_type="image/jpeg")
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                self.fail("Expected HTTP 413 for oversized file")
+        except urllib.error.HTTPError as e:
+            self.assertEqual(e.code, 413)
+            err_body = json.loads(e.read().decode("utf-8"))
+            self.assertIn("15mb", err_body.get("detail", "").lower())
+
+    def test_08_unrelated_image_strict_anti_guessing(self):
+        """Verify POST /api/medicine/recognize strictly forbids automatic guessing when no medicine is present"""
+        import io
+        from PIL import Image
+        # 300x300 blank gray image with no medicine text or packaging features
+        buf = io.BytesIO()
+        Image.new("RGB", (300, 300), color=(128, 128, 128)).save(buf, format="JPEG")
+        blank_bytes = buf.getvalue()
+
+        req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", blank_bytes, "blank.jpg")
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            self.assertEqual(resp.status, 200)
+            data = json.loads(resp.read().decode("utf-8"))
+            self.assertIn(data.get("status"), ["unrecognized", "unreadable", "uncertain"])
+            self.assertEqual(len(data.get("detected_medicines", [])), 0)
+            self.assertIn("disclaimer", data)
+
+    def test_09_memory_guard_high_res_image_downscaling(self):
+        """Regression Test: Verify high-resolution (>2000px) images are safely downscaled and do not cause OOM/502"""
+        if not os.path.exists(TEST_IMAGE_PATH):
+            raise unittest.SkipTest(f"Test image not found at {TEST_IMAGE_PATH}")
+
+        from PIL import Image
+        import cv2
+        import numpy as np
+
+        with open(TEST_IMAGE_PATH, "rb") as f:
+            raw_bytes = f.read()
+
+        im = Image.open(TEST_IMAGE_PATH)
+        orig_w, orig_h = im.size
+        self.assertGreater(max(orig_w, orig_h), 1024, "Test image must be high-resolution (>1024px) to test memory guard")
+
+        # Verify endpoint accepts the high-res file and processes it successfully
+        req = post_multipart(f"{BACKEND_BASE_URL}/api/medicine/recognize", raw_bytes, "high_res_pkg.jpg")
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            self.assertEqual(resp.status, 200)
+            data = json.loads(resp.read().decode("utf-8"))
+            self.assertEqual(data.get("status"), "success")
+            self.assertGreater(len(data.get("detected_medicines", [])), 0)
 
 if __name__ == "__main__":
     unittest.main()

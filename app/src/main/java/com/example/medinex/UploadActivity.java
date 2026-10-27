@@ -121,11 +121,11 @@ public class UploadActivity extends AppCompatActivity {
 
             final Bitmap targetBitmap = inputBitmap;
 
-            // Compress image for Shared AI endpoint
+            // Standardize max dimension to 1024px for optimal network transfer and memory efficiency
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             int width = targetBitmap.getWidth();
             int height = targetBitmap.getHeight();
-            float maxDim = 1200f;
+            float maxDim = 1024f;
             Bitmap toSend = targetBitmap;
             if (width > maxDim || height > maxDim) {
                 float scale = Math.min(maxDim / width, maxDim / height);

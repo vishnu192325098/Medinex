@@ -52,7 +52,9 @@ def extract_dosage_form(text: str) -> Optional[str]:
     """Extract printed dosage form (tablets, caplets, syrup, etc.)."""
     if not text:
         return None
-    match = DOSAGE_FORM_REGEX.search(text)
+    # Normalize common OCR joined words like film-coatedtablets
+    clean = re.sub(r"(coated)(tablets?)", r"\1 \2", text, flags=re.IGNORECASE).replace("-", " ")
+    match = DOSAGE_FORM_REGEX.search(clean)
     if match:
         return match.group(1).capitalize()
     return None
@@ -60,7 +62,8 @@ def extract_dosage_form(text: str) -> Optional[str]:
 def verify_dosage_consistency(detected_strength: str, candidate_expected_strength: str) -> Tuple[bool, str]:
     """
     Check if detected strength matches candidate package catalog strength.
-    Strictly forbids guessing or conversion between distinct amounts (e.g. 500 mg vs 5 mg).
+    Strictly forbids guessing or conversion between distinct amounts (e.g. 500 mg vs 5 mg)
+    or incompatible physical units (e.g. 10 mg solid tablets vs 10 ml liquid drops).
     """
     if not detected_strength or not candidate_expected_strength:
         return True, "neutral"
@@ -87,6 +90,13 @@ def verify_dosage_consistency(detected_strength: str, candidate_expected_strengt
 
     if det_nums == exp_nums and det_units == exp_units:
         return True, "normalized_match"
+
+    # Incompatible physical forms (e.g. solid mg vs liquid ml)
+    solid_units = {"mg", "g", "mcg", "μg"}
+    liquid_units = {"ml", "l"}
+    if (set(det_units) & solid_units and set(exp_units) & liquid_units) or \
+       (set(det_units) & liquid_units and set(exp_units) & solid_units):
+        return False, f"unit_incompatibility_{norm_det}_vs_{norm_exp}"
 
     # If numbers differ significantly, flag discrepancy
     if det_nums and exp_nums and det_nums != exp_nums:

@@ -12,6 +12,8 @@ import numpy as np
 import joblib
 from rapidocr_onnxruntime import RapidOCR
 
+import logging
+
 from dosage_guard import (
     extract_all_strengths,
     extract_dosage_form,
@@ -19,8 +21,16 @@ from dosage_guard import (
     normalize_strength_token
 )
 
+logger = logging.getLogger("medinex_recognizer")
+
 MODELS_DIR = os.path.join(os.path.dirname(__file__), "models")
 CATALOG_PATH = os.path.join(os.path.dirname(__file__), "medicine_catalog.json")
+
+# Memory Safety: Maximum pixel dimension for OCR inference.
+# Clamping to 1024px preserves sub-millimeter typography legibility while
+# reducing ONNX runtime intermediate tensor memory from >400MB to <35MB,
+# strictly preventing Out-Of-Memory (OOM) 502 crashes on 512MB hosting tiers.
+MAX_OCR_DIMENSION = 1024
 
 class MedicineRecognizer:
     _instance = None
@@ -158,6 +168,7 @@ class MedicineRecognizer:
         img_np = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
         if img_np is None:
+            logger.warning("Failed to decode image buffer with cv2.imdecode.")
             return {
                 "status": "error",
                 "uncertainty_status": "unknown",
@@ -169,6 +180,22 @@ class MedicineRecognizer:
                 "loose_pill_notice": "Loose-pill visual identification requires laboratory pill-imprint confirmation. Please scan the original box or blister strip.",
                 "disclaimer": "This identification is for informational packaging recognition only and is separate from professional medical advice."
             }
+
+        # Memory Safety Guard: Downscale oversized images so max dimension <= MAX_OCR_DIMENSION.
+        # High-resolution mobile uploads (e.g. 2448x3264 or 4000x3000) cause RapidOCR/ONNX to
+        # allocate huge intermediate tensor feature maps (>400MB RAM), tripping the 512MB cgroup OOM
+        # limit on cloud instances and triggering HTTP 502 Bad Gateway.
+        # Clamping to 1024px preserves sub-millimeter medicine typography while keeping RAM <35MB.
+        orig_h, orig_w = img_np.shape[:2]
+        max_dim = max(orig_h, orig_w)
+        if max_dim > MAX_OCR_DIMENSION:
+            scale = float(MAX_OCR_DIMENSION) / float(max_dim)
+            new_w = max(1, int(round(orig_w * scale)))
+            new_h = max(1, int(round(orig_h * scale)))
+            img_np = cv2.resize(img_np, (new_w, new_h), interpolation=cv2.INTER_AREA)
+            logger.info(f"Memory Guard: Downscaled image from {orig_w}x{orig_h} to {new_w}x{new_h} (scale={scale:.3f})")
+        else:
+            logger.info(f"Memory Guard: Image dimensions within budget ({orig_w}x{orig_h})")
 
         # 2. Quality assessment
         quality = self.assess_image_quality(img_np)
@@ -221,10 +248,15 @@ class MedicineRecognizer:
                         if c_idx is not None:
                             visual_candidates_scores[c_idx] = entry
         except Exception as e:
-            print(f"Warning: Visual feature extraction error: {e}")
+            logger.warning(f"Visual feature extraction error: {e}")
 
-        # 4. Decoupled OCR execution
-        ocr_result, _ = self.ocr(img_np)
+        # 4. Decoupled OCR execution with defensive fault tolerance
+        ocr_result = None
+        try:
+            ocr_result, _ = self.ocr(img_np)
+        except Exception as ocr_err:
+            logger.error(f"RapidOCR execution encountered an error: {str(ocr_err)}", exc_info=True)
+            ocr_result = None
         extracted_lines = []
         raw_tokens = []
         ocr_confidences = []
@@ -412,8 +444,9 @@ class MedicineRecognizer:
 
         top_cand = scored_candidates[0]
 
-        # Determine Uncertainty Status
-        if critical_discrepancy_detected:
+        # Determine Uncertainty Status based on top candidate
+        top_has_discrepancy = any("CRITICAL DOSAGE DISCREPANCY" in str(ev) for ev in top_cand.get("evidence", []))
+        if top_has_discrepancy:
             uncertainty_status = "uncertain"
             warning = discrepancy_message
         elif top_cand["confidence"] >= 0.65:

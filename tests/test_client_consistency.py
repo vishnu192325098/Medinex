@@ -41,8 +41,10 @@ class TestClientConsistency(unittest.TestCase):
             cls.image_bytes = f.read()
 
     def test_both_clients_reach_shared_backend_and_return_identical_data(self):
-        web_url = "http://127.0.0.1:8000/api/medicine/recognize"
-        android_url = os.environ.get("ANDROID_BACKEND_URL", "http://172.20.10.3:8000/api/medicine/recognize")
+        base_env = os.environ.get("MEDINEX_BACKEND_URL", "https://medinex-backend-bukx.onrender.com").rstrip("/")
+        default_endpoint = base_env if base_env.endswith("/api/medicine/recognize") else f"{base_env}/api/medicine/recognize"
+        web_url = os.environ.get("WEB_BACKEND_URL", default_endpoint)
+        android_url = os.environ.get("ANDROID_BACKEND_URL", default_endpoint)
 
         # Web request
         web_resp = post_multipart(web_url, self.image_bytes, "packaging.jpg")

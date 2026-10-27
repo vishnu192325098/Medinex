@@ -9,6 +9,7 @@ from fastapi.responses import JSONResponse
 import uvicorn
 import logging
 import os
+from starlette.concurrency import run_in_threadpool
 
 from recognizer import MedicineRecognizer
 
@@ -67,13 +68,18 @@ async def recognize_medicine(file: UploadFile = File(...)):
     if not (content_type.startswith("image/") or file.filename.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))):
         raise HTTPException(status_code=400, detail="Invalid file type. Please upload a JPEG, PNG, or WebP image.")
 
+    MAX_FILE_SIZE = 15 * 1024 * 1024  # 15 MB payload guard
     try:
         image_bytes = await file.read()
         if len(image_bytes) == 0:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+        if len(image_bytes) > MAX_FILE_SIZE:
+            raise HTTPException(status_code=413, detail="Uploaded file exceeds 15MB limit. Please upload a compressed or standard image.")
 
-        # Run clinical packaging recognition pipeline
-        result = recognizer.recognize_image(image_bytes)
+        logger.info(f"Received packaging image: name='{file.filename}', size={len(image_bytes)} bytes, content_type='{content_type}'")
+        # Run clinical packaging recognition pipeline in worker threadpool to prevent event-loop stalls
+        result = await run_in_threadpool(recognizer.recognize_image, image_bytes)
+        logger.info(f"Recognition pipeline complete: status='{result.get('status')}', detected={len(result.get('detected_medicines', []))}")
         return JSONResponse(status_code=200, content=result)
 
     except HTTPException:
@@ -97,4 +103,4 @@ async def recognize_medicine(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)
+    uvicorn.run("app:app", host="0.0.0.0", port=port, timeout_keep_alive=30, reload=False)

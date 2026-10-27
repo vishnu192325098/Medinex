@@ -544,8 +544,10 @@ public class MedicineRecognitionTest {
     @Test
     public void testRetrofitClientBackendUrlConfiguration() {
         assertEquals("Emulator URL must be http://10.0.2.2:8000/", "http://10.0.2.2:8000/", RetrofitClient.EMULATOR_URL);
-        assertNotNull("BuildConfig.PHYSICAL_BACKEND_URL must not be null", BuildConfig.PHYSICAL_BACKEND_URL);
-        assertTrue("BuildConfig URL must end with port 8000", BuildConfig.PHYSICAL_BACKEND_URL.contains(":8000"));
+        assertTrue("BuildConfig URL must be a valid HTTP or HTTPS URL",
+                BuildConfig.PHYSICAL_BACKEND_URL.startsWith("http://") || BuildConfig.PHYSICAL_BACKEND_URL.startsWith("https://"));
+        assertEquals("Production URL must match Render deployment",
+                "https://medinex-backend-bukx.onrender.com/", RetrofitClient.PRODUCTION_BACKEND_URL);
 
         // Verify custom override
         String testCustomUrl = "http://192.168.1.150:8000";
@@ -555,7 +557,7 @@ public class MedicineRecognitionTest {
         // Reset custom URL to null to restore default behavior
         RetrofitClient.setSharedAiBaseUrl(null);
         String resolved = RetrofitClient.getSharedAiBaseUrl();
-        assertTrue("Resolved URL must be either emulator or BuildConfig physical URL",
-                resolved.equals(RetrofitClient.EMULATOR_URL) || resolved.equals(RetrofitClient.PHYSICAL_DEVICE_URL) || resolved.contains(":8000/"));
+        assertTrue("Resolved URL must be either emulator, BuildConfig physical URL, or production HTTPS URL",
+                resolved.equals(RetrofitClient.EMULATOR_URL) || resolved.equals(RetrofitClient.PHYSICAL_DEVICE_URL) || resolved.startsWith("https://") || resolved.contains(":8000/"));
     }
 }

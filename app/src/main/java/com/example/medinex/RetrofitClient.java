@@ -24,7 +24,7 @@ public class RetrofitClient {
     // Configured physical device backend URL resolved from BuildConfig.PHYSICAL_BACKEND_URL
     public static final String PHYSICAL_DEVICE_URL = BuildConfig.PHYSICAL_BACKEND_URL;
 
-    // Configured production backend HTTPS placeholder resolved from BuildConfig.PRODUCTION_BACKEND_URL
+    // Configured production backend HTTPS URL resolved from BuildConfig.PRODUCTION_BACKEND_URL
     public static final String PRODUCTION_BACKEND_URL = BuildConfig.PRODUCTION_BACKEND_URL;
 
     private static String customSharedAiBaseUrl = null;
@@ -53,7 +53,7 @@ public class RetrofitClient {
 
         String defaultPhysical = (BuildConfig.PHYSICAL_BACKEND_URL != null && !BuildConfig.PHYSICAL_BACKEND_URL.trim().isEmpty())
                 ? BuildConfig.PHYSICAL_BACKEND_URL.trim()
-                : "http://172.20.10.3:8000/";
+                : PRODUCTION_BACKEND_URL;
         if (!defaultPhysical.endsWith("/")) {
             defaultPhysical += "/";
         }

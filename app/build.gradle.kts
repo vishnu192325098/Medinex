@@ -29,14 +29,14 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // Production backend HTTPS URL placeholder (replace with your actual Render service URL, e.g. "https://medinex-backend.onrender.com/")
-        val placeholderProductionUrl = "https://YOUR-RENDER-SERVICE-NAME.onrender.com/"
-        buildConfigField("String", "PRODUCTION_BACKEND_URL", "\"$placeholderProductionUrl\"")
+        // Production backend HTTPS URL (deployed on Render)
+        val productionBackendUrl = "https://medinex-backend-bukx.onrender.com/"
+        buildConfigField("String", "PRODUCTION_BACKEND_URL", "\"$productionBackendUrl\"")
 
         // Centralized backend URL configuration:
         // Priority 1: Command-line property (-PbackendUrl="https://...")
         // Priority 2: local.properties entry (backendUrl=http://<IP>:8000/ or https://...)
-        // Priority 3: Default local development IP for physical Android testing
+        // Priority 3: Production Render HTTPS backend URL (removes local IP dependence)
         val localProps = Properties()
         val localPropsFile = project.rootProject.file("local.properties")
         if (localPropsFile.exists()) {
@@ -48,7 +48,7 @@ android {
 
         val rawBackendUrl = (project.findProperty("backendUrl") as? String)?.trim()
             ?: localBackendProp
-            ?: "http://172.20.10.3:8000/"
+            ?: productionBackendUrl
         val configuredBackendUrl = if (rawBackendUrl.endsWith("/")) rawBackendUrl else "$rawBackendUrl/"
         buildConfigField("String", "PHYSICAL_BACKEND_URL", "\"$configuredBackendUrl\"")
     }
