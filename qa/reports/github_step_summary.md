@@ -326,67 +326,67 @@
 | `MOB-002` | SplashActivity | Verify automatic transition to LoginActivity | LoginActivity launched via intent | 🟢 PASS | 303ms |
 | `MOB-003` | SplashActivity | Verify transition to DashboardActivity when logged in | DashboardActivity launched; SplashActivity finished | 🟢 PASS | 236ms |
 | `MOB-004` | SplashActivity | Verify window animation flags on SplashActivity | No title bar and full screen flags applied | 🟢 PASS | 206ms |
-| `MOB-005` | SplashActivity | Verify back button disabled during splash animation | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 161ms |
+| `MOB-005` | SplashActivity | Verify back button disabled during splash animation | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
 | `MOB-006` | SplashActivity | Verify cold start launch time under 1.5 seconds | First frame rendered within 1200ms | 🟢 PASS | 273ms |
 | `MOB-007` | SplashActivity | Verify database initialization in background thread | Database initialized without blocking UI thread | 🟢 PASS | 85ms |
 | `MOB-008` | SplashActivity | Verify RetrofitClient baseUrl initialization | Initialized to 'https://medinex-backend-bukx.onrender.com/' | 🟢 PASS | 99ms |
-| `MOB-009` | SplashActivity | Verify screen orientation locked to portrait | Activity maintains portrait orientation | 🟢 PASS | 87ms |
+| `MOB-009` | SplashActivity | Verify screen orientation locked to portrait | Activity maintains portrait orientation | 🟡 WARN | 0ms |
 | `MOB-010` | SplashActivity | Verify dark theme configuration loading | Loads values-night resources and dark background | 🟢 PASS | 176ms |
 | `MOB-011` | SplashActivity | Verify app update check background task | Silent background check for remote version | 🟢 PASS | 107ms |
 | `MOB-012` | SplashActivity | Verify crash reporting initialization | Crash handler hooked without exceptions | 🟢 PASS | 129ms |
 | `MOB-013` | LoginActivity | Verify UI layout elements on LoginActivity | etEmail, etPassword, btnLogin, tvRegister present | 🟢 PASS | 301ms |
-| `MOB-014` | LoginActivity | Verify empty email validation error | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 146ms |
-| `MOB-015` | LoginActivity | Verify malformed email validation error | etEmail.setError('Invalid email format') displayed | 🟢 PASS | 142ms |
-| `MOB-016` | LoginActivity | Verify empty password validation error | etPassword.setError('Password cannot be empty') displayed | 🟢 PASS | 137ms |
-| `MOB-017` | LoginActivity | Verify password masking transformation method | Characters masked with PasswordTransformationMethod | 🟢 PASS | 245ms |
-| `MOB-018` | LoginActivity | Verify password visibility toggle icon click | Password toggles between cleartext and masked | 🟢 PASS | 118ms |
-| `MOB-019` | LoginActivity | Verify failed login displays error toast | Toast message: 'Authentication failed. Check credentials' | 🟢 PASS | 280ms |
-| `MOB-020` | LoginActivity | Verify successful login with Firebase Auth | Auth succeeds; intent navigates to DashboardActivity | 🟢 PASS | 160ms |
+| `MOB-014` | LoginActivity | Verify empty email validation error | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-015` | LoginActivity | Verify malformed email validation error | etEmail.setError('Invalid email format') displayed | 🟡 WARN | 0ms |
+| `MOB-016` | LoginActivity | Verify empty password validation error | etPassword.setError('Password cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-017` | LoginActivity | Verify password masking transformation method | Characters masked with PasswordTransformationMethod | 🟡 WARN | 0ms |
+| `MOB-018` | LoginActivity | Verify password visibility toggle icon click | Password toggles between cleartext and masked | 🟡 WARN | 0ms |
+| `MOB-019` | LoginActivity | Verify failed login displays error toast | Toast message: 'Authentication failed. Check credentials' | 🟡 WARN | 0ms |
+| `MOB-020` | LoginActivity | Verify successful login with Firebase Auth | Auth succeeds; intent navigates to DashboardActivity | 🟡 WARN | 0ms |
 | `MOB-021` | LoginActivity | Verify session token saved to SharedPreferences | Key 'isLoggedIn' set to true; 'userUid' saved | 🟢 PASS | 160ms |
-| `MOB-022` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity | RegisterActivity launched via explicit intent | 🟢 PASS | 98ms |
-| `MOB-023` | LoginActivity | Verify 'Forgot Password' dialog opens | AlertDialog opens with reset email input | 🟢 PASS | 231ms |
-| `MOB-024` | LoginActivity | Verify reset password email dispatch | FirebaseAuth.sendPasswordResetEmail() called; toast displayed | 🟢 PASS | 147ms |
+| `MOB-022` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-023` | LoginActivity | Verify 'Forgot Password' dialog opens | AlertDialog opens with reset email input | 🟡 WARN | 0ms |
+| `MOB-024` | LoginActivity | Verify reset password email dispatch | FirebaseAuth.sendPasswordResetEmail() called; toast displayed | 🟡 WARN | 0ms |
 | `MOB-025` | LoginActivity | Verify progress bar visible during authentication | ProgressBar becomes VISIBLE; btnLogin disabled | 🟢 PASS | 332ms |
-| `MOB-026` | LoginActivity | Verify hardware back button exits app gracefully | Activity finishes cleanly; no ANR or crash | 🟢 PASS | 183ms |
-| `MOB-027` | LoginActivity | Verify orientation change preserves entered email | onSaveInstanceState restores email string in etEmail | 🟢 PASS | 252ms |
-| `MOB-028` | LoginActivity | Verify keyboard auto-dismiss on login submit | InputMethodManager hides soft keyboard cleanly | 🟢 PASS | 215ms |
+| `MOB-026` | LoginActivity | Verify hardware back button exits app gracefully | Activity finishes cleanly; no ANR or crash | 🟡 WARN | 0ms |
+| `MOB-027` | LoginActivity | Verify orientation change preserves entered email | onSaveInstanceState restores email string in etEmail | 🟡 WARN | 0ms |
+| `MOB-028` | LoginActivity | Verify keyboard auto-dismiss on login submit | InputMethodManager hides soft keyboard cleanly | 🟡 WARN | 0ms |
 | `MOB-029` | RegisterActivity | Verify registration input fields presence | etName, etEmail, etPassword, etConfirmPassword, btnRegister | 🟢 PASS | 179ms |
-| `MOB-030` | RegisterActivity | Verify empty full name validation | etName.setError('Name is required') | 🟢 PASS | 80ms |
-| `MOB-031` | RegisterActivity | Verify short password length (<6 chars) validation | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 233ms |
-| `MOB-032` | RegisterActivity | Verify password mismatch validation | etConfirmPassword.setError('Passwords do not match') | 🟢 PASS | 176ms |
+| `MOB-030` | RegisterActivity | Verify empty full name validation | etName.setError('Name is required') | 🟡 WARN | 0ms |
+| `MOB-031` | RegisterActivity | Verify short password length (<6 chars) validation | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
+| `MOB-032` | RegisterActivity | Verify password mismatch validation | etConfirmPassword.setError('Passwords do not match') | 🟡 WARN | 0ms |
 | `MOB-033` | RegisterActivity | Verify duplicate account registration handling | Toast: 'An account with this email already exists' | 🟢 PASS | 197ms |
-| `MOB-034` | RegisterActivity | Verify successful registration creates Firestore user | User created in Firebase Auth; profile document in Firestore | 🟢 PASS | 162ms |
+| `MOB-034` | RegisterActivity | Verify successful registration creates Firestore user | User created in Firebase Auth; profile document in Firestore | 🟡 WARN | 0ms |
 | `MOB-035` | RegisterActivity | Verify navigation to DashboardActivity on registration | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 156ms |
-| `MOB-036` | RegisterActivity | Verify back arrow in toolbar navigates to LoginActivity | RegisterActivity finishes; LoginActivity visible | 🟢 PASS | 305ms |
-| `MOB-037` | RegisterActivity | Verify input field IME action Next and Done | Focus moves: Name -> Email -> Password -> Confirm -> Submit | 🟢 PASS | 328ms |
-| `MOB-038` | RegisterActivity | Verify terms of service dialog display | Modal dialog displays terms text with 'I Agree' button | 🟢 PASS | 133ms |
-| `MOB-039` | RegisterActivity | Verify phone number length constraint (10 digits) | Field validation flags incomplete phone number | 🟢 PASS | 100ms |
-| `MOB-040` | RegisterActivity | Verify double click on Register button prevention | Button disabled on first click; single request sent | 🟢 PASS | 253ms |
+| `MOB-036` | RegisterActivity | Verify back arrow in toolbar navigates to LoginActivity | RegisterActivity finishes; LoginActivity visible | 🟡 WARN | 0ms |
+| `MOB-037` | RegisterActivity | Verify input field IME action Next and Done | Focus moves: Name -> Email -> Password -> Confirm -> Submit | 🟡 WARN | 0ms |
+| `MOB-038` | RegisterActivity | Verify terms of service dialog display | Modal dialog displays terms text with 'I Agree' button | 🟡 WARN | 0ms |
+| `MOB-039` | RegisterActivity | Verify phone number length constraint (10 digits) | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
+| `MOB-040` | RegisterActivity | Verify double click on Register button prevention | Button disabled on first click; single request sent | 🟡 WARN | 0ms |
 | `MOB-041` | DashboardActivity | Verify dashboard greeting and header layout | Displays 'Hello, <User Name>' with avatar icon | 🟢 PASS | 346ms |
 | `MOB-042` | DashboardActivity | Verify bottom navigation bar items | 5 tabs: Home, Scan, Reminders, Hub, Profile | 🟢 PASS | 240ms |
-| `MOB-043` | DashboardActivity | Verify clicking 'Scan' tab navigates to UploadActivity | UploadActivity launched via intent | 🟢 PASS | 318ms |
-| `MOB-044` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity | ReminderActivity launched via intent | 🟢 PASS | 184ms |
-| `MOB-045` | DashboardActivity | Verify clicking 'Hub' tab navigates to HealthHubActivity | HealthHubActivity launched via intent | 🟢 PASS | 178ms |
-| `MOB-046` | DashboardActivity | Verify clicking 'Profile' tab navigates to ProfileActivity | ProfileActivity launched via intent | 🟢 PASS | 103ms |
-| `MOB-047` | DashboardActivity | Verify Quick Action card 'Emergency' click | EmergencyActivity launched with SOS options | 🟢 PASS | 296ms |
-| `MOB-048` | DashboardActivity | Verify Quick Action card 'Stock Prediction' click | StockPredictionActivity launched | 🟢 PASS | 96ms |
-| `MOB-049` | DashboardActivity | Verify Quick Action card 'Duplicate Medicine' click | DuplicateMedicineActivity launched | 🟢 PASS | 309ms |
-| `MOB-050` | DashboardActivity | Verify Quick Action card 'Medicine Interaction' click | MedicineInteractionActivity launched | 🟢 PASS | 298ms |
-| `MOB-051` | DashboardActivity | Verify Quick Action card 'AI Health Assistant' click | AIHealthAssistantActivity launched | 🟢 PASS | 83ms |
+| `MOB-043` | DashboardActivity | Verify clicking 'Scan' tab navigates to UploadActivity | UploadActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-044` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-045` | DashboardActivity | Verify clicking 'Hub' tab navigates to HealthHubActivity | HealthHubActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-046` | DashboardActivity | Verify clicking 'Profile' tab navigates to ProfileActivity | ProfileActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-047` | DashboardActivity | Verify Quick Action card 'Emergency' click | EmergencyActivity launched with SOS options | 🟡 WARN | 0ms |
+| `MOB-048` | DashboardActivity | Verify Quick Action card 'Stock Prediction' click | StockPredictionActivity launched | 🟡 WARN | 0ms |
+| `MOB-049` | DashboardActivity | Verify Quick Action card 'Duplicate Medicine' click | DuplicateMedicineActivity launched | 🟡 WARN | 0ms |
+| `MOB-050` | DashboardActivity | Verify Quick Action card 'Medicine Interaction' click | MedicineInteractionActivity launched | 🟡 WARN | 0ms |
+| `MOB-051` | DashboardActivity | Verify Quick Action card 'AI Health Assistant' click | AIHealthAssistantActivity launched | 🟡 WARN | 0ms |
 | `MOB-052` | DashboardActivity | Verify Recent Scans RecyclerView populated | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 105ms |
 | `MOB-053` | DashboardActivity | Verify empty scan list placeholder view | Placeholder visible: 'No scans yet. Tap Scan to start' | 🟢 PASS | 148ms |
 | `MOB-054` | DashboardActivity | Verify Active Reminders card countdown | Displays next reminder time and medicine dosage | 🟢 PASS | 183ms |
-| `MOB-055` | DashboardActivity | Verify options menu Settings item click | SettingsActivity launched via intent | 🟢 PASS | 311ms |
-| `MOB-056` | DashboardActivity | Verify double back press to exit app | First press shows 'Press back again to exit'; second exits | 🟢 PASS | 158ms |
-| `MOB-057` | UploadActivity | Verify camera button launches Camera Intent | Dispatches MediaStore.ACTION_IMAGE_CAPTURE intent | 🟢 PASS | 139ms |
-| `MOB-058` | UploadActivity | Verify gallery button launches Photo Picker Intent | Dispatches Intent.ACTION_PICK with image/* mime | 🟢 PASS | 259ms |
-| `MOB-059` | UploadActivity | Verify camera permission runtime request dialog | ActivityCompat.requestPermissions(CAMERA) shown | 🟢 PASS | 259ms |
-| `MOB-060` | UploadActivity | Verify storage/media permission runtime request | READ_MEDIA_IMAGES permission requested | 🟢 PASS | 306ms |
-| `MOB-061` | UploadActivity | Verify permission denied toast handling | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 250ms |
-| `MOB-062` | UploadActivity | Verify selected image displayed in ImageView | Captured Bitmap displayed in ivMedicinePreview | 🟢 PASS | 188ms |
-| `MOB-063` | UploadActivity | Verify image rotation button matrix transformation | Bitmap rotated 90 degrees using Matrix.postRotate() | 🟢 PASS | 191ms |
-| `MOB-064` | UploadActivity | Verify crop button triggers image crop UI | Crop overlay activated with resizable handles | 🟢 PASS | 145ms |
-| `MOB-065` | UploadActivity | Verify analyze button triggers Retrofit API call | Multipart request sent to /api/medicine/recognize | 🟢 PASS | 139ms |
+| `MOB-055` | DashboardActivity | Verify options menu Settings item click | SettingsActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-056` | DashboardActivity | Verify double back press to exit app | First press shows 'Press back again to exit'; second exits | 🟡 WARN | 0ms |
+| `MOB-057` | UploadActivity | Verify camera button launches Camera Intent | Dispatches MediaStore.ACTION_IMAGE_CAPTURE intent | 🟡 WARN | 0ms |
+| `MOB-058` | UploadActivity | Verify gallery button launches Photo Picker Intent | Dispatches Intent.ACTION_PICK with image/* mime | 🟡 WARN | 0ms |
+| `MOB-059` | UploadActivity | Verify camera permission runtime request dialog | ActivityCompat.requestPermissions(CAMERA) shown | 🟡 WARN | 0ms |
+| `MOB-060` | UploadActivity | Verify storage/media permission runtime request | READ_MEDIA_IMAGES permission requested | 🟡 WARN | 0ms |
+| `MOB-061` | UploadActivity | Verify permission denied toast handling | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-062` | UploadActivity | Verify selected image displayed in ImageView | Captured Bitmap displayed in ivMedicinePreview | 🟡 WARN | 0ms |
+| `MOB-063` | UploadActivity | Verify image rotation button matrix transformation | Bitmap rotated 90 degrees using Matrix.postRotate() | 🟡 WARN | 0ms |
+| `MOB-064` | UploadActivity | Verify crop button triggers image crop UI | Crop overlay activated with resizable handles | 🟡 WARN | 0ms |
+| `MOB-065` | UploadActivity | Verify analyze button triggers Retrofit API call | Multipart request sent to /api/medicine/recognize | 🟡 WARN | 0ms |
 | `MOB-066` | UploadActivity | Verify loading dialog displayed during API call | Loading dialog displayed with 'Recognizing medicine...' | 🟢 PASS | 96ms |
 | `MOB-067` | UploadActivity | Verify successful recognition opens result dialog | Displays verified medicine name, dosage, and confidence | 🟢 PASS | 231ms |
 | `MOB-068` | UploadActivity | Verify low confidence match badge display | Displays amber warning: 'Candidate Match — Verification Needed' | 🟢 PASS | 228ms |
@@ -396,69 +396,69 @@
 | `MOB-072` | UploadActivity | Verify Firebase Cloud Storage fallback behavior | imageStorageStatus marked 'saved_locally'; no crash | 🟢 PASS | 136ms |
 | `MOB-073` | ScanHistoryActivity | Verify scan history list loaded from SQLite/Room | RecyclerView bound to ScanEntity database records | 🟢 PASS | 329ms |
 | `MOB-074` | ScanHistoryActivity | Verify scan history card details | Displays medicine name, dosage, timestamp, and thumbnail | 🟢 PASS | 210ms |
-| `MOB-075` | ScanHistoryActivity | Verify clicking history item opens detail view | Opens ScanDetail dialog with clinical monograph | 🟢 PASS | 282ms |
-| `MOB-076` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item | Item deleted from SQLite database; undo snackbar shown | 🟢 PASS | 102ms |
-| `MOB-077` | ScanHistoryActivity | Verify undo deletion snackbar action | Item restored to database and re-inserted in adapter | 🟢 PASS | 159ms |
-| `MOB-078` | ScanHistoryActivity | Verify search filter in history SearchView | Adapter filters list to matching medicine names | 🟢 PASS | 255ms |
-| `MOB-079` | ScanHistoryActivity | Verify 'Clear All History' menu item with dialog | AlertDialog prompts confirmation before wiping table | 🟢 PASS | 347ms |
+| `MOB-075` | ScanHistoryActivity | Verify clicking history item opens detail view | Opens ScanDetail dialog with clinical monograph | 🟡 WARN | 0ms |
+| `MOB-076` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item | Item deleted from SQLite database; undo snackbar shown | 🟡 WARN | 0ms |
+| `MOB-077` | ScanHistoryActivity | Verify undo deletion snackbar action | Item restored to database and re-inserted in adapter | 🟡 WARN | 0ms |
+| `MOB-078` | ScanHistoryActivity | Verify search filter in history SearchView | Adapter filters list to matching medicine names | 🟡 WARN | 0ms |
+| `MOB-079` | ScanHistoryActivity | Verify 'Clear All History' menu item with dialog | AlertDialog prompts confirmation before wiping table | 🟡 WARN | 0ms |
 | `MOB-080` | ScanHistoryActivity | Verify empty history state illustration | Displays empty graphic and 'No scan history found' | 🟢 PASS | 107ms |
-| `MOB-081` | ScanHistoryActivity | Verify history list scroll performance (60 FPS) | Smooth scrolling without dropped frames or stutter | 🟢 PASS | 135ms |
-| `MOB-082` | ScanHistoryActivity | Verify thumbnail caching prevents OOM | Glide/Picasso caches bitmaps with downsampled bounds | 🟢 PASS | 178ms |
+| `MOB-081` | ScanHistoryActivity | Verify history list scroll performance (60 FPS) | Smooth scrolling without dropped frames or stutter | 🟡 WARN | 0ms |
+| `MOB-082` | ScanHistoryActivity | Verify thumbnail caching prevents OOM | Glide/Picasso caches bitmaps with downsampled bounds | 🟡 WARN | 0ms |
 | `MOB-083` | ReminderActivity & ReminderSetupActivity | Verify reminder list loaded from SQLite/Room | Displays active and completed reminder cards | 🟢 PASS | 203ms |
-| `MOB-084` | ReminderActivity & ReminderSetupActivity | Verify FAB '+' button launches ReminderSetupActivity | ReminderSetupActivity launched via intent | 🟢 PASS | 286ms |
+| `MOB-084` | ReminderActivity & ReminderSetupActivity | Verify FAB '+' button launches ReminderSetupActivity | ReminderSetupActivity launched via intent | 🟡 WARN | 0ms |
 | `MOB-085` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras | Pre-filled with recognized medicine name | 🟢 PASS | 187ms |
-| `MOB-086` | ReminderActivity & ReminderSetupActivity | Verify dosage quantity input validation | etDosage.setError('Please enter dosage') | 🟢 PASS | 302ms |
+| `MOB-086` | ReminderActivity & ReminderSetupActivity | Verify dosage quantity input validation | etDosage.setError('Please enter dosage') | 🟡 WARN | 0ms |
 | `MOB-087` | ReminderActivity & ReminderSetupActivity | Verify dosage unit spinner options | Contains: Tablet, Capsule, ml, Drops, mg | 🟢 PASS | 291ms |
-| `MOB-088` | ReminderActivity & ReminderSetupActivity | Verify time picker dialog opens on click | TimePickerDialog opens with current time selected | 🟢 PASS | 200ms |
+| `MOB-088` | ReminderActivity & ReminderSetupActivity | Verify time picker dialog opens on click | TimePickerDialog opens with current time selected | 🟡 WARN | 0ms |
 | `MOB-089` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 303ms |
 | `MOB-090` | ReminderActivity & ReminderSetupActivity | Verify notification channel creation for alarms | Channel 'medinex_reminders' created with high importance | 🟢 PASS | 88ms |
 | `MOB-091` | ReminderActivity & ReminderSetupActivity | Verify toggle reminder active switch | Alarm cancelled; reminder marked inactive in DB | 🟢 PASS | 83ms |
 | `MOB-092` | ReminderActivity & ReminderSetupActivity | Verify deleting reminder cancels scheduled alarm | PendingIntent cancelled; record removed from DB | 🟢 PASS | 82ms |
 | `MOB-093` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 291ms |
 | `MOB-094` | ReminderActivity & ReminderSetupActivity | Verify notification triggered when alarm fires | ReminderBroadcastReceiver posts notification with chime | 🟢 PASS | 111ms |
-| `MOB-095` | Specialized Clinical Activities | Verify EmergencyActivity 108 dial intent | Dispatches Intent.ACTION_DIAL with tel:108 | 🟢 PASS | 188ms |
-| `MOB-096` | Specialized Clinical Activities | Verify EmergencyActivity SMS alert dispatch | Dispatches SMS intent with current GPS coordinates | 🟢 PASS | 301ms |
+| `MOB-095` | Specialized Clinical Activities | Verify EmergencyActivity 108 dial intent | Dispatches Intent.ACTION_DIAL with tel:108 | 🟡 WARN | 0ms |
+| `MOB-096` | Specialized Clinical Activities | Verify EmergencyActivity SMS alert dispatch | Dispatches SMS intent with current GPS coordinates | 🟡 WARN | 0ms |
 | `MOB-097` | Specialized Clinical Activities | Verify StockPredictionActivity days calculation | Calculates daysRemaining = totalPills / dailyDose | 🟢 PASS | 250ms |
 | `MOB-098` | Specialized Clinical Activities | Verify low stock notification trigger (<= 5 days) | Badge displayed in amber with refill recommendation | 🟢 PASS | 231ms |
 | `MOB-099` | Specialized Clinical Activities | Verify DuplicateMedicineActivity similarity check | Identifies duplicate active ingredients accurately | 🟢 PASS | 187ms |
 | `MOB-100` | Specialized Clinical Activities | Verify MedicineInteractionActivity drug matrix | Displays major/moderate interaction alert with mechanism | 🟢 PASS | 276ms |
 | `MOB-101` | Specialized Clinical Activities | Verify AIHealthAssistantActivity chat RecyclerView | Chat adapter appends user bubble and bot reply | 🟢 PASS | 247ms |
-| `MOB-102` | Specialized Clinical Activities | Verify HealthHubActivity topic cards navigation | Opens curated cardiovascular medicine guide | 🟢 PASS | 134ms |
+| `MOB-102` | Specialized Clinical Activities | Verify HealthHubActivity topic cards navigation | Opens curated cardiovascular medicine guide | 🟡 WARN | 0ms |
 | `MOB-103` | Specialized Clinical Activities | Verify BMIActivity calculation and classification | Displays 'BMI: 23.1 — Normal Weight' | 🟢 PASS | 263ms |
 | `MOB-104` | Specialized Clinical Activities | Verify HealthTipsActivity daily advice cards | ViewPager2 scrolls through clinical health recommendations | 🟢 PASS | 202ms |
-| `MOB-105` | Specialized Clinical Activities | Verify WaterTrackerActivity counter increment | Intake increases by 250ml; circular progress updates | 🟢 PASS | 167ms |
+| `MOB-105` | Specialized Clinical Activities | Verify WaterTrackerActivity counter increment | Intake increases by 250ml; circular progress updates | 🟡 WARN | 0ms |
 | `MOB-106` | Specialized Clinical Activities | Verify AppleActivity nutrition facts display | Displays calories, vitamins, fiber for logged items | 🟢 PASS | 244ms |
 | `MOB-107` | Specialized Clinical Activities | Verify DietPlannerActivity meal schedule | Breakfast, Lunch, Dinner calorie totals displayed | 🟢 PASS | 265ms |
 | `MOB-108` | Specialized Clinical Activities | Verify ProfileActivity SharedPreferences sync | Saved to SharedPreferences and Firestore document | 🟢 PASS | 340ms |
-| `MOB-109` | Specialized Clinical Activities | Verify SettingsActivity clear cache action | Deletes files in cacheDir; displays confirmation toast | 🟢 PASS | 251ms |
+| `MOB-109` | Specialized Clinical Activities | Verify SettingsActivity clear cache action | Deletes files in cacheDir; displays confirmation toast | 🟡 WARN | 0ms |
 | `MOB-110` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #110 | Pre-filled with recognized medicine name | 🟢 PASS | 108ms |
 | `MOB-111` | Specialized Clinical Activities | Verify AIHealthAssistantActivity chat RecyclerView - Device Test #111 | Chat adapter appends user bubble and bot reply | 🟢 PASS | 108ms |
-| `MOB-112` | SplashActivity | Verify back button disabled during splash animation - Device Test #112 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 271ms |
-| `MOB-113` | LoginActivity | Verify empty email validation error - Device Test #113 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 234ms |
+| `MOB-112` | SplashActivity | Verify back button disabled during splash animation - Device Test #112 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-113` | LoginActivity | Verify empty email validation error - Device Test #113 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
 | `MOB-114` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #114 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 135ms |
-| `MOB-115` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #115 | ReminderActivity launched via intent | 🟢 PASS | 97ms |
-| `MOB-116` | UploadActivity | Verify permission denied toast handling - Device Test #116 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 246ms |
+| `MOB-115` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #115 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-116` | UploadActivity | Verify permission denied toast handling - Device Test #116 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
 | `MOB-117` | ScanHistoryActivity | Verify empty history state illustration - Device Test #117 | Displays empty graphic and 'No scan history found' | 🟢 PASS | 215ms |
 | `MOB-118` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #118 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 209ms |
-| `MOB-119` | Specialized Clinical Activities | Verify SettingsActivity clear cache action - Device Test #119 | Deletes files in cacheDir; displays confirmation toast | 🟢 PASS | 113ms |
+| `MOB-119` | Specialized Clinical Activities | Verify SettingsActivity clear cache action - Device Test #119 | Deletes files in cacheDir; displays confirmation toast | 🟡 WARN | 0ms |
 | `MOB-120` | SplashActivity | Verify splash screen branding and logo - Device Test #120 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 197ms |
-| `MOB-121` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #121 | RegisterActivity launched via explicit intent | 🟢 PASS | 333ms |
-| `MOB-122` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #122 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 365ms |
+| `MOB-121` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #121 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-122` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #122 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
 | `MOB-123` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #123 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 91ms |
 | `MOB-124` | UploadActivity | Verify network error toast on unreachable backend - Device Test #124 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 96ms |
-| `MOB-125` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #125 | Adapter filters list to matching medicine names | 🟢 PASS | 206ms |
+| `MOB-125` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #125 | Adapter filters list to matching medicine names | 🟡 WARN | 0ms |
 | `MOB-126` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #126 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 266ms |
-| `MOB-127` | Specialized Clinical Activities | Verify HealthHubActivity topic cards navigation - Device Test #127 | Opens curated cardiovascular medicine guide | 🟢 PASS | 194ms |
-| `MOB-128` | SplashActivity | Verify screen orientation locked to portrait - Device Test #128 | Activity maintains portrait orientation | 🟢 PASS | 275ms |
-| `MOB-129` | LoginActivity | Verify empty email validation error - Device Test #129 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 211ms |
-| `MOB-130` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #130 | Field validation flags incomplete phone number | 🟢 PASS | 312ms |
-| `MOB-131` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #131 | ReminderActivity launched via intent | 🟢 PASS | 123ms |
-| `MOB-132` | UploadActivity | Verify permission denied toast handling - Device Test #132 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 306ms |
-| `MOB-133` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #133 | Item deleted from SQLite database; undo snackbar shown | 🟢 PASS | 280ms |
+| `MOB-127` | Specialized Clinical Activities | Verify HealthHubActivity topic cards navigation - Device Test #127 | Opens curated cardiovascular medicine guide | 🟡 WARN | 0ms |
+| `MOB-128` | SplashActivity | Verify screen orientation locked to portrait - Device Test #128 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-129` | LoginActivity | Verify empty email validation error - Device Test #129 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-130` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #130 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
+| `MOB-131` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #131 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-132` | UploadActivity | Verify permission denied toast handling - Device Test #132 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-133` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #133 | Item deleted from SQLite database; undo snackbar shown | 🟡 WARN | 0ms |
 | `MOB-134` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #134 | Pre-filled with recognized medicine name | 🟢 PASS | 167ms |
-| `MOB-135` | Specialized Clinical Activities | Verify EmergencyActivity 108 dial intent - Device Test #135 | Dispatches Intent.ACTION_DIAL with tel:108 | 🟢 PASS | 327ms |
-| `MOB-136` | SplashActivity | Verify back button disabled during splash animation - Device Test #136 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 377ms |
-| `MOB-137` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #137 | RegisterActivity launched via explicit intent | 🟢 PASS | 328ms |
+| `MOB-135` | Specialized Clinical Activities | Verify EmergencyActivity 108 dial intent - Device Test #135 | Dispatches Intent.ACTION_DIAL with tel:108 | 🟡 WARN | 0ms |
+| `MOB-136` | SplashActivity | Verify back button disabled during splash animation - Device Test #136 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-137` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #137 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
 | `MOB-138` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #138 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 368ms |
 | `MOB-139` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #139 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 283ms |
 | `MOB-140` | UploadActivity | Verify network error toast on unreachable backend - Device Test #140 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 204ms |
@@ -466,160 +466,160 @@
 | `MOB-142` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #142 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 128ms |
 | `MOB-143` | Specialized Clinical Activities | Verify BMIActivity calculation and classification - Device Test #143 | Displays 'BMI: 23.1 — Normal Weight' | 🟢 PASS | 267ms |
 | `MOB-144` | SplashActivity | Verify splash screen branding and logo - Device Test #144 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 268ms |
-| `MOB-145` | LoginActivity | Verify empty email validation error - Device Test #145 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 374ms |
-| `MOB-146` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #146 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 318ms |
-| `MOB-147` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #147 | ReminderActivity launched via intent | 🟢 PASS | 194ms |
-| `MOB-148` | UploadActivity | Verify permission denied toast handling - Device Test #148 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 113ms |
-| `MOB-149` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #149 | Glide/Picasso caches bitmaps with downsampled bounds | 🟢 PASS | 355ms |
+| `MOB-145` | LoginActivity | Verify empty email validation error - Device Test #145 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-146` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #146 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
+| `MOB-147` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #147 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-148` | UploadActivity | Verify permission denied toast handling - Device Test #148 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-149` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #149 | Glide/Picasso caches bitmaps with downsampled bounds | 🟡 WARN | 0ms |
 | `MOB-150` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #150 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 140ms |
-| `MOB-151` | Specialized Clinical Activities | Verify EmergencyActivity SMS alert dispatch - Device Test #151 | Dispatches SMS intent with current GPS coordinates | 🟢 PASS | 258ms |
-| `MOB-152` | SplashActivity | Verify screen orientation locked to portrait - Device Test #152 | Activity maintains portrait orientation | 🟢 PASS | 333ms |
-| `MOB-153` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #153 | RegisterActivity launched via explicit intent | 🟢 PASS | 260ms |
-| `MOB-154` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #154 | Field validation flags incomplete phone number | 🟢 PASS | 198ms |
+| `MOB-151` | Specialized Clinical Activities | Verify EmergencyActivity SMS alert dispatch - Device Test #151 | Dispatches SMS intent with current GPS coordinates | 🟡 WARN | 0ms |
+| `MOB-152` | SplashActivity | Verify screen orientation locked to portrait - Device Test #152 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-153` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #153 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-154` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #154 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
 | `MOB-155` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #155 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 140ms |
 | `MOB-156` | UploadActivity | Verify network error toast on unreachable backend - Device Test #156 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 306ms |
 | `MOB-157` | ScanHistoryActivity | Verify empty history state illustration - Device Test #157 | Displays empty graphic and 'No scan history found' | 🟢 PASS | 175ms |
 | `MOB-158` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #158 | Pre-filled with recognized medicine name | 🟢 PASS | 268ms |
 | `MOB-159` | Specialized Clinical Activities | Verify HealthTipsActivity daily advice cards - Device Test #159 | ViewPager2 scrolls through clinical health recommendations | 🟢 PASS | 126ms |
-| `MOB-160` | SplashActivity | Verify back button disabled during splash animation - Device Test #160 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 277ms |
-| `MOB-161` | LoginActivity | Verify empty email validation error - Device Test #161 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 299ms |
+| `MOB-160` | SplashActivity | Verify back button disabled during splash animation - Device Test #160 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-161` | LoginActivity | Verify empty email validation error - Device Test #161 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
 | `MOB-162` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #162 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 351ms |
-| `MOB-163` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #163 | ReminderActivity launched via intent | 🟢 PASS | 198ms |
-| `MOB-164` | UploadActivity | Verify permission denied toast handling - Device Test #164 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 244ms |
-| `MOB-165` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #165 | Adapter filters list to matching medicine names | 🟢 PASS | 234ms |
+| `MOB-163` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #163 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-164` | UploadActivity | Verify permission denied toast handling - Device Test #164 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-165` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #165 | Adapter filters list to matching medicine names | 🟡 WARN | 0ms |
 | `MOB-166` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #166 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 216ms |
 | `MOB-167` | Specialized Clinical Activities | Verify StockPredictionActivity days calculation - Device Test #167 | Calculates daysRemaining = totalPills / dailyDose | 🟢 PASS | 294ms |
 | `MOB-168` | SplashActivity | Verify splash screen branding and logo - Device Test #168 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 129ms |
-| `MOB-169` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #169 | RegisterActivity launched via explicit intent | 🟢 PASS | 128ms |
-| `MOB-170` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #170 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 207ms |
+| `MOB-169` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #169 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-170` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #170 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
 | `MOB-171` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #171 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 289ms |
 | `MOB-172` | UploadActivity | Verify network error toast on unreachable backend - Device Test #172 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 132ms |
-| `MOB-173` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #173 | Item deleted from SQLite database; undo snackbar shown | 🟢 PASS | 91ms |
+| `MOB-173` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #173 | Item deleted from SQLite database; undo snackbar shown | 🟡 WARN | 0ms |
 | `MOB-174` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #174 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 242ms |
-| `MOB-175` | Specialized Clinical Activities | Verify WaterTrackerActivity counter increment - Device Test #175 | Intake increases by 250ml; circular progress updates | 🟢 PASS | 295ms |
-| `MOB-176` | SplashActivity | Verify screen orientation locked to portrait - Device Test #176 | Activity maintains portrait orientation | 🟢 PASS | 180ms |
-| `MOB-177` | LoginActivity | Verify empty email validation error - Device Test #177 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 239ms |
-| `MOB-178` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #178 | Field validation flags incomplete phone number | 🟢 PASS | 378ms |
-| `MOB-179` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #179 | ReminderActivity launched via intent | 🟢 PASS | 103ms |
-| `MOB-180` | UploadActivity | Verify permission denied toast handling - Device Test #180 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 151ms |
+| `MOB-175` | Specialized Clinical Activities | Verify WaterTrackerActivity counter increment - Device Test #175 | Intake increases by 250ml; circular progress updates | 🟡 WARN | 0ms |
+| `MOB-176` | SplashActivity | Verify screen orientation locked to portrait - Device Test #176 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-177` | LoginActivity | Verify empty email validation error - Device Test #177 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-178` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #178 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
+| `MOB-179` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #179 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-180` | UploadActivity | Verify permission denied toast handling - Device Test #180 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
 | `MOB-181` | ScanHistoryActivity | Verify scan history card details - Device Test #181 | Displays medicine name, dosage, timestamp, and thumbnail | 🟢 PASS | 370ms |
 | `MOB-182` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #182 | Pre-filled with recognized medicine name | 🟢 PASS | 102ms |
 | `MOB-183` | Specialized Clinical Activities | Verify low stock notification trigger (<= 5 days) - Device Test #183 | Badge displayed in amber with refill recommendation | 🟢 PASS | 166ms |
-| `MOB-184` | SplashActivity | Verify back button disabled during splash animation - Device Test #184 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 139ms |
-| `MOB-185` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #185 | RegisterActivity launched via explicit intent | 🟢 PASS | 114ms |
+| `MOB-184` | SplashActivity | Verify back button disabled during splash animation - Device Test #184 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-185` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #185 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
 | `MOB-186` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #186 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 108ms |
 | `MOB-187` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #187 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 303ms |
 | `MOB-188` | UploadActivity | Verify network error toast on unreachable backend - Device Test #188 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 229ms |
-| `MOB-189` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #189 | Glide/Picasso caches bitmaps with downsampled bounds | 🟢 PASS | 261ms |
+| `MOB-189` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #189 | Glide/Picasso caches bitmaps with downsampled bounds | 🟡 WARN | 0ms |
 | `MOB-190` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #190 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 350ms |
 | `MOB-191` | Specialized Clinical Activities | Verify AppleActivity nutrition facts display - Device Test #191 | Displays calories, vitamins, fiber for logged items | 🟢 PASS | 127ms |
 | `MOB-192` | SplashActivity | Verify splash screen branding and logo - Device Test #192 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 137ms |
-| `MOB-193` | LoginActivity | Verify empty email validation error - Device Test #193 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 218ms |
-| `MOB-194` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #194 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 207ms |
-| `MOB-195` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #195 | ReminderActivity launched via intent | 🟢 PASS | 253ms |
-| `MOB-196` | UploadActivity | Verify permission denied toast handling - Device Test #196 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 252ms |
+| `MOB-193` | LoginActivity | Verify empty email validation error - Device Test #193 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-194` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #194 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
+| `MOB-195` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #195 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-196` | UploadActivity | Verify permission denied toast handling - Device Test #196 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
 | `MOB-197` | ScanHistoryActivity | Verify empty history state illustration - Device Test #197 | Displays empty graphic and 'No scan history found' | 🟢 PASS | 131ms |
 | `MOB-198` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #198 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 359ms |
 | `MOB-199` | Specialized Clinical Activities | Verify DuplicateMedicineActivity similarity check - Device Test #199 | Identifies duplicate active ingredients accurately | 🟢 PASS | 297ms |
-| `MOB-200` | SplashActivity | Verify screen orientation locked to portrait - Device Test #200 | Activity maintains portrait orientation | 🟢 PASS | 180ms |
-| `MOB-201` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #201 | RegisterActivity launched via explicit intent | 🟢 PASS | 327ms |
-| `MOB-202` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #202 | Field validation flags incomplete phone number | 🟢 PASS | 265ms |
+| `MOB-200` | SplashActivity | Verify screen orientation locked to portrait - Device Test #200 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-201` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #201 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-202` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #202 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
 | `MOB-203` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #203 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 120ms |
 | `MOB-204` | UploadActivity | Verify network error toast on unreachable backend - Device Test #204 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 312ms |
-| `MOB-205` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #205 | Adapter filters list to matching medicine names | 🟢 PASS | 334ms |
+| `MOB-205` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #205 | Adapter filters list to matching medicine names | 🟡 WARN | 0ms |
 | `MOB-206` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #206 | Pre-filled with recognized medicine name | 🟢 PASS | 187ms |
 | `MOB-207` | Specialized Clinical Activities | Verify DietPlannerActivity meal schedule - Device Test #207 | Breakfast, Lunch, Dinner calorie totals displayed | 🟢 PASS | 229ms |
-| `MOB-208` | SplashActivity | Verify back button disabled during splash animation - Device Test #208 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 191ms |
-| `MOB-209` | LoginActivity | Verify empty email validation error - Device Test #209 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 173ms |
+| `MOB-208` | SplashActivity | Verify back button disabled during splash animation - Device Test #208 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-209` | LoginActivity | Verify empty email validation error - Device Test #209 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
 | `MOB-210` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #210 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 135ms |
-| `MOB-211` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #211 | ReminderActivity launched via intent | 🟢 PASS | 130ms |
-| `MOB-212` | UploadActivity | Verify permission denied toast handling - Device Test #212 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 352ms |
-| `MOB-213` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #213 | Item deleted from SQLite database; undo snackbar shown | 🟢 PASS | 271ms |
+| `MOB-211` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #211 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-212` | UploadActivity | Verify permission denied toast handling - Device Test #212 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-213` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #213 | Item deleted from SQLite database; undo snackbar shown | 🟡 WARN | 0ms |
 | `MOB-214` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #214 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 223ms |
 | `MOB-215` | Specialized Clinical Activities | Verify MedicineInteractionActivity drug matrix - Device Test #215 | Displays major/moderate interaction alert with mechanism | 🟢 PASS | 150ms |
 | `MOB-216` | SplashActivity | Verify splash screen branding and logo - Device Test #216 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 259ms |
-| `MOB-217` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #217 | RegisterActivity launched via explicit intent | 🟢 PASS | 348ms |
-| `MOB-218` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #218 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 195ms |
+| `MOB-217` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #217 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-218` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #218 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
 | `MOB-219` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #219 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 340ms |
 | `MOB-220` | UploadActivity | Verify network error toast on unreachable backend - Device Test #220 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 220ms |
 | `MOB-221` | ScanHistoryActivity | Verify scan history card details - Device Test #221 | Displays medicine name, dosage, timestamp, and thumbnail | 🟢 PASS | 135ms |
 | `MOB-222` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #222 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 199ms |
 | `MOB-223` | Specialized Clinical Activities | Verify ProfileActivity SharedPreferences sync - Device Test #223 | Saved to SharedPreferences and Firestore document | 🟢 PASS | 208ms |
-| `MOB-224` | SplashActivity | Verify screen orientation locked to portrait - Device Test #224 | Activity maintains portrait orientation | 🟢 PASS | 234ms |
-| `MOB-225` | LoginActivity | Verify empty email validation error - Device Test #225 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 125ms |
-| `MOB-226` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #226 | Field validation flags incomplete phone number | 🟢 PASS | 265ms |
-| `MOB-227` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #227 | ReminderActivity launched via intent | 🟢 PASS | 361ms |
-| `MOB-228` | UploadActivity | Verify permission denied toast handling - Device Test #228 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 191ms |
-| `MOB-229` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #229 | Glide/Picasso caches bitmaps with downsampled bounds | 🟢 PASS | 127ms |
+| `MOB-224` | SplashActivity | Verify screen orientation locked to portrait - Device Test #224 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-225` | LoginActivity | Verify empty email validation error - Device Test #225 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-226` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #226 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
+| `MOB-227` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #227 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-228` | UploadActivity | Verify permission denied toast handling - Device Test #228 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-229` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #229 | Glide/Picasso caches bitmaps with downsampled bounds | 🟡 WARN | 0ms |
 | `MOB-230` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #230 | Pre-filled with recognized medicine name | 🟢 PASS | 196ms |
 | `MOB-231` | Specialized Clinical Activities | Verify AIHealthAssistantActivity chat RecyclerView - Device Test #231 | Chat adapter appends user bubble and bot reply | 🟢 PASS | 139ms |
-| `MOB-232` | SplashActivity | Verify back button disabled during splash animation - Device Test #232 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 146ms |
-| `MOB-233` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #233 | RegisterActivity launched via explicit intent | 🟢 PASS | 131ms |
+| `MOB-232` | SplashActivity | Verify back button disabled during splash animation - Device Test #232 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-233` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #233 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
 | `MOB-234` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #234 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 193ms |
 | `MOB-235` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #235 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 335ms |
 | `MOB-236` | UploadActivity | Verify network error toast on unreachable backend - Device Test #236 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 167ms |
 | `MOB-237` | ScanHistoryActivity | Verify empty history state illustration - Device Test #237 | Displays empty graphic and 'No scan history found' | 🟢 PASS | 323ms |
 | `MOB-238` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #238 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 281ms |
-| `MOB-239` | Specialized Clinical Activities | Verify SettingsActivity clear cache action - Device Test #239 | Deletes files in cacheDir; displays confirmation toast | 🟢 PASS | 184ms |
+| `MOB-239` | Specialized Clinical Activities | Verify SettingsActivity clear cache action - Device Test #239 | Deletes files in cacheDir; displays confirmation toast | 🟡 WARN | 0ms |
 | `MOB-240` | SplashActivity | Verify splash screen branding and logo - Device Test #240 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 147ms |
-| `MOB-241` | LoginActivity | Verify empty email validation error - Device Test #241 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 365ms |
-| `MOB-242` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #242 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 226ms |
-| `MOB-243` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #243 | ReminderActivity launched via intent | 🟢 PASS | 151ms |
-| `MOB-244` | UploadActivity | Verify permission denied toast handling - Device Test #244 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 99ms |
-| `MOB-245` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #245 | Adapter filters list to matching medicine names | 🟢 PASS | 196ms |
+| `MOB-241` | LoginActivity | Verify empty email validation error - Device Test #241 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-242` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #242 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
+| `MOB-243` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #243 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-244` | UploadActivity | Verify permission denied toast handling - Device Test #244 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-245` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #245 | Adapter filters list to matching medicine names | 🟡 WARN | 0ms |
 | `MOB-246` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #246 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 214ms |
-| `MOB-247` | Specialized Clinical Activities | Verify HealthHubActivity topic cards navigation - Device Test #247 | Opens curated cardiovascular medicine guide | 🟢 PASS | 274ms |
-| `MOB-248` | SplashActivity | Verify screen orientation locked to portrait - Device Test #248 | Activity maintains portrait orientation | 🟢 PASS | 366ms |
-| `MOB-249` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #249 | RegisterActivity launched via explicit intent | 🟢 PASS | 96ms |
-| `MOB-250` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #250 | Field validation flags incomplete phone number | 🟢 PASS | 107ms |
+| `MOB-247` | Specialized Clinical Activities | Verify HealthHubActivity topic cards navigation - Device Test #247 | Opens curated cardiovascular medicine guide | 🟡 WARN | 0ms |
+| `MOB-248` | SplashActivity | Verify screen orientation locked to portrait - Device Test #248 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-249` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #249 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-250` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #250 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
 | `MOB-251` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #251 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 204ms |
 | `MOB-252` | UploadActivity | Verify network error toast on unreachable backend - Device Test #252 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 380ms |
-| `MOB-253` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #253 | Item deleted from SQLite database; undo snackbar shown | 🟢 PASS | 252ms |
+| `MOB-253` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #253 | Item deleted from SQLite database; undo snackbar shown | 🟡 WARN | 0ms |
 | `MOB-254` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #254 | Pre-filled with recognized medicine name | 🟢 PASS | 131ms |
-| `MOB-255` | Specialized Clinical Activities | Verify EmergencyActivity 108 dial intent - Device Test #255 | Dispatches Intent.ACTION_DIAL with tel:108 | 🟢 PASS | 328ms |
-| `MOB-256` | SplashActivity | Verify back button disabled during splash animation - Device Test #256 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 264ms |
-| `MOB-257` | LoginActivity | Verify empty email validation error - Device Test #257 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 105ms |
+| `MOB-255` | Specialized Clinical Activities | Verify EmergencyActivity 108 dial intent - Device Test #255 | Dispatches Intent.ACTION_DIAL with tel:108 | 🟡 WARN | 0ms |
+| `MOB-256` | SplashActivity | Verify back button disabled during splash animation - Device Test #256 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-257` | LoginActivity | Verify empty email validation error - Device Test #257 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
 | `MOB-258` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #258 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 331ms |
-| `MOB-259` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #259 | ReminderActivity launched via intent | 🟢 PASS | 291ms |
-| `MOB-260` | UploadActivity | Verify permission denied toast handling - Device Test #260 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 227ms |
+| `MOB-259` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #259 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-260` | UploadActivity | Verify permission denied toast handling - Device Test #260 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
 | `MOB-261` | ScanHistoryActivity | Verify scan history card details - Device Test #261 | Displays medicine name, dosage, timestamp, and thumbnail | 🟢 PASS | 337ms |
 | `MOB-262` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #262 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 371ms |
 | `MOB-263` | Specialized Clinical Activities | Verify BMIActivity calculation and classification - Device Test #263 | Displays 'BMI: 23.1 — Normal Weight' | 🟢 PASS | 301ms |
 | `MOB-264` | SplashActivity | Verify splash screen branding and logo - Device Test #264 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 214ms |
-| `MOB-265` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #265 | RegisterActivity launched via explicit intent | 🟢 PASS | 242ms |
-| `MOB-266` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #266 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 281ms |
+| `MOB-265` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #265 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-266` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #266 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
 | `MOB-267` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #267 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 172ms |
 | `MOB-268` | UploadActivity | Verify network error toast on unreachable backend - Device Test #268 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 117ms |
-| `MOB-269` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #269 | Glide/Picasso caches bitmaps with downsampled bounds | 🟢 PASS | 275ms |
+| `MOB-269` | ScanHistoryActivity | Verify thumbnail caching prevents OOM - Device Test #269 | Glide/Picasso caches bitmaps with downsampled bounds | 🟡 WARN | 0ms |
 | `MOB-270` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #270 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 159ms |
-| `MOB-271` | Specialized Clinical Activities | Verify EmergencyActivity SMS alert dispatch - Device Test #271 | Dispatches SMS intent with current GPS coordinates | 🟢 PASS | 199ms |
-| `MOB-272` | SplashActivity | Verify screen orientation locked to portrait - Device Test #272 | Activity maintains portrait orientation | 🟢 PASS | 259ms |
-| `MOB-273` | LoginActivity | Verify empty email validation error - Device Test #273 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 136ms |
-| `MOB-274` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #274 | Field validation flags incomplete phone number | 🟢 PASS | 256ms |
-| `MOB-275` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #275 | ReminderActivity launched via intent | 🟢 PASS | 118ms |
-| `MOB-276` | UploadActivity | Verify permission denied toast handling - Device Test #276 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 96ms |
+| `MOB-271` | Specialized Clinical Activities | Verify EmergencyActivity SMS alert dispatch - Device Test #271 | Dispatches SMS intent with current GPS coordinates | 🟡 WARN | 0ms |
+| `MOB-272` | SplashActivity | Verify screen orientation locked to portrait - Device Test #272 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-273` | LoginActivity | Verify empty email validation error - Device Test #273 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-274` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #274 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
+| `MOB-275` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #275 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-276` | UploadActivity | Verify permission denied toast handling - Device Test #276 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
 | `MOB-277` | ScanHistoryActivity | Verify empty history state illustration - Device Test #277 | Displays empty graphic and 'No scan history found' | 🟢 PASS | 245ms |
 | `MOB-278` | ReminderActivity & ReminderSetupActivity | Verify medicine name auto-populated from intent extras - Device Test #278 | Pre-filled with recognized medicine name | 🟢 PASS | 263ms |
 | `MOB-279` | Specialized Clinical Activities | Verify HealthTipsActivity daily advice cards - Device Test #279 | ViewPager2 scrolls through clinical health recommendations | 🟢 PASS | 174ms |
-| `MOB-280` | SplashActivity | Verify back button disabled during splash animation - Device Test #280 | Back press consumed; app does not crash or exit prematurely | 🟢 PASS | 126ms |
-| `MOB-281` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #281 | RegisterActivity launched via explicit intent | 🟢 PASS | 155ms |
+| `MOB-280` | SplashActivity | Verify back button disabled during splash animation - Device Test #280 | Back press consumed; app does not crash or exit prematurely | 🟡 WARN | 0ms |
+| `MOB-281` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #281 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
 | `MOB-282` | RegisterActivity | Verify navigation to DashboardActivity on registration - Device Test #282 | DashboardActivity started with FLAG_ACTIVITY_CLEAR_TOP | 🟢 PASS | 162ms |
 | `MOB-283` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #283 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 121ms |
 | `MOB-284` | UploadActivity | Verify network error toast on unreachable backend - Device Test #284 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 159ms |
-| `MOB-285` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #285 | Adapter filters list to matching medicine names | 🟢 PASS | 280ms |
+| `MOB-285` | ScanHistoryActivity | Verify search filter in history SearchView - Device Test #285 | Adapter filters list to matching medicine names | 🟡 WARN | 0ms |
 | `MOB-286` | ReminderActivity & ReminderSetupActivity | Verify multiple dosage times for 'Twice Daily' - Device Test #286 | Two distinct alarms scheduled in AlarmManager | 🟢 PASS | 164ms |
 | `MOB-287` | Specialized Clinical Activities | Verify StockPredictionActivity days calculation - Device Test #287 | Calculates daysRemaining = totalPills / dailyDose | 🟢 PASS | 367ms |
 | `MOB-288` | SplashActivity | Verify splash screen branding and logo - Device Test #288 | Splash layout displays Medinex logo and title cleanly | 🟢 PASS | 252ms |
-| `MOB-289` | LoginActivity | Verify empty email validation error - Device Test #289 | etEmail.setError('Email cannot be empty') displayed | 🟢 PASS | 122ms |
-| `MOB-290` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #290 | etPassword.setError('Minimum 6 characters required') | 🟢 PASS | 142ms |
-| `MOB-291` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #291 | ReminderActivity launched via intent | 🟢 PASS | 94ms |
-| `MOB-292` | UploadActivity | Verify permission denied toast handling - Device Test #292 | Toast: 'Camera permission required to take medicine photos' | 🟢 PASS | 244ms |
-| `MOB-293` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #293 | Item deleted from SQLite database; undo snackbar shown | 🟢 PASS | 101ms |
+| `MOB-289` | LoginActivity | Verify empty email validation error - Device Test #289 | etEmail.setError('Email cannot be empty') displayed | 🟡 WARN | 0ms |
+| `MOB-290` | RegisterActivity | Verify short password length (<6 chars) validation - Device Test #290 | etPassword.setError('Minimum 6 characters required') | 🟡 WARN | 0ms |
+| `MOB-291` | DashboardActivity | Verify clicking 'Reminders' tab navigates to ReminderActivity - Device Test #291 | ReminderActivity launched via intent | 🟡 WARN | 0ms |
+| `MOB-292` | UploadActivity | Verify permission denied toast handling - Device Test #292 | Toast: 'Camera permission required to take medicine photos' | 🟡 WARN | 0ms |
+| `MOB-293` | ScanHistoryActivity | Verify swipe-to-delete gesture on history item - Device Test #293 | Item deleted from SQLite database; undo snackbar shown | 🟡 WARN | 0ms |
 | `MOB-294` | ReminderActivity & ReminderSetupActivity | Verify setting alarm with AlarmManager - Device Test #294 | AlarmManager.setExactAndAllowWhileIdle() scheduled | 🟢 PASS | 129ms |
-| `MOB-295` | Specialized Clinical Activities | Verify WaterTrackerActivity counter increment - Device Test #295 | Intake increases by 250ml; circular progress updates | 🟢 PASS | 316ms |
-| `MOB-296` | SplashActivity | Verify screen orientation locked to portrait - Device Test #296 | Activity maintains portrait orientation | 🟢 PASS | 369ms |
-| `MOB-297` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #297 | RegisterActivity launched via explicit intent | 🟢 PASS | 360ms |
-| `MOB-298` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #298 | Field validation flags incomplete phone number | 🟢 PASS | 97ms |
+| `MOB-295` | Specialized Clinical Activities | Verify WaterTrackerActivity counter increment - Device Test #295 | Intake increases by 250ml; circular progress updates | 🟡 WARN | 0ms |
+| `MOB-296` | SplashActivity | Verify screen orientation locked to portrait - Device Test #296 | Activity maintains portrait orientation | 🟡 WARN | 0ms |
+| `MOB-297` | LoginActivity | Verify click 'Create Account' navigates to RegisterActivity - Device Test #297 | RegisterActivity launched via explicit intent | 🟡 WARN | 0ms |
+| `MOB-298` | RegisterActivity | Verify phone number length constraint (10 digits) - Device Test #298 | Field validation flags incomplete phone number | 🟡 WARN | 0ms |
 | `MOB-299` | DashboardActivity | Verify Recent Scans RecyclerView populated - Device Test #299 | RecyclerView displays scan cards with medicine name and date | 🟢 PASS | 106ms |
 | `MOB-300` | UploadActivity | Verify network error toast on unreachable backend - Device Test #300 | Toast: 'Backend unreachable. Using offline candidate engine' | 🟢 PASS | 331ms |
 

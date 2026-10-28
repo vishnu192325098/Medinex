@@ -234,13 +234,15 @@ def generate_unified_report():
 
     cat_rows = []
     for title, tot, pas, link in all_categories_meta:
+        rate = (pas / tot * 100) if tot else 0
+        pill_class = "status-pass-pill" if rate >= 90 else "status-warn-pill"
         cat_rows.append(f"""
         <tr>
           <td><a href="./{link}" style="color:var(--accent-blue); text-decoration:none; font-weight:600;">{title}</a></td>
           <td style="text-align:center;">{tot}</td>
           <td style="text-align:center; color:var(--status-pass); font-weight:600;">{pas}</td>
           <td style="text-align:center;">0</td>
-          <td style="text-align:center;"><span class="status-pill status-pass-pill">100.0%</span></td>
+          <td style="text-align:center;"><span class="status-pill {pill_class}">{rate:.1f}%</span></td>
           <td style="text-align:center;"><a href="./{link}" style="color:var(--accent-teal); font-size:12px;">View Report →</a></td>
         </tr>
         """)
