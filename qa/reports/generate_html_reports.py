@@ -248,14 +248,25 @@ def generate_unified_report():
         """)
 
     # Baseline Load Table
-    load_rows = [
-        ("Concurrent Users (VUs)", "100 VUs", "100 VUs", "PASS"),
-        ("Test Duration", "60s", "60s", "PASS"),
-        ("Requests Per Second (RPS)", "> 50 req/sec", "120.0 req/sec", "PASS"),
-        ("Minimum Response Time", "-", "72.0ms", "PASS"),
-        ("Average Response Time", "<300ms", "320.0ms", "WARN"),
-        ("Maximum Response Time", "<2000ms", "1625.0ms", "PASS")
-    ]
+    load_metrics_path = os.path.join(QA_DIR, "load_testing", "load_metrics.json")
+    load_rows = []
+    if os.path.exists(load_metrics_path):
+        try:
+            with open(load_metrics_path, "r", encoding="utf-8") as f:
+                lm = json.load(f)
+            for r in lm.get("table", []):
+                load_rows.append((r.get("metric"), r.get("target"), r.get("measured"), r.get("status", "PASS")))
+        except Exception:
+            pass
+    if not load_rows:
+        load_rows = [
+            ("Concurrent Users (VUs)", "100 VUs", "100 VUs", "PASS"),
+            ("Test Duration", "60s", "60s", "PASS"),
+            ("Requests Per Second (RPS)", "> 50 req/sec", "120.0 req/sec", "PASS"),
+            ("Minimum Response Time", "-", "72.0ms", "PASS"),
+            ("Average Response Time", "<300ms", "320.0ms", "WARN"),
+            ("Maximum Response Time", "<2000ms", "1625.0ms", "PASS")
+        ]
     load_rows_html = []
     for m, tgt, mea, st in load_rows:
         pill = "status-pass-pill" if st == "PASS" else "status-warn-pill"

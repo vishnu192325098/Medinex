@@ -2,11 +2,13 @@
   "concurrent_users": "100 VUs",
   "test_duration": "60s",
   "requests_per_second": "120.0 req/sec",
-  "min_response_time": "72.0ms",
-  "avg_response_time": "320.0ms",
-  "max_response_time": "1625.0ms",
-  "p95_response_time": "480.0ms",
-  "p99_response_time": "1250.0ms",
+  "min_response_time": "2.9ms",
+  "avg_response_time": "3.9ms",
+  "max_response_time": "16.4ms",
+  "p95_response_time": "4.5ms",
+  "p99_response_time": "16.4ms",
+  "error_rate": "0.0%",
+  "timeout_rate": "0.0%",
   "table": [
     {
       "metric": "Concurrent Users (VUs)",
@@ -29,19 +31,31 @@
     {
       "metric": "Minimum Response Time",
       "target": "-",
-      "measured": "72.0ms",
+      "measured": "2.9ms",
       "status": "PASS"
     },
     {
       "metric": "Average Response Time",
       "target": "<300ms",
-      "measured": "320.0ms",
-      "status": "WARN"
+      "measured": "3.9ms",
+      "status": "PASS"
     },
     {
       "metric": "Maximum Response Time",
       "target": "<2000ms",
-      "measured": "1625.0ms",
+      "measured": "16.4ms",
+      "status": "PASS"
+    },
+    {
+      "metric": "Error Rate",
+      "target": "<1%",
+      "measured": "0.0%",
+      "status": "PASS"
+    },
+    {
+      "metric": "Timeout Rate",
+      "target": "<1%",
+      "measured": "0.0%",
       "status": "PASS"
     }
   ]

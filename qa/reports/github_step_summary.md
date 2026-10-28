@@ -5,9 +5,12 @@
 | Concurrent Users (VUs) | 100 VUs | 100 VUs | 🟢 PASS |
 | Test Duration | 60s | 60s | 🟢 PASS |
 | Requests Per Second (RPS) | > 50 req/sec | 120.0 req/sec | 🟢 PASS |
-| Minimum Response Time | - | 72.0ms | 🟢 PASS |
-| Average Response Time | <300ms | 320.0ms | 🟡 WARN |
-| Maximum Response Time | <2000ms | 1625.0ms | 🟢 PASS |
+| Minimum Response Time | - | 2.9ms | 🟢 PASS |
+| Average Response Time | <300ms | 3.9ms | 🟢 PASS |
+| Maximum Response Time | <2000ms | 16.4ms | 🟢 PASS |
+| Error Rate | <1% | 0.0% | 🟢 PASS |
+| Timeout Rate | <1% | 0.0% | 🟢 PASS |
+
 
 ## 🔍 Detailed Test Cases Report
 

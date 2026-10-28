@@ -44,6 +44,42 @@ jobs:
       - name: Grant execute permission for Gradle wrapper
         run: chmod +x gradlew
 
+      - name: Ensure Google Services Configuration
+        run: |
+          if [ ! -f app/google-services.json ]; then
+            cat << 'EOF' > app/google-services.json
+          {
+            "project_info": {
+              "project_number": "882881654200",
+              "project_id": "medinex-2d09e",
+              "storage_bucket": "medinex-2d09e.firebasestorage.app"
+            },
+            "client": [
+              {
+                "client_info": {
+                  "mobilesdk_app_id": "1:882881654200:android:c71d210cb9e88c3537734d",
+                  "android_client_info": {
+                    "package_name": "com.example.medinex"
+                  }
+                },
+                "oauth_client": [],
+                "api_key": [
+                  {
+                    "current_key": "AIzaSyCOCCs39PZ9UhJo5psyTjYTLMU6YkggXP0"
+                  }
+                ],
+                "services": {
+                  "appinvite_service": {
+                    "other_platform_oauth_client": []
+                  }
+                }
+              }
+            ],
+            "configuration_version": "1"
+          }
+          EOF
+          fi
+
       - name: Build Android Debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
 
@@ -122,7 +158,6 @@ jobs:
   # ==========================================================
   web-e2e-tests:
     name: Web E2E Tests
-    needs: android-appium-e2e
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -191,7 +226,6 @@ jobs:
   # ==========================================================
   verify-live-deployment:
     name: Verify Live Web Deployment
-    needs: security-review
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -205,6 +239,10 @@ jobs:
       - name: Install Backend & Load Dependencies
         run: |
           pip install requests
+
+      - name: Verify Live Website Deployment (GitHub Pages)
+        run: |
+          python qa/web_verification/verify_deployment.py
 
       - name: Verify Live Endpoints & Run Backend Service Tests
         run: |
@@ -229,7 +267,8 @@ jobs:
   # ==========================================================
   unified-summary:
     name: Unified Summary & Report Deployment
-    needs: [web-e2e-tests, verify-live-deployment]
+    needs: [build-android-apk, android-appium-e2e, web-e2e-tests, security-review, verify-live-deployment]
+    if: always() && !cancelled()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

@@ -20,9 +20,8 @@ __pycache__/
 *$py.class
 .pytest_cache/
 
-# Firebase client secrets & credentials
-google-services.json
-app/google-services.json
+# Firebase client secrets & credentials (root temporary files)
+google-services-private.json
 
 # Local environment variables & secrets
 .env

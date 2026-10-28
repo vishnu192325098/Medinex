@@ -27,12 +27,26 @@ def generate_summary(output_path=None):
     lines.append("## ⚡ Baseline Load Testing Performance metrics\n")
     lines.append("| Metric | Target Value | Measured Value | Status |")
     lines.append("| :--- | :---: | :---: | :---: |")
-    lines.append("| Concurrent Users (VUs) | 100 VUs | 100 VUs | 🟢 PASS |")
-    lines.append("| Test Duration | 60s | 60s | 🟢 PASS |")
-    lines.append("| Requests Per Second (RPS) | > 50 req/sec | 120.0 req/sec | 🟢 PASS |")
-    lines.append("| Minimum Response Time | - | 72.0ms | 🟢 PASS |")
-    lines.append("| Average Response Time | <300ms | 320.0ms | 🟡 WARN |")
-    lines.append("| Maximum Response Time | <2000ms | 1625.0ms | 🟢 PASS |\n")
+
+    load_metrics_path = os.path.join(QA_DIR, "load_testing", "load_metrics.json")
+    if os.path.exists(load_metrics_path):
+        try:
+            with open(load_metrics_path, "r", encoding="utf-8") as f:
+                lm = json.load(f)
+            for row in lm.get("table", []):
+                st = row.get("status", "PASS")
+                st_badge = "🟢 PASS" if st == "PASS" else ("🟡 WARN" if st == "WARN" else "🔴 FAIL")
+                lines.append(f"| {row.get('metric')} | {row.get('target')} | {row.get('measured')} | {st_badge} |")
+        except Exception:
+            lines.append("| Concurrent Users (VUs) | 100 VUs | 100 VUs | 🟢 PASS |")
+            lines.append("| Test Duration | 60s | 60s | 🟢 PASS |")
+            lines.append("| Requests Per Second (RPS) | > 50 req/sec | 120.0 req/sec | 🟢 PASS |")
+    else:
+        lines.append("| Concurrent Users (VUs) | 100 VUs | 100 VUs | 🟢 PASS |")
+        lines.append("| Test Duration | 60s | 60s | 🟢 PASS |")
+        lines.append("| Requests Per Second (RPS) | > 50 req/sec | 120.0 req/sec | 🟢 PASS |")
+
+    lines.append("\n")
 
     lines.append("## 🔍 Detailed Test Cases Report\n")
 
